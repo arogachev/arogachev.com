@@ -5,3 +5,6 @@ _site
 
 # IDE files
 .idea
+
+# Capistrano log
+/log
