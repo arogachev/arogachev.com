@@ -42,7 +42,7 @@ namespace :bundle do
   task :install do
     on roles(:all) do
       within release_path do
-        execute "cd #{release_path} && bundle install"
+        execute "cd #{release_path} && bundle install --without development test"
       end
     end
   end
