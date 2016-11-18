@@ -1,14 +1,14 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'arogachev_com'
+set :repo_url, 'https://github.com/arogachev/arogachev.com.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/home/arogachev/arogachev_com'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -34,3 +34,49 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+# Dependencies
+
+namespace :bundle do
+  desc 'Install Bundler packages'
+  task :install do
+    on roles(:all) do
+      within release_path do
+        execute "cd #{release_path} && bundle install"
+      end
+    end
+  end
+end
+
+# Static site generation
+
+namespace :jekyll do
+  desc 'Build site using Jekyll'
+  task :build do
+    on roles(:all) do
+      within release_path do
+        execute "cd #{release_path} && bundle exec jekyll build"
+      end
+    end
+  end
+end
+
+before 'deploy:updated', 'bundle:install'
+before 'deploy:reverted', 'bundle:install'
+
+before 'deploy:updated', 'jekyll:build'
+
+# Web servers
+
+namespace :nginx do
+  desc 'Reload Nginx'
+  task :reload do
+    on roles(:all) do
+      within release_path do
+        execute 'sudo systemctl reload nginx'
+      end
+    end
+  end
+end
+
+after 'deploy:finished', 'nginx:reload'
