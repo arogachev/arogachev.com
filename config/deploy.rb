@@ -72,10 +72,19 @@ namespace :assets do
     end
   end
 
+  desc 'Create assets directory'
+  task :create_dir do
+    on roles(:all) do
+      within release_path do
+        execute "cd #{release_path} && mkdir -p assets/css"
+      end
+    end
+  end
+
   desc 'Sync assets'
   task :sync do
     run_locally do
-      execute "rsync -ru --progress --delete assets/css/style.css arogachev@margin.kz:#{release_path}/assets/css/"
+      execute "rsync -ru --progress --delete assets/css/style.css arogachev@arogachev.com:#{release_path}/assets/css/"
     end
   end
 end
@@ -84,6 +93,7 @@ before 'deploy:updated', 'bower:install'
 before 'deploy:reverted', 'bower:install'
 
 before 'deploy:updated', 'assets:compile'
+before 'deploy:updated', 'assets:create_dir'
 before 'deploy:updated', 'assets:sync'
 
 # Static site generation
