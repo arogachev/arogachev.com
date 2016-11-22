@@ -34,9 +34,12 @@ exclude:
   # Folders
   - config
   - log
+  - node_modules
   # Files
   - bower.json
   - Capfile
   - Gemfile
   - Gemfile.lock
+  - gulpfile.js
+  - package.json
   - README.md

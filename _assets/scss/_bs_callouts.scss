@@ -1,0 +1,45 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  code {
+    border-radius: 3px;
+  }
+
+  &+.bs-callout {
+    margin-top: -5px;
+  }
+}
+
+@mixin bs-mixin($name, $callout-color) {
+  // Callout border color
+  .#{$name} {
+    border-left-color: $callout-color;
+  }
+
+  // Callout header color
+  .#{$name} h4, .#{$name} h4 a {
+    color: $callout-color;
+  }
+}
+
+@include bs-mixin(bs-callout-default, $gray);
+@include bs-mixin(bs-callout-primary, $brand-primary);
+@include bs-mixin(bs-callout-info, $brand-info);
+@include bs-mixin(bs-callout-danger, $brand-danger);
+@include bs-mixin(bs-callout-warning, $brand-warning);
+@include bs-mixin(bs-callout-success, $brand-success);

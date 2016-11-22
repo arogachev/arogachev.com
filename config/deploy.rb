@@ -64,8 +64,27 @@ namespace :bower do
   end
 end
 
+namespace :assets do
+  desc 'Compile assets'
+  task :compile do
+    run_locally do
+      execute 'gulp sass'
+    end
+  end
+
+  desc 'Sync assets'
+  task :sync do
+    run_locally do
+      execute "rsync -ru --progress --delete assets/css/style.css arogachev@margin.kz:#{release_path}/assets/css/"
+    end
+  end
+end
+
 before 'deploy:updated', 'bower:install'
 before 'deploy:reverted', 'bower:install'
+
+before 'deploy:updated', 'assets:compile'
+before 'deploy:updated', 'assets:sync'
 
 # Static site generation
 
