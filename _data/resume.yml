@@ -1,0 +1,322 @@
+basics:
+  name: Alexey Rogachev
+  label: Web programmer
+  picture: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAdMAAAAJGZiY2NmMDE2LTc3M2ItNDQxNi04OGM2LWU2NTA2NWNhMmFkNQ.jpg
+  email: arogachev90@gmail.com
+  summary: >
+    Full stack web developer from Petropavl, Kazakhstan. Mostly working with PHP and Yii 2 framework. Perfectionist,
+    but try to find a balance between quality, deadlines and requirements.
+  location:
+    city: Petropavl
+    country_code: KZ
+    region: North Kazakhstan
+work:
+  margin:
+    company: Zernovye & Maslichnye. Kazakhstan
+    position: Web programmer
+    website: https://margin.kz/
+    start_date: 2016-04-06
+    end_date:
+    summary: News and analytics about agriculture in Kazakhstan. Developing with Django and PostgreSQL
+    highlights:
+      - Rewrote existing company site from Joomla to Django.
+      - Fixed bugs, improved functionality, migrated all existing data.
+      - Some content is now closed and payment required to view it.
+      - Implemented image cropping for better images display.
+      - Developed new module - agricultural enterprises with map.
+    achievements:
+      - Learned Python basics.
+      - Learned Django basics.
+      - Improved skills of configuring VPS from scratch.
+  fora:
+    company: Baza MTO, LLC
+    position: Web programmer
+    website: https://fora.kz/
+    start_date: 2013-12-23
+    end_date: 2016-04-17
+    summary: >
+      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many shops across
+      Kazakhstan. Backend programming in Yii 1 and Yii 2 PHP frameworks. Frontend programming and some work with layout
+      using JavaScript, jQuery, AngularJS, Bootstrap 3.
+    highlights:
+      - >
+        Worked on support and improvement of main public company site - fora.kz (e-commerce). It was built with
+        Yii 1.1, not it's rewritten in Yii 2.
+      - Worked on public company job service - job.fora.kz (development from scratch, support). Built with Yii 2.
+      - >
+        Worked on internal private ERP system - development from scratch according to company specific and needs.
+        Built with Yii 2 and PostgreSQL. Modules development and support. Currently system is introduced and required
+        for usage for every employee.
+      - >
+        Worked on some other internal private projects to automate and optimize work of employees inside the company
+        (guarantee and repair service, advertising, etc.).
+    achievements:
+      - >
+        Reached completely new level in work with PHP - learned OOP, MVC, some design patterns, frameworks Yii 1 and
+        Yii 2, PHPDoc, PSR, development on the latest versions (5.6), with usage of its features.
+      - Learned and started to use Git VCS.
+      - >
+        Improved working with layout skills, started to use SASS, CSS frameworks - Bootstrap 2 и 3, Grunt for building
+        project assets.
+      - Usage of JIRA tracking system.
+      - >
+        Improved JavaScript and jQuery skills, used AngularJS and template engines (Handlebars.js) for solving some
+        tasks.
+      - Started to use more convenient local development tools, such as Vagrant and Puppet (with PuPHPet).
+      - Have got Debian and Ubuntu OS administration skills.
+      - Started to use package managers, such as Composer, Bower, NPM.
+      - Have faced with PostgreSQL RDBMS, used its some unique features in developed projects.
+      - Improved Nginx and Apache web servers configuring skills.
+      - Have got basic testing knowledge using Codeception.
+      - Developed few extensions for Yii 2.
+      - Usage of technologies, such as Redis, RabbitMQ, memcached in projects.
+      - Usage of wide set of auxiliary libraries and components.
+  insy:
+    company: INSY, LLC
+    position: Programmer-analyst
+    website: http://insy.kz/
+    start_date: 2012-11-01
+    end_date: 2013-11-15
+    summary: >
+      INSY company is website developing company based in Petropavl, Kazakhstan. Work on company projects in PHP based
+      CMS (UMI.CMS and 1C-Bitrix).
+    highlights:
+      - Working with layout.
+      - Programming (including non-standard functionality) using CMS API.
+      - Minor design fixes.
+      - Integration between 1C and sites, adding related non-standard functionality to the sites.
+      - Filling products catalog on one of the projects - http://mchip.kz/ (about 2000 products).
+      - Editing product images.
+      - Content management.
+      - Management work with clients.
+      - Basic SEO and SMM.
+      - Integration of payment systems - VISA, QIWI, KASSA 24.
+      - Work on internal company CRM - completion of existing modules and development of new ones.
+    achievements:
+      - Working with layout skills (HTML, CSS) and programming (PHP, JavaScript, JQuery) were considerably improved.
+      - SQL and MySQL knowledge was improved.
+      - Have mastered XSLT template engine.
+      - Development of non-standard functionality in UMI.CMS and 1C-Bitrix.
+      - Active participation in company life, initiative manifestation.
+      - Have got basic skills with work with CentOS.
+      - Started to use VCS - HG (Mercurial).
+  bars_stroy:
+    company: BARS-NORD, LLC
+    position: Web technologies specialist
+    website: http://bars-stroy.kz/
+    start_date: 2011-08-15
+    end_date: 2012-11-01
+    summary: >
+      Bars Stroy company is construction materials seller. Has some branches across Kazakhstan. Improvement and support
+      of existing main company site based on UMI.CMS (PHP).
+    highlights:
+      - Working with layout.
+      - Programming - fixing bugs, development of new functionality.
+      - Minor design fixes.
+      - Content management.
+      - 1C integration.
+      - Filling products catalog - almost all products (filled products count - about 7000).
+      - Products photographing and photos editing.
+      - Basic SEO.
+      - SMM.
+      - Clients support in social networks.
+      - Rewriting, copywriting.
+    achievements:
+      - Improved knowledge of HTML, CSS, PHP, JavaScript, jQuery.
+      - Have got good experience with UMI.CMS.
+      - >
+        Work was versatile (because I was the only one working with site, at the end designer helped a bit) and wasn't
+        limited to programming only: editing images skills, SEO knowledge were improved, learned a lot of new
+        information about construction materials.
+      - >
+        Filled products catalog almost alone, in the future it became a base for e-commerce (after my leaving, because
+        at the moment of my work administration was not ready to create it yet.
+      - >
+        Have got communication experience with people of different positions and from different departments (including
+        meetings, etc.) and clients during answering and consultation through messengers and social networks.
+      - Showed initiative in many questions related to site.
+volunteer:
+  organization: Tatyana Nazarenko Photo Studio
+  position: Web programmer
+  website: https://tnazarenko.com/
+  start_date: 2015-07-04
+  endDate: 2015-11-02
+  summary: >
+    Personal site with portfolio. Hosting is expired, person is not interested to develop site and fill content
+    anymore.
+  highlights:
+    - Learned Ruby basics.
+    - Learned Ruby on Rails 4 basics.
+    - Deployed project to shared hosting using Capistrano.
+    - Implemented image cropping for better photos display.
+education:
+  higher:
+    institution: North Kazakhstan State University, named for M. Kozybaev
+    area: 050602 - Computer Science
+    study_type: Bachelor
+    start_date: 2007-09-01
+    end_date: 2011-06-15
+    gpa: 3.81
+    courses:
+      - WD3222 - Web-Design
+      - Alg1204 - Algebra
+      - AS2215 - Algebraic Structures
+      - ASD2213 - Algorithms and Structure of Data
+      - AVR4309 - Analysis of Temporal Series
+      - AKS1218 - Computer System Architecture
+      - Geo1205 - Geometry
+      - DMML2210 - Discrete Mathematics and Mathematical Logic
+      - DU2206 - Differential Equations
+      - DGML3219 - Supplementary Chapters on Mathematical Logic
+      - ZI4220 - Information Security
+      - IYa1103 - Foreign Language
+      - Inf1104 - Computer Science
+      - KYa1102 - Kazakh Language
+      - MSKG3221 - Computer Graphics
+      - KS3304 - Computer Networks
+      - MMPP4314 - Mathematical Models of Production Planning
+      - MAAF1202 - Mathematical Analysis. Analysis of Function with one Variable
+      - MAAF2203 - Mathematical Analysis. Analysis of Functions with many Variable Quantities
+      - MAVA1201 - Mathematical Analysis. Introduction to the Analysis
+      - MM3216 - Mathematical Modeling
+      - MPI3214 - Teaching Methods of Computer Science
+      - MOIO3209 - Methods of Optimization and Operations Research
+      - OOP3301 - Object-Oriented Programming
+      - OS2303 - Operating Systems
+      - OBZh4112 - Bases of Life Safety
+      - OP1108 - Basic Law
+      - OS2306 - Bases of Circuitry
+      - OET2107 - Bases of Economic Theory
+      - PV4305 - Parallel Computations
+      - Pol3109 - Political Science
+      - SP2302 - System Programming
+      - SII4308 - Artificial-Intelligence Systems
+      - Soc3110 - Sociology
+      - SA4311 - Statistical Analysis
+      - TBD3307 - Data Base Theory
+      - TVMS3211 - Theory of Probability and Mathematical Statistics
+      - TG3217 - Graph Theory
+      - TYaA2212 - Language and Automatic Machine Theory
+      - Fil2106 - Philosophy
+      - ChM3208 - Numerical Methods
+      - Eko1105 - Environmental Science
+      - EPDO1111 - Ethics and Psychology of Business Communication
+      - YaTP2207 - Programming Languages and Technologies
+      - IS3310 - Information Systems (Course Project)
+      - Mat2312 - Mathematics (Course paper)
+      - PM4313 - Applied Mathematics (Course paper)
+skills:
+  programming:
+    name: Programming languages
+    keywords: [PHP, JavaScript, Ruby, Python]
+  frameworks:
+    name: Web frameworks
+    keywords: [Yii, Ruby on Rails, Django]
+  cms:
+    name: CMS
+    keywords: [UMI.CMS, 1C-Bitrix]
+  frontend:
+    name: Frontend
+    keywords: [HTML, CSS, SASS, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
+  db:
+    name: Databases
+    keywords: [MySQL, PostgreSQL, SQLite, Redis]
+  servers:
+    name: Web servers
+    keywords: [Nginx, Apache, Unicorn, Gunicorn]
+  deploy:
+    name: Deploy
+    keywords: [Deployer, Capistrano]
+  testing:
+    name: Testing
+    keywords: [PHPUnit, Codeception]
+  vcs:
+    name: Version control systems
+    keywords: [Git, Hg (Mercurial)]
+  os:
+    name: Operating systems
+    keywords: [Debian, Ubuntu, CentOS]
+  automation:
+    name: Work automating
+    keywords: [Vagrant, Puppet, PuPHPet]
+  templates:
+    name: Template engines
+    keywords: [Twig, Handlebars.js]
+  caching:
+    name: Caching
+    keywords: [memcached]
+  queues:
+    name: Queue systems
+    keywords: [RabbitMQ]
+  misc:
+    name: Miscellaneous
+    keywords: [XLST]
+references:
+  vaslanov:
+    name: Viktor Aslanov, founder of Zernovye & Maslichnye. Kazakhstan
+    reference: >
+      Alexey helped us rewrite our site margin.kz from Joomla to Django, improve functionality, fix bugs and migrate
+      all existing data. Traffic and sales were increased. Alexey is always ready to help, explain and recommend the
+      more suitable way of solving problem. He is thoughtful and experienced programmer, also punctual and responsible.
+      We are happy with his work and support of our site.
+languages:
+  ru:
+    language: Russian
+    fluency: Native speaker
+  en:
+    language: English
+    fluency: Can pass interviews
+  kz:
+    language: Kazakh
+    fluency: Basic knowledge
+interests:
+  sports:
+    name: Sports
+    keywords: [gym, running, cycling, stretching]
+  languages:
+    name: Foreign languages studying
+    keywords: [english]
+  phogography:
+    name: Photography
+    keywords: [nature, architecture]
+  psychology:
+    name: Psychology
+    keywords: [articles, books]
+  music:
+    name: Music
+    keywords: []
+  movies:
+    name: Movies
+    keywords: []
+  books:
+    name: Books
+    keywords: []
+profiles:
+  github:
+    network: Github
+    username: arogachev
+    url: https://github.com/arogachev
+  stackoverflow:
+    network: StackOverflow
+    username: arogachev
+    url: http://stackoverflow.com/users/4323648/arogachev
+  linkedln:
+    network: LinkedIn
+    username: Alexey Rogachev
+    url: https://www.linkedin.com/in/alexey-rogachev-182b68109?trk=hp-identity-name
+  twitter:
+    network: Twitter
+    username: arogachev90
+    url: https://twitter.com/arogachev90
+  vk:
+    network: Vkontakte
+    username: arogachev90
+    url: http://vk.com/arogachev90
+  facebook:
+    network: Facebook
+    username: Alexey Rogachev
+    url: https://www.facebook.com/profile.php?id=100009774254444
+  instagram:
+    network: Instagram
+    username: arogachev90
+    url: https://www.instagram.com/arogachev90/

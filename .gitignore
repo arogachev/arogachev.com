@@ -8,3 +8,6 @@ _site
 
 # Capistrano log
 /log
+
+# Bower packages
+/bower_components

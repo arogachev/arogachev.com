@@ -1,0 +1,21 @@
+{
+  "name": "arogachev.com",
+  "homepage": "http://arogachev.com",
+  "authors": [
+    "Alexey Rogachev <arogachev90@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

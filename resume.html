@@ -1,0 +1,65 @@
+---
+layout: default
+title: Resume
+permalink: /resume/
+---
+
+{% assign resume = page.resume %}
+
+<h2>Work</h2>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  {% for job in resume.work %}
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-{{ forloop.index }}">
+        <h4 class="panel-title">
+          <a role="button"
+             data-toggle="collapse"
+             data-parent="#accordion"
+             href="#collapse-{{ forloop.index }}"
+             aria-expanded="true"
+             aria-controls="collapse-{{ forloop.index }}">
+            {{ job[1].company }}
+            ({{ job[1].start_date | date: '%Y' }} -
+            {% if job[1].end_date %}{{ job[1].end_date | date: '%Y' }}{% else %}Present{% endif %})
+          </a>
+        </h4>
+      </div>
+      <div id="collapse-{{ forloop.index }}"
+           class="panel-collapse collapse"
+           role="tabpanel"
+           aria-labelledby="heading-{{ forloop.index }}">
+        <div class="panel-body">
+          <p>
+            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+            {{ job[1].start_date | date: '%b. %Y' }} -
+            {% if job[1].end_date %}{{ job[1].end_date | date: '%b. %Y' }}{% else %}Present{% endif %}
+            (<b>{{ job[1].start_date | date_diff: job[1].end_date }}</b> in total)
+          </p>
+
+          <p><b>Position:</b> {{ job[1].position }}</p>
+          <p><b>Website:</b> <a href="{{ job[1].website }}">{{ job[1].website }}</a></p>
+
+          <p>{{ job[1].summary }}</p>
+
+          <p>
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <b>Highlights:</b>
+          </p>
+          <ul>
+            {% for highlight in job[1].highlights %}
+              <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+
+          <p><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> <b>Achievements:</b></p>
+          <ul>
+            {% for achievement in job[1].achievements %}
+              <li>{{ achievement }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
