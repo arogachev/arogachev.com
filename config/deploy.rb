@@ -48,6 +48,25 @@ namespace :bundle do
   end
 end
 
+before 'deploy:updated', 'bundle:install'
+before 'deploy:reverted', 'bundle:install'
+
+# Assets
+
+namespace :bower do
+  desc 'Install Bower packages'
+  task :install do
+    on roles(:all) do
+      within release_path do
+        execute "cd #{release_path} && /home/arogachev/.npm-global/bin/bower install"
+      end
+    end
+  end
+end
+
+before 'deploy:updated', 'bower:install'
+before 'deploy:reverted', 'bower:install'
+
 # Static site generation
 
 namespace :jekyll do
@@ -60,9 +79,6 @@ namespace :jekyll do
     end
   end
 end
-
-before 'deploy:updated', 'bundle:install'
-before 'deploy:reverted', 'bundle:install'
 
 before 'deploy:updated', 'jekyll:build'
 
