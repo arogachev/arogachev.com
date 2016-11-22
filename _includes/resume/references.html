@@ -1,0 +1,16 @@
+<h2>References</h2>
+
+<div>
+  {% for reference in resume.references %}
+    <blockquote>
+      <p>{{ reference[1].reference }}</p>
+      <footer>
+        {{ reference[1].name }},
+        {% if reference[1].position %}{{ reference[1].position }}{% endif %}
+        {% if reference[1].company %}
+          {{ reference[1].preposition }} <cite title="{{ reference[1].company }}">{{ reference[1].company }}</cite>
+        {% endif %}
+      </footer>
+    </blockquote>
+  {% endfor %}
+</div>

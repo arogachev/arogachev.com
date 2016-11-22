@@ -1,0 +1,20 @@
+{% assign education = resume.education.higher %}
+
+<h2>Education</h2>
+
+<div>
+  <p>
+    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+    {{ education.start_date | date: '%b. %Y' }} - {{ education.end_date | date: '%b. %Y' }}
+  </p>
+  <p><b>Institution:</b> {{ education.institution }}</p>
+  <p><b>Area:</b> {{ education.area }}</p>
+  <p><b>Degree:</b> {{ education.degree }}</p>
+  <p><b>GPA:</b> {{ education.gpa }}</p>
+  <p><b>Courses:</b></p>
+  <ul>
+    {% for course in education.courses %}
+      <li>{{ course }}</li>
+    {% endfor %}
+  </ul>
+</div>

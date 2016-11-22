@@ -153,7 +153,7 @@ education:
   higher:
     institution: North Kazakhstan State University, named for M. Kozybaev
     area: 050602 - Computer Science
-    study_type: Bachelor
+    degree: Bachelor
     start_date: 2007-09-01
     end_date: 2011-06-15
     gpa: 3.81
@@ -253,7 +253,10 @@ skills:
     keywords: [XLST]
 references:
   vaslanov:
-    name: Viktor Aslanov, founder of Zernovye & Maslichnye. Kazakhstan
+    name: Viktor Aslanov
+    position: founder
+    preposition: of
+    company: Zernovye & Maslichnye. Kazakhstan
     reference: >
       Alexey helped us rewrite our site margin.kz from Joomla to Django, improve functionality, fix bugs and migrate
       all existing data. Traffic and sales were increased. Alexey is always ready to help, explain and recommend the
