@@ -9,7 +9,9 @@
     .fa {
       font-size: 32px;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         text-decoration: none;
         color: #999;
       }
