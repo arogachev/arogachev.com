@@ -1,0 +1,12 @@
+<div class="interests">
+  <dl class="interest">
+    {% for interest in resume.interests %}
+      <dt class="name">{{ interest[1].name }}</dt>
+      <dd class="keywords">
+        {% for keyword in interest[1].keywords %}
+          <span class="label label-primary">{{ keyword }}</span>
+        {% endfor %}
+      </dd>
+    {% endfor %}
+  </dl>
+</div>

@@ -16,7 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "anchor-js": "^3.2.2"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7"

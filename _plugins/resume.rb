@@ -7,7 +7,7 @@ module Resume
 
   class Generator < Jekyll::Generator
     def generate(site)
-      resume = site.pages.detect {|page| page.name == 'resume.html'}
+      resume = site.pages.detect {|page| page.name == 'resume.md'}
       resume.data['resume'] = Resume.from_file()
     end
   end

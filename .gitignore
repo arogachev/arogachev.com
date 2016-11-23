@@ -11,9 +11,3 @@ _site
 
 # Bower packages
 /bower_components
-
-# NPM packages
-/node_modules
-
-# Assets
-/assets
