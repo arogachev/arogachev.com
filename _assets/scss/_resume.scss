@@ -1,4 +1,6 @@
 .resume {
+  // Interests
+
   .interest {
     .name {
       margin: 10px 0;
@@ -40,6 +42,15 @@
 
     .fa-instagram {
       color: #262626;
+    }
+  }
+
+  // References
+
+  .references {
+    .photo {
+      width: 80px;
+      height: 80px;
     }
   }
 }
