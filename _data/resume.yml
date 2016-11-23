@@ -1,14 +1,14 @@
 basics:
   name: Alexey Rogachev
-  label: Web programmer
-  picture: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAdMAAAAJGZiY2NmMDE2LTc3M2ItNDQxNi04OGM2LWU2NTA2NWNhMmFkNQ.jpg
+  specialization: Web programmer
+  image: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAdMAAAAJGZiY2NmMDE2LTc3M2ItNDQxNi04OGM2LWU2NTA2NWNhMmFkNQ.jpg
   email: 'arogachev90@gmail.com'
   summary: >
-    Full stack web developer from Petropavl, Kazakhstan. Mostly working with PHP and Yii 2 framework. Perfectionist,
-    but try to find a balance between quality, deadlines and requirements.
+    Full stack web developer. Mostly working with PHP and Yii 2 framework. Perfectionist, but try to find a balance
+    between quality, deadlines and requirements.
   location:
     city: Petropavl
-    country_code: KZ
+    country: Kazakhstan
     region: North Kazakhstan
 work:
   margin:

@@ -6,6 +6,8 @@ permalink: /resume/
 
 {% assign resume = page.resume %}
 
+{% include resume/basics.html %}
+
 ## Work
 {% include resume/work.html %}
 

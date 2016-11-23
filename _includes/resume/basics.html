@@ -1,0 +1,29 @@
+{% assign basics = resume.basics %}
+{% assign location = basics.location %}
+{% capture languages %}
+  {% for language in resume.languages %}
+    {{ language[1].language }} ({{ language[1].fluency | downcase }}){% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+{% endcapture %}
+
+<div class="basics row">
+  <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+    <img src="{{ basics.image }}" class="photo img-circle" alt="{{ basics.name }}" title="{{ basics.name }}">
+  </div>
+  <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12">
+    <p class="name">{{ basics.name }}</p>
+    <p>{{ basics.specialization }}</p>
+
+    <p>
+      <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+      <span class="location">{{ location.city }}, {{ location.country }} ({{ location.region }})</span>
+    </p>
+
+    <p>
+      <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+      <span class="languages">{{ languages }}</span>
+    </p>
+
+    <blockquote>{{ basics.summary }}</blockquote>
+  </div>
+</div>
