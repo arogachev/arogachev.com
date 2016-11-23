@@ -303,7 +303,7 @@ profiles:
     network: StackOverflow
     username: arogachev
     url: http://stackoverflow.com/users/4323648/arogachev
-  linkedln:
+  linkedin:
     network: LinkedIn
     username: Alexey Rogachev
     url: https://www.linkedin.com/in/alexey-rogachev-182b68109?trk=hp-identity-name

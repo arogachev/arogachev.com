@@ -20,3 +20,6 @@ permalink: /resume/
 
 ## References
 {% include resume/references.html %}
+
+## Profiles
+{% include resume/profiles.html %}

@@ -4,4 +4,39 @@
       margin: 10px 0;
     }
   }
+
+  .profiles {
+    .fa {
+      font-size: 32px;
+
+      &:hover {
+        text-decoration: none;
+        color: #999;
+      }
+    }
+
+    .fa-github {
+      color: #333;
+    }
+
+    .fa-stack-overflow {
+      color: #f48024;
+    }
+
+    .fa-linkedin {
+      color: #1985bc;
+    }
+
+    .fa-twitter {
+      color: #1da1f2;
+    }
+
+    .fa-vk {
+      color: #507299;
+    }
+
+    .fa-instagram {
+      color: #262626;
+    }
+  }
 }
