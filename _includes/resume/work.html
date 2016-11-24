@@ -27,18 +27,43 @@
             (<b>{{ job[1].start_date | date_diff: job[1].end_date }}</b> in total)
           </p>
 
-          <p><b>Position:</b> {{ job[1].position }}</p>
-          <p><b>Website:</b> <a href="{{ job[1].website }}">{{ job[1].website }}</a></p>
+          <p>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <b>Position:</b> {{ job[1].position }}
+          </p>
+
+          <p>
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+            <b>Website:</b> <a href="{{ job[1].website }}">{{ job[1].website }}</a>
+          </p>
 
           <p>{{ job[1].summary }}</p>
 
+          <p><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> <b>Technologies:</b></p>
           <p>
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <b>Highlights:</b>
+            {% for technology in job[1].technologies %}
+              <span class="label label-primary">{{ technology }}</span>
+            {% endfor %}
           </p>
+
+          <p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <b>Tasks:</b></p>
+          <ul>
+            {% for task in job[1].tasks %}
+              <li>{{ task }}</li>
+            {% endfor %}
+          </ul>
+
+          <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <b>Highlights:</b></p>
           <ul>
             {% for highlight in job[1].highlights %}
               <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+
+          <p><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> <b>Results:</b></p>
+          <ul>
+            {% for result in job[1].results %}
+              <li>{{ result }}</li>
             {% endfor %}
           </ul>
 

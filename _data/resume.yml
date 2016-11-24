@@ -17,17 +17,62 @@ work:
     website: https://margin.kz/
     start_date: 2016-04-06
     end_date:
-    summary: News and analytics about agriculture in Kazakhstan. Developing with Django and PostgreSQL
+    summary: >
+      Informational and analytical resource about agriculture in Kazakhstan. The customer already had site written in
+      Joomla, but was not satisfied with its work and support. Planned ideas and improvements would be hard to
+      implement using Joomla. Because of that we decided to completely rewrite it using Django and PostgreSQL and made
+      improvements after that.
+    technologies:
+      - Python
+      - Django
+      - PHP
+      - Joomla
+      - MySQL
+      - PostgreSQL
+      - Nginx
+      - Gunicorn
+      - Ubuntu
+      - JavaScript
+      - jQuery
+      - HTML
+      - Sass
+      - Gulp
+      - Capistrano
+    tasks:
+      - Full rewriting of existing company site based on Joomla in Django from scratch.
+      - Changing database from MySQL to PostgreSQL and migrating of all existing data.
+      - Switching from shared hosting to VPS, setup and use different technology stack.
+      - Integration of new design and layout based on Bootstrap 3.
+      - Fixing new layout bugs, adding missing layout elements.
+      - Improving existing functionality (including "News" module).
+      - Developing new functionality (including "Agrarian map" and "Trading platform" modules).
+      - Basic SEO related work. Improving urls and redirects setup.
+      - Switching from HTTP to HTTPS.
+      - Launch of the new site and further support of it.
     highlights:
-      - Rewrote existing company site from Joomla to Django.
-      - Fixed bugs, improved functionality, migrated all existing data.
-      - Some content is now closed and payment required to view it.
-      - Implemented image cropping for better images display.
-      - Developed new module - agricultural enterprises with map.
+      - Implemented image cropping for better images' display.
+      - Added convenient way to pick the location of settlements and enterprises.
+      - >
+        Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
+        better UX and page loading).
+      - Implemented moderation for some site's objects.
+      - Limited access to some site's functionality using custom permissions.
+      - Added notifications (via email and push) for better UX.
+      - Shared some functionality between backend and frontend parts of the site.
+    results:
+      - New site was released in may of 2016.
+      - Traffic and sales were increased.
+      - The site became more comfortable to view because of a new UI and responsive design.
+      - >
+        Registration and authentication became more user friendly because of adding social auth and extending profile's
+        functionality.
+      - Managing content is faster and more comfortable for customer now.
+      - The site became more secure, pages are loaded faster.
     achievements:
-      - Learned Python basics.
-      - Learned Django basics.
-      - Improved skills of configuring VPS from scratch.
+      - Programming in Python and Django.
+      - Migration of site and data.
+      - Configuring VPS from scratch.
+      - Setup of production environment for Django site.
   fora:
     company: Baza MTO, LLC
     position: Web programmer
@@ -38,6 +83,7 @@ work:
       FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many shops across
       Kazakhstan. Backend programming in Yii 1 and Yii 2 PHP frameworks. Frontend programming and some work with layout
       using JavaScript, jQuery, AngularJS, Bootstrap 3.
+    tasks:
     highlights:
       - >
         Worked on support and improvement of main public company site - fora.kz (e-commerce). It was built with
@@ -50,6 +96,7 @@ work:
       - >
         Worked on some other internal private projects to automate and optimize work of employees inside the company
         (guarantee and repair service, advertising, etc.).
+    results:
     achievements:
       - >
         Reached completely new level in work with PHP - learned OOP, MVC, some design patterns, frameworks Yii 1 and
@@ -80,6 +127,7 @@ work:
     summary: >
       INSY company is website developing company based in Petropavl, Kazakhstan. Work on company projects in PHP based
       CMS (UMI.CMS and 1C-Bitrix).
+    tasks:
     highlights:
       - Working with layout.
       - Programming (including non-standard functionality) using CMS API.
@@ -92,6 +140,7 @@ work:
       - Basic SEO and SMM.
       - Integration of payment systems - VISA, QIWI, KASSA 24.
       - Work on internal company CRM - completion of existing modules and development of new ones.
+    results:
     achievements:
       - Working with layout skills (HTML, CSS) and programming (PHP, JavaScript, JQuery) were considerably improved.
       - SQL and MySQL knowledge was improved.
@@ -109,6 +158,7 @@ work:
     summary: >
       Bars Stroy company is construction materials seller. Has some branches across Kazakhstan. Improvement and support
       of existing main company site based on UMI.CMS (PHP).
+    tasks:
     highlights:
       - Working with layout.
       - Programming - fixing bugs, development of new functionality.
@@ -121,6 +171,7 @@ work:
       - SMM.
       - Clients support in social networks.
       - Rewriting, copywriting.
+    results:
     achievements:
       - Improved knowledge of HTML, CSS, PHP, JavaScript, jQuery.
       - Have got good experience with UMI.CMS.
