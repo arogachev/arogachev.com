@@ -35,6 +35,7 @@ work:
       - JavaScript
       - jQuery
       - HTML
+      - Bootstrap
       - Sass
       - Gulp
       - Capistrano
@@ -54,7 +55,7 @@ work:
       - Added convenient way to pick the location of settlements and enterprises.
       - >
         Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
-        better UX and page loading).
+        better UX and page loading) with filter.
       - Implemented moderation for some site's objects.
       - Limited access to some site's functionality using custom permissions.
       - Added notifications (via email and push) for better UX.
@@ -66,7 +67,7 @@ work:
       - >
         Registration and authentication became more user friendly because of adding social auth and extending profile's
         functionality.
-      - Managing content is faster and more comfortable for customer now.
+      - Managing content became faster and more comfortable.
       - The site became more secure, pages are loaded faster.
     achievements:
       - Programming in Python and Django.
@@ -80,43 +81,110 @@ work:
     start_date: 2013-12-23
     end_date: 2016-04-17
     summary: >
-      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many shops across
-      Kazakhstan. Backend programming in Yii 1 and Yii 2 PHP frameworks. Frontend programming and some work with layout
-      using JavaScript, jQuery, AngularJS, Bootstrap 3.
+      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many branches across the
+      country. Backend programming in Yii 1 and Yii 2 PHP frameworks. Frontend programming and some work with layout
+      using JavaScript, jQuery, AngularJS, Bootstrap 2 and 3.
+    technologies:
+      - PHP
+      - Yii
+      - Silex
+      - PHPUnit
+      - Codeception
+      - MySQL
+      - PostgreSQL
+      - Nginx
+      - Apache
+      - PHP-FPM
+      - memcached
+      - Redis
+      - RabbitMQ
+      - Ubuntu
+      - Debian
+      - JavaScript
+      - jQuery
+      - AngularJS
+      - HTML
+      - CSS
+      - Bootstrap
+      - Sass
+      - Grunt
+      - Deployer
+      - Jira
     tasks:
-    highlights:
       - >
-        Worked on support and improvement of main public company site - fora.kz (e-commerce). It was built with
-        Yii 1.1, not it's rewritten in Yii 2.
-      - Worked on public company job service - job.fora.kz (development from scratch, support). Built with Yii 2.
+        Support and improvement of main public company site - fora.kz (e-commerce). It was built with Yii 1, then was
+        rewritten in Yii 2 (upgrade to newer version was fully completed only after my leaving). API part was written
+        using Silex.
+      - Work on public company job service - job.fora.kz (development from scratch, support). Built with Yii 2.
       - >
-        Worked on internal private ERP system - development from scratch according to company specific and needs.
-        Built with Yii 2 and PostgreSQL. Modules development and support. Currently system is introduced and required
+        Work on internal ERP system - development from scratch according to company specifics and needs. Built with Yii
+        2 and PostgreSQL. Modules development and support. Synchronization with 1C. System was introduced and required
         for usage for every employee.
       - >
-        Worked on some other internal private projects to automate and optimize work of employees inside the company
-        (guarantee and repair service, advertising, etc.).
+        Work on other internal projects intended to automate and optimize work of employees inside the company
+        (including guarantee and repair service, advertising).
+      - Writing wiki documentation and tutorials for employees about how to use company's internal web services.
+      - Consulting of employees about problems and usage of company's internal web services.
+      - Participating in testing and choosing candidates for web developer position.
+      - Teach and control new junior developers.
+      - Rewriting legacy code, upgrading to newer versions of used technologies.
+    highlights:
+      - >
+        Developed "Testing" module for ERP system which was intented to periodically check professional suitability and
+        knowledge of employees from different departments. It can handle pretty complex types of tests, filling data is
+        possible with either easy-to-use GUI (AngularJS based) or importing Excel file using yii2-excel extension which
+        I developed during work on this module. Test passing also involves a lot of JavaScript for better UX. Detailed
+        statistics is avalable for inspectors.
+      - >
+        Implemented subordination graph for ERP system to be able to get each employee's chiefs and subordinates based
+        on data in 1C. The structure couldn't be presented as tree (employee could have multiple chiefs, relations were
+        set using different factors - departments, geographical location, etc.). This graph then was integrated into
+        permission system to regulate access of different employees to specific parts of the application.
+      - Implemented "Procedural Tasks" module for ERP system for setting and tracking periodical tasks for employees.
+      - >
+        Implemented deferred tasks functionality to run tasks for specific employye(s) at specific date and time. Such
+        tasks include setting of auto remarks and sending notifications. Used Redis and Supervisor. This took off a lot
+        of additional load from the server (cron was used before) and tasks began to run more precisely and in due time.
+      - >
+        Created component for building complex forms (multiple related formsets with dynamic number of additional forms
+        in it) and used it in few projects.
+      - Developed model life cycle component, used it mostly in guarantee and repair service project.
+      - >
+        Implemented algorithm of calculating business days in given date range and used it for statistics in fora.kz
+        site.
+      - Automated deploy of the projects using Deployer.
     results:
+      - fora.kz helped to increase sales and company income in certain periods of time.
+      - With appearing of job.fora.kz the number of sent resume was increased.
+      - >
+        With distribution of internal projects many processes inside of the company was optimized and work of employees
+        became more automated.
+      - >
+        After adding tracking of working hours and adding remarks system in ERP (which affects salary) working
+        discipline became better, number of cases of coming late was reduced. Encouragements system helped employees to
+        be more motivated.
+      - >
+        After creating subordination graph and presenting new permissions system in ERP some flaws were found in company
+        structure and the structure was redesigned to be more optimal.
+      - ERP helped people to stay more informed, better know and communicate with each other (especially with branches).
     achievements:
       - >
         Reached completely new level in work with PHP - learned OOP, MVC, some design patterns, frameworks Yii 1 and
-        Yii 2, PHPDoc, PSR, development on the latest versions (5.6), with usage of its features.
-      - Learned and started to use Git VCS.
+        Yii 2, PHPDoc, PSR. Development on the latest versions at that moment (5.6), with usage of their features.
       - >
-        Improved working with layout skills, started to use SASS, CSS frameworks - Bootstrap 2 и 3, Grunt for building
+        Improved working with layout skills, started to use Sass, CSS frameworks - Bootstrap 2 и 3, Grunt for building
         project assets.
-      - Usage of JIRA tracking system.
+      - Improved JavaScript and jQuery skills, used AngularJS and some libraries for solving certain tasks.
       - >
-        Improved JavaScript and jQuery skills, used AngularJS and template engines (Handlebars.js) for solving some
-        tasks.
-      - Started to use more convenient local development tools, such as Vagrant and Puppet (with PuPHPet).
-      - Have got Debian and Ubuntu OS administration skills.
-      - Started to use package managers, such as Composer, Bower, NPM.
-      - Have faced with PostgreSQL RDBMS, used its some unique features in developed projects.
-      - Improved Nginx and Apache web servers configuring skills.
-      - Have got basic testing knowledge using Codeception.
-      - Developed few extensions for Yii 2.
-      - Usage of technologies, such as Redis, RabbitMQ, memcached in projects.
+        Started to use more convenient development tools intended to ease setup and work in development environment,
+        such as Vagrant and Puppet (with PuPHPet).
+      - Started to use Git and GitHub.
+      - Usage of JIRA tracking system, Agile methodology (Scrum).
+      - Have got Debian and Ubuntu OS administration skills, improved related software configuring skills.
+      - Have faced with PostgreSQL RDBMS, used some unique features of it in developed projects.
+      - Started to test written PHP code using PHPUnit and Codeception.
+      - Developed few extensions for Yii 2 and used it in company projects.
+      - Started to contribute to StackOverflow, earned "yii2" tag gold badge and became top user by "yii2" tag.
       - Usage of wide set of auxiliary libraries and components.
   insy:
     company: INSY, LLC
@@ -262,13 +330,13 @@ skills:
     keywords: [PHP, JavaScript, Ruby, Python]
   frameworks:
     name: Web frameworks
-    keywords: [Yii, Ruby on Rails, Django]
+    keywords: [Yii, Silex, Ruby on Rails, Django]
   cms:
     name: CMS
     keywords: [UMI.CMS, 1C-Bitrix]
   frontend:
     name: Frontend
-    keywords: [HTML, CSS, SASS, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
+    keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
   db:
     name: Databases
     keywords: [MySQL, PostgreSQL, SQLite, Redis]
