@@ -20,8 +20,8 @@ work:
     summary: >
       Informational and analytical resource about agriculture in Kazakhstan. The customer already had site written in
       Joomla, but was not satisfied with its work and support. Planned ideas and improvements would be hard to
-      implement using Joomla. Because of that we decided to completely rewrite it using Django and PostgreSQL and made
-      improvements after that.
+      implement using Joomla. Because of that the decision was taken to completely rewrite it using Django and
+      PostgreSQL and make improvements after that.
     technologies:
       - Python
       - Django
