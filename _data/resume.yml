@@ -40,10 +40,10 @@ work:
       - Gulp
       - Capistrano
     tasks:
-      - Full rewriting of existing company site based on Joomla in Django from scratch.
+      - Full rewriting of the existing company site based on Joomla in Django from scratch.
       - Changing database from MySQL to PostgreSQL and migrating of all existing data.
-      - Switching from shared hosting to VPS, setup and use different technology stack.
-      - Integration of new design and layout based on Bootstrap 3.
+      - Switching from shared hosting to VPS, setup of different technology stack.
+      - Integration of new graphic design and layout based on Bootstrap 3.
       - Fixing new layout bugs, adding missing layout elements.
       - Improving existing functionality (including "News" module).
       - Developing new functionality (including "Agrarian map" and "Trading platform" modules).
@@ -51,7 +51,7 @@ work:
       - Switching from HTTP to HTTPS.
       - Launch of the new site and further support of it.
     highlights:
-      - Implemented image cropping for better images' display.
+      - Implemented image cropping for news for better images' display.
       - Added convenient way to pick the location of settlements and enterprises.
       - >
         Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
@@ -170,7 +170,7 @@ work:
     achievements:
       - >
         Reached completely new level in work with PHP - learned OOP, MVC, some design patterns, frameworks Yii 1 and
-        Yii 2, PHPDoc, PSR. Development on the latest versions at that moment (5.6), with usage of their features.
+        Yii 2, PHPDoc, PSR. Development on the latest versions at that time (5.6), with usage of their features.
       - >
         Improved working with layout skills, started to use Sass, CSS frameworks - Bootstrap 2 и 3, Grunt for building
         project assets.
@@ -179,7 +179,7 @@ work:
         Started to use more convenient development tools intended to ease setup and work in development environment,
         such as Vagrant and Puppet (with PuPHPet).
       - Started to use Git and GitHub.
-      - Usage of JIRA tracking system, Agile methodology (Scrum).
+      - Usage of Jira tracking system, Agile methodology (Scrum).
       - Have got Debian and Ubuntu OS administration skills, improved related software configuring skills.
       - Have faced with PostgreSQL RDBMS, used some unique features of it in developed projects.
       - Started to test written PHP code using PHPUnit and Codeception.
@@ -212,7 +212,7 @@ work:
       - Participating in prototyping of graphic design and UI.
       - Minor graphic design fixes.
       - Programming (including non-standard functionality) using PHP and CMS API, also JavaScript and jQuery.
-      - Support of existing company projects.
+      - Support of the existing company projects.
       - Work on internal company's CRM - improving existing modules and developing new ones.
       - Writing wiki documentation for internal usage.
       - Content management, rewriting, copywriting, editing product images.
@@ -220,16 +220,18 @@ work:
       - Communication with the clients.
       - Helping new junior developers.
     highlights:
-      - Created miltiple currency plugin supporting synchronization with current currency rate.
+      - Created miltiple currency plugin supporting synchronization with actual currency rate.
       - >
-        Implemented catalog filter component with support for complex search combinations, different types of inputs,
-        easy layout integration.
+        Implemented catalog filter component with support for complex search combinations, different types of inputs
+        (according to CMS data types), easy layout integration.
       - Implemented custom integration with 1C for some sites.
-      - Filled products catalog for one of the projects - mchip.kz (about 2000 products).
+      - Filled products catalog completely for one of the projects - mchip.kz (about 2000 products).
       - Integration of payment systems (VISA, QIWI, KASSA 24) and delivery services (Exline).
       - Added notifications in CRM (including sending messages to XMPP).
       - Created mail module in CRM to optimize work with emails and better collaborative actions.
-      - Provided limited access to CRM for customers to be able to view some information about tasks, their state.
+      - >
+        Provided limited access to CRM for customers to be able to view some information (including tasks and their
+        state).
     results:
       - Released some projects that help customers to promote and expand their business.
       - Optimized communication with clients and internal company work processes with CRM.
@@ -252,7 +254,7 @@ work:
     end_date: 2012-11-01
     summary: >
       Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan. Improvement and
-      support of existing main company site based on UMI.CMS (PHP).
+      support of the existing main company site based on UMI.CMS (PHP).
     technologies:
       - PHP
       - UMI.CMS
@@ -270,7 +272,7 @@ work:
       - Integration with 1C (products, prices, availability, etc.).
       - Content management.
       - Rewriting, copywriting.
-      - Filling of products catalog.
+      - Filling of the products catalog.
       - Photographing of the products and editing of the taken photos.
       - Basic SEO.
       - SMM.
@@ -281,7 +283,7 @@ work:
       - Filled almost all products for retail sale (filled products count was about 7000).
       - Fixed many bugs left since site creation.
       - Developed a job module with actual vacancies list and sending resume feature.
-      - Wrote company history article (interviewed administration, collected data from acrhives).
+      - Wrote company history article (interviewed administration, collected data from archives).
       - >
         Collected and edited photos of key employees (took missing photos) together with info about them, then filled
         "Our employees" page which reflected company structure including different departments.
