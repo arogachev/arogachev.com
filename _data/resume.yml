@@ -17,17 +17,63 @@ work:
     website: https://margin.kz/
     start_date: 2016-04-06
     end_date:
-    summary: News and analytics about agriculture in Kazakhstan. Developing with Django and PostgreSQL
+    summary: >
+      Informational and analytical resource about agriculture in Kazakhstan. The customer already had site written in
+      Joomla, but was not satisfied with its work and support. Planned ideas and improvements would be hard to
+      implement using Joomla. Because of that the decision was taken to completely rewrite it using Django and
+      PostgreSQL and make improvements after that.
+    technologies:
+      - Python
+      - Django
+      - PHP
+      - Joomla
+      - MySQL
+      - PostgreSQL
+      - Nginx
+      - Gunicorn
+      - Ubuntu
+      - JavaScript
+      - jQuery
+      - HTML
+      - Bootstrap
+      - Sass
+      - Gulp
+      - Capistrano
+    tasks:
+      - Full rewriting of the existing company site based on Joomla in Django from scratch.
+      - Changing database from MySQL to PostgreSQL and migrating of all existing data.
+      - Switching from shared hosting to VPS, setup of different technology stack.
+      - Integration of new graphic design and layout based on Bootstrap 3.
+      - Fixing new layout bugs, adding missing layout elements.
+      - Improving existing functionality (including "News" module).
+      - Developing new functionality (including "Agrarian map" and "Trading platform" modules).
+      - Basic SEO related work. Improving urls and redirects setup.
+      - Switching from HTTP to HTTPS.
+      - Launch of the new site and further support of it.
     highlights:
-      - Rewrote existing company site from Joomla to Django.
-      - Fixed bugs, improved functionality, migrated all existing data.
-      - Some content is now closed and payment required to view it.
-      - Implemented image cropping for better images display.
-      - Developed new module - agricultural enterprises with map.
+      - Implemented image cropping for news for better images' display.
+      - Added convenient way to pick the location of settlements and enterprises.
+      - >
+        Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
+        better UX and page loading) with filter.
+      - Implemented moderation for some site's objects.
+      - Limited access to some site's functionality using custom permissions.
+      - Added notifications (via email and push) for better UX.
+      - Shared some functionality between backend and frontend parts of the site.
+    results:
+      - New site was released in may of 2016.
+      - Traffic and sales were increased.
+      - The site became more comfortable to view because of a new UI and responsive design.
+      - >
+        Registration and authentication became more user friendly because of adding social auth and extending profile's
+        functionality.
+      - Managing content became faster and more comfortable.
+      - The site became more secure, pages started to load faster.
     achievements:
-      - Learned Python basics.
-      - Learned Django basics.
-      - Improved skills of configuring VPS from scratch.
+      - Programming in Python and Django.
+      - Migration of site and data.
+      - Configuring VPS from scratch.
+      - Setup of production environment for Django site.
   fora:
     company: Baza MTO, LLC
     position: Web programmer
@@ -35,41 +81,110 @@ work:
     start_date: 2013-12-23
     end_date: 2016-04-17
     summary: >
-      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many shops across
-      Kazakhstan. Backend programming in Yii 1 and Yii 2 PHP frameworks. Frontend programming and some work with layout
-      using JavaScript, jQuery, AngularJS, Bootstrap 3.
-    highlights:
+      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many branches across the
+      country. Backend programming in Yii 1 and Yii 2 PHP frameworks. Frontend programming and some work with layout
+      using JavaScript, jQuery, AngularJS, Bootstrap 2 and 3.
+    technologies:
+      - PHP
+      - Yii
+      - Silex
+      - PHPUnit
+      - Codeception
+      - MySQL
+      - PostgreSQL
+      - Nginx
+      - Apache
+      - PHP-FPM
+      - memcached
+      - Redis
+      - RabbitMQ
+      - Ubuntu
+      - Debian
+      - JavaScript
+      - jQuery
+      - AngularJS
+      - HTML
+      - CSS
+      - Bootstrap
+      - Sass
+      - Grunt
+      - Deployer
+      - Jira
+    tasks:
       - >
-        Worked on support and improvement of main public company site - fora.kz (e-commerce). It was built with
-        Yii 1.1, not it's rewritten in Yii 2.
-      - Worked on public company job service - job.fora.kz (development from scratch, support). Built with Yii 2.
+        Support and improvement of main public company site - fora.kz (e-commerce). It was built with Yii 1, then was
+        rewritten in Yii 2 (upgrade to newer version was fully completed only after my leaving). API part was written
+        using Silex.
+      - Work on public company job service - job.fora.kz (development from scratch, support). Built with Yii 2.
       - >
-        Worked on internal private ERP system - development from scratch according to company specific and needs.
-        Built with Yii 2 and PostgreSQL. Modules development and support. Currently system is introduced and required
+        Work on internal ERP system - development from scratch according to company specifics and needs. Built with Yii
+        2 and PostgreSQL. Modules development and support. Synchronization with 1C. System was introduced and required
         for usage for every employee.
       - >
-        Worked on some other internal private projects to automate and optimize work of employees inside the company
-        (guarantee and repair service, advertising, etc.).
+        Work on other internal projects intended to automate and optimize work of employees inside the company
+        (including guarantee and repair service, advertising).
+      - Writing wiki documentation and tutorials for employees about how to use company's internal web services.
+      - Consulting of employees about problems and usage of company's internal web services.
+      - Participating in testing and choosing candidates for web developer position.
+      - Teach and control new junior developers.
+      - Rewriting legacy code, upgrading to newer versions of used technologies.
+    highlights:
+      - >
+        Developed "Testing" module for ERP system which was intented to periodically check professional suitability and
+        knowledge of employees from different departments. It can handle pretty complex types of tests, filling data is
+        possible with either easy-to-use GUI (AngularJS based) or importing Excel file using yii2-excel extension which
+        I developed during work on this module. Test passing also involves a lot of JavaScript for better UX. Detailed
+        statistics is avalable for inspectors.
+      - >
+        Implemented subordination graph for ERP system to be able to get each employee's chiefs and subordinates based
+        on data in 1C. The structure couldn't be presented as tree (employee could have multiple chiefs, relations were
+        set using different factors - departments, geographical location, etc.). This graph then was integrated into
+        permission system to regulate access of different employees to specific parts of the application.
+      - Implemented "Procedural Tasks" module for ERP system for setting and tracking periodical tasks for employees.
+      - >
+        Implemented deferred tasks functionality to run tasks for specific employye(s) at specific date and time. Such
+        tasks include setting of auto remarks and sending notifications. Used Redis and Supervisor. This took off a lot
+        of additional load from the server (cron was used before) and tasks began to run more precisely and in due time.
+      - >
+        Created component for building complex forms (multiple related formsets with dynamic number of additional forms
+        in it) and used it in few projects.
+      - Developed model life cycle component, used it mostly in guarantee and repair service project.
+      - >
+        Implemented algorithm of calculating business days in given date range and used it for statistics in fora.kz
+        site.
+      - Automated deploy of the projects using Deployer.
+    results:
+      - fora.kz helped to increase sales and company income in certain periods of time.
+      - With appearing of job.fora.kz the number of sent resume was increased.
+      - >
+        With distribution of internal projects many processes inside of the company was optimized and work of employees
+        became more automated.
+      - >
+        After adding tracking of working hours and adding remarks system in ERP (which affects salary) working
+        discipline became better, number of cases of coming late was reduced. Encouragements system helped employees to
+        be more motivated.
+      - >
+        After creating subordination graph and presenting new permissions system in ERP some flaws were found in company
+        structure and the structure was redesigned to be more optimal.
+      - ERP helped people to stay more informed, better know and communicate with each other (especially with branches).
     achievements:
       - >
         Reached completely new level in work with PHP - learned OOP, MVC, some design patterns, frameworks Yii 1 and
-        Yii 2, PHPDoc, PSR, development on the latest versions (5.6), with usage of its features.
-      - Learned and started to use Git VCS.
+        Yii 2, PHPDoc, PSR. Development on the latest versions at that time (5.6), with usage of their features.
       - >
-        Improved working with layout skills, started to use SASS, CSS frameworks - Bootstrap 2 и 3, Grunt for building
+        Improved working with layout skills, started to use Sass, CSS frameworks - Bootstrap 2 и 3, Grunt for building
         project assets.
-      - Usage of JIRA tracking system.
+      - Improved JavaScript and jQuery skills, used AngularJS and some libraries for solving certain tasks.
       - >
-        Improved JavaScript and jQuery skills, used AngularJS and template engines (Handlebars.js) for solving some
-        tasks.
-      - Started to use more convenient local development tools, such as Vagrant and Puppet (with PuPHPet).
-      - Have got Debian and Ubuntu OS administration skills.
-      - Started to use package managers, such as Composer, Bower, NPM.
-      - Have faced with PostgreSQL RDBMS, used its some unique features in developed projects.
-      - Improved Nginx and Apache web servers configuring skills.
-      - Have got basic testing knowledge using Codeception.
-      - Developed few extensions for Yii 2.
-      - Usage of technologies, such as Redis, RabbitMQ, memcached in projects.
+        Started to use more convenient development tools intended to ease setup and work in development environment,
+        such as Vagrant and Puppet (with PuPHPet).
+      - Started to use Git and GitHub.
+      - Usage of Jira tracking system, Agile methodology (Scrum).
+      - Have got Debian and Ubuntu OS administration skills, improved related software configuring skills.
+      - Have faced with PostgreSQL RDBMS, used some unique features of it in developed projects.
+      - Started to test written PHP code using PHPUnit and Codeception.
+      - Developed few extensions for Yii 2 and used it in company projects.
+      - Started to contribute to StackOverflow, earned "yii2" tag gold badge and became top user by "yii2" tag.
       - Usage of wide set of auxiliary libraries and components.
   insy:
     company: INSY, LLC
@@ -78,28 +193,59 @@ work:
     start_date: 2012-11-01
     end_date: 2013-11-15
     summary: >
-      INSY company is website developing company based in Petropavl, Kazakhstan. Work on company projects in PHP based
-      CMS (UMI.CMS and 1C-Bitrix).
-    highlights:
+      INSY company is a website developing company based in Petropavl, Kazakhstan. Services also include mobile
+      applications development, creation of logos and corporate style. Work on company projects in PHP based CMS
+      (UMI.CMS and 1C-Bitrix). Full company portfolio can be found here - http://insy.kz/portfolio/.
+    technologies:
+      - PHP
+      - UMI.CMS
+      - 1C-Bitrix
+      - MySQL
+      - Apache
+      - CentOS
+      - JavaScript
+      - jQuery
+      - HTML
+      - CSS
+    tasks:
       - Working with layout.
-      - Programming (including non-standard functionality) using CMS API.
-      - Minor design fixes.
-      - Integration between 1C and sites, adding related non-standard functionality to the sites.
-      - Filling products catalog on one of the projects - http://mchip.kz/ (about 2000 products).
-      - Editing product images.
-      - Content management.
-      - Management work with clients.
+      - Participating in prototyping of graphic design and UI.
+      - Minor graphic design fixes.
+      - Programming (including non-standard functionality) using PHP and CMS API, also JavaScript and jQuery.
+      - Support of the existing company projects.
+      - Work on internal company's CRM - improving existing modules and developing new ones.
+      - Writing wiki documentation for internal usage.
+      - Content management, rewriting, copywriting, editing product images.
       - Basic SEO and SMM.
-      - Integration of payment systems - VISA, QIWI, KASSA 24.
-      - Work on internal company CRM - completion of existing modules and development of new ones.
+      - Communication with the clients.
+      - Helping new junior developers.
+    highlights:
+      - Created miltiple currency plugin supporting synchronization with actual currency rate.
+      - >
+        Implemented catalog filter component with support for complex search combinations, different types of inputs
+        (according to CMS data types), easy layout integration.
+      - Implemented custom integration with 1C for some sites.
+      - Filled products catalog completely for one of the projects - mchip.kz (about 2000 products).
+      - Integration of payment systems (VISA, QIWI, KASSA 24) and delivery services (Exline).
+      - Added notifications in CRM (including sending messages to XMPP).
+      - Created mail module in CRM to optimize work with emails and better collaborative actions.
+      - >
+        Provided limited access to CRM for customers to be able to view some information (including tasks and their
+        state).
+    results:
+      - Released some projects that help customers to promote and expand their business.
+      - Optimized communication with clients and internal company work processes with CRM.
+      - More orders from different cities.
+      - Rating among the other certified companies working with these CMS was increased.
     achievements:
       - Working with layout skills (HTML, CSS) and programming (PHP, JavaScript, JQuery) were considerably improved.
+      - Learned UMI.CMS and 1C-Bitrix, used it to develop non-standard functionality.
       - SQL and MySQL knowledge was improved.
-      - Have mastered XSLT template engine.
-      - Development of non-standard functionality in UMI.CMS and 1C-Bitrix.
-      - Active participation in company life, initiative manifestation.
-      - Have got basic skills with work with CentOS.
-      - Started to use VCS - HG (Mercurial).
+      - Have mastered XSLT.
+      - Have got basic skills of administrating CentOS and configuring related software.
+      - Started to use VCS - Hg (Mercurial).
+      - Active participation in company's life, initiative manifestation.
+      - Improved skills of communication with customers.
   bars_stroy:
     company: BARS-NORD, LLC
     position: Web technologies specialist
@@ -107,20 +253,49 @@ work:
     start_date: 2011-08-15
     end_date: 2012-11-01
     summary: >
-      Bars Stroy company is construction materials seller. Has some branches across Kazakhstan. Improvement and support
-      of existing main company site based on UMI.CMS (PHP).
-    highlights:
+      Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan. Improvement and
+      support of the existing main company site based on UMI.CMS (PHP).
+    technologies:
+      - PHP
+      - UMI.CMS
+      - MySQL
+      - JavaScript
+      - jQuery
+      - HTML
+      - CSS
+    tasks:
       - Working with layout.
-      - Programming - fixing bugs, development of new functionality.
-      - Minor design fixes.
+      - Minor graphic design fixes.
+      - >
+        Programming - fixing bugs, development of new functionality using PHP and UMI.CMS API, also JavaScript and
+        jQuery.
+      - Integration with 1C (products, prices, availability, etc.).
       - Content management.
-      - 1C integration.
-      - Filling products catalog - almost all products (filled products count - about 7000).
-      - Products photographing and photos editing.
+      - Rewriting, copywriting.
+      - Filling of the products catalog.
+      - Photographing of the products and editing of the taken photos.
       - Basic SEO.
       - SMM.
+      - Corporate mail setup for employees.
       - Clients support in social networks.
-      - Rewriting, copywriting.
+    highlights:
+      - Integrated products catalog with 1C.
+      - Filled almost all products for retail sale (filled products count was about 7000).
+      - Fixed many bugs left since site creation.
+      - Developed a job module with actual vacancies list and sending resume feature.
+      - Wrote company history article (interviewed administration, collected data from archives).
+      - >
+        Collected and edited photos of key employees (took missing photos) together with info about them, then filled
+        "Our employees" page which reflected company structure including different departments.
+      - Wrote some news, photos were taken where the events took place.
+    results:
+      - At that time site was the best among the rival companies in Petropavl and helped to stand out from them.
+      - Filled products catalog was useful for both customers and company managers and sellers.
+      - >
+        Filled products catalog in the future became a solid base for e-commerce (after my leaving, because at the
+        moment of my work administration was not ready to create it yet).
+      - Automation of HR department's work, number of candidates was increased.
+      - Site appeared in top 10 in Google and Yandex search at certain queries.
     achievements:
       - Improved knowledge of HTML, CSS, PHP, JavaScript, jQuery.
       - Have got good experience with UMI.CMS.
@@ -129,11 +304,8 @@ work:
         limited to programming only: editing images skills, SEO knowledge were improved, learned a lot of new
         information about construction materials.
       - >
-        Filled products catalog almost alone, in the future it became a base for e-commerce (after my leaving, because
-        at the moment of my work administration was not ready to create it yet.
-      - >
         Have got communication experience with people of different positions and from different departments (including
-        meetings, etc.) and clients during answering and consultation through messengers and social networks.
+        meetings, etc.) and clients during answering and consultations through messengers and social networks.
       - Showed initiative in many questions related to site.
 volunteer:
   organization: Tatyana Nazarenko Photo Studio
@@ -211,13 +383,13 @@ skills:
     keywords: [PHP, JavaScript, Ruby, Python]
   frameworks:
     name: Web frameworks
-    keywords: [Yii, Ruby on Rails, Django]
+    keywords: [Yii, Silex, Ruby on Rails, Django]
   cms:
     name: CMS
     keywords: [UMI.CMS, 1C-Bitrix]
   frontend:
     name: Frontend
-    keywords: [HTML, CSS, SASS, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
+    keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
   db:
     name: Databases
     keywords: [MySQL, PostgreSQL, SQLite, Redis]
