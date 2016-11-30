@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% contentfor extrahead %}
+  <script src="/assets/js/portfolio.js"></script>
+{% endcontentfor %}
+
+{% assign project = page.project %}
+
+<div class="row">
+  <div class="col-lg-3">
+    <ul id="screenshot-menu" class="nav nav-pills nav-stacked">
+      {% for screenshot in project.screenshots %}
+        <li class="screenshot-menu-item{% if forloop.first %} active{% endif %}">
+          <a class="screenshot-menu-item"
+             href="#"
+             data-src="/assets/images/portfolio/projects/{{ project.name }}/{{ screenshot }}.png"
+             data-title="{{ screenshot | humanize }}">{{ screenshot | humanize }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div id="screenshot" class="col-lg-9">
+    <a href="/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots[0] }}.png">
+      <img class="img-responsive"
+           src="/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots[0] }}.png"
+           alt="{{ project.screenshots[0] | humanize }}"
+           title="{{ project.screenshots[0] | humanize }}">
+    </a>
+  </div>
+</div>

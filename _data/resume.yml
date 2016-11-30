@@ -307,6 +307,42 @@ work:
         Have got communication experience with people of different positions and from different departments (including
         meetings, etc.) and clients during answering and consultations through messengers and social networks.
       - Showed initiative in many questions related to site.
+# Portfolio projects
+projects:
+  # margin.kz
+  - name: margin
+    title: Zernovye & Maslichnye. Kazakhstan
+    site: https://margin.kz/
+    description: Informational and analytical resource about agriculture in Kazakhstan.
+    screenshots: [home, news, agrarian_map, trading_platform, adding_enterprise]
+  # dostawka.kz
+  - name: dostawka
+    title: dostawka.kz
+    site: http://dostawka.kz/
+    description: Food's order and delivery service based in Petropavl, Kazakhstan.
+    screenshots: [home, products, product, cart, order, contacts]
+  # k1mma.kz
+  - name: k1mma
+    title: MMA Kenturion
+    site: http://k1mma.kz/
+    description: Multibrand online store offering clothes and equipment for MMA. Has 2 offices in Petropavl and Astana.
+    screenshots: [home, menu, about_company, news, products, product, cart, order, contacts]
+  # fintechn.ru
+  - name: ftconsult
+    title: FT-Consult
+    site: http://fintechn.ru/
+    description: >
+      "FT-Consult" is a russian company that specializes on supply, introduction and maintenance of information
+      management systems. Has 2 offices in Novosibirsk and Novokuznetsk.
+    screenshots: [home, menu, service, product, product_details, solutions, clients, contacts, presentation_request]
+  # 3zvonka.kz
+  - name: 3zvonka
+    title: 3Zvon'ka
+    site: http://3zvonka.kz/
+    description: >
+      Digital devices online store based in Petropavl, Kazakhstan. Products range includes smartphones, tablets,
+      accessories.
+    screenshots: [home, products_menu, news, products, adding_to_cart, product, cart, order]
 volunteer:
   organization: Tatyana Nazarenko Photo Studio
   position: Web programmer

@@ -1,0 +1,37 @@
+---
+layout: default
+title: Portfolio
+permalink: /portfolio/
+---
+
+{% assign projects = page.projects %}
+
+{% for group in projects %}
+  <div class="row">
+    {% for project in group %}
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <a href="/portfolio/projects/{{ project.name }}/">
+            <img src="/assets/images/portfolio/projects/{{ project.name }}/main.png"
+                 alt="{{ project.title }}"
+                 title="{{ project.title }}">
+          </a>
+          <div class="caption">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <p>
+              <a href="/portfolio/projects/{{ project.name }}/" class="btn btn-primary" aria-label="Left Align">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                View details
+              </a>
+              <a href="{{ project.site }}" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                View site
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}
