@@ -323,6 +323,15 @@ projects:
     year: 2014 - 2016
     description: Separate service for jobs in Fora company.
     screenshots: [home, vacancies, vacancy, career, resume_constructor]
+  # fora.kz
+  - name: fora
+    title: Fora
+    site: https://fora.kz/
+    year: 2014 - 2016
+    description: >
+      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many branches across the
+      country.
+    screenshots: [home]
   # tnazarenko.com
   - name: tnazarenko
     title: Tatyana Nazarenko Photo Studio
