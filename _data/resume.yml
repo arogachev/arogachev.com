@@ -316,6 +316,13 @@ projects:
     year: 2016
     description: Informational and analytical resource about agriculture in Kazakhstan.
     screenshots: [home, news, agrarian_map, trading_platform, adding_enterprise]
+  # job.fora.kz
+  - name: jobfora
+    title: Jobs in Fora company
+    site: http://job.fora.kz/
+    year: 2014 - 2016
+    description: Separate service for jobs in Fora company.
+    screenshots: [home, vacancies, vacancy, career, resume_constructor]
   # tnazarenko.com
   - name: tnazarenko
     title: Tatyana Nazarenko Photo Studio
