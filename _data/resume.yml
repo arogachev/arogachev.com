@@ -330,14 +330,6 @@ projects:
     year: 2014 - 2016
     description: Separate service for jobs in Fora company.
     screenshots: [home, vacancies, vacancy, career, resume_constructor]
-  # tests-psychology.com
-  - name: testspsychology
-    title: Psychological tests online
-    site: http://tests-psychology.com/
-    year: 2014 - 2016
-    description: >
-      Service providing a set of different psychological tests for passing online with automatic calculation of results.
-    screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
   # fora.kz
   - name: fora
     title: Fora
@@ -379,6 +371,14 @@ projects:
       Digital devices online store based in Petropavl, Kazakhstan. Products range includes smartphones, tablets,
       accessories.
     screenshots: [home, products_menu, news, products, adding_to_cart, product, cart, order]
+  # tests-psychology.com
+  - name: testspsychology
+    title: Psychological tests online
+    site: http://tests-psychology.com/
+    year: 2014 - 2016
+    description: >
+      Service providing a set of different psychological tests for passing online with automatic calculation of results.
+    screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
   # mchip.kz
   - name: mchip
     title: Chip
