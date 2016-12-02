@@ -316,6 +316,13 @@ projects:
     year: 2016
     description: Informational and analytical resource about agriculture in Kazakhstan.
     screenshots: [home, news, agrarian_map, trading_platform, adding_enterprise]
+  # tnazarenko.com
+  - name: tnazarenko
+    title: Tatyana Nazarenko Photo Studio
+    site: http://tnazarenko.com/
+    year: 2015
+    description: Personal site with portfolio.
+    screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
   # job.fora.kz
   - name: jobfora
     title: Jobs in Fora company
@@ -323,6 +330,14 @@ projects:
     year: 2014 - 2016
     description: Separate service for jobs in Fora company.
     screenshots: [home, vacancies, vacancy, career, resume_constructor]
+  # tests-psychology.com
+  - name: testspsychology
+    title: Psychological tests online
+    site: http://tests-psychology.com/
+    year: 2014 - 2016
+    description: >
+      Service providing a set of different psychological tests for passing online with automatic calculation of results.
+    screenshots: [home, menu, sign_up, tests, test, passings, saved_passings]
   # fora.kz
   - name: fora
     title: Fora
@@ -332,13 +347,6 @@ projects:
       FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many branches across the
       country.
     screenshots: [home]
-  # tnazarenko.com
-  - name: tnazarenko
-    title: Tatyana Nazarenko Photo Studio
-    site: http://tnazarenko.com/
-    year: 2015
-    description: Personal site with portfolio.
-    screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
   # dostawka.kz
   - name: dostawka
     title: dostawka.kz
