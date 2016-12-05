@@ -16,7 +16,7 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'portfolio_project.html')
       self.data['title'] = project['title']
-      self.data['permalink'] = "/portfolio/projects/#{project['name']}"
+      self.data['permalink'] = "/portfolio/projects/#{project['name']}/"
       self.data['project'] = project
     end
   end
