@@ -479,7 +479,7 @@ skills:
     keywords: [PHP, JavaScript, Ruby, Python]
   frameworks:
     name: Web frameworks
-    keywords: [Yii, Silex, Ruby on Rails, Django]
+    keywords: [Yii, Silex, Ruby on Rails, Jekyll, Django]
   cms:
     name: CMS
     keywords: [UMI.CMS, 1C-Bitrix]
