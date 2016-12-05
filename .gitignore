@@ -11,3 +11,6 @@ _site
 
 # Bower packages
 /bower_components
+
+# Main images in portfolio projects
+/assets/images/portfolio/projects/*/main.png

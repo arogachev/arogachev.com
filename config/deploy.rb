@@ -65,7 +65,26 @@ namespace :bower do
 end
 
 before 'deploy:updated', 'bower:install'
-before 'deploy:reverted', 'bower:install'
+
+namespace :assets do
+  desc 'Generate assets'
+  task :generate do
+    run_locally do
+      command = [
+        'assets_dir="$PWD/assets/images/portfolio/projects";',
+        'for f in `ls $assets_dir`;',
+        'do',
+        'cd "$assets_dir/$f";',
+        'echo "Generating assets for $f project";',
+        'convert home.png -crop 1280x1280+0+0 -resize 700x700 main.png;',
+        'done',
+      ]
+      execute command.join(' ')
+    end
+  end
+end
+
+before 'deploy:updated', 'assets:generate'
 
 # Static site generation
 
