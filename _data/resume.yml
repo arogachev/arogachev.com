@@ -307,20 +307,116 @@ work:
         Have got communication experience with people of different positions and from different departments (including
         meetings, etc.) and clients during answering and consultations through messengers and social networks.
       - Showed initiative in many questions related to site.
-volunteer:
-  organization: Tatyana Nazarenko Photo Studio
-  position: Web programmer
-  website: https://tnazarenko.com/
-  start_date: 2015-07-04
-  endDate: 2015-11-02
-  summary: >
-    Personal site with portfolio. Hosting is expired, person is not interested to develop site and fill content
-    anymore.
-  highlights:
-    - Learned Ruby basics.
-    - Learned Ruby on Rails 4 basics.
-    - Deployed project to shared hosting using Capistrano.
-    - Implemented image cropping for better photos display.
+# Portfolio projects
+projects:
+  # margin.kz
+  - name: margin
+    title: Zernovye & Maslichnye. Kazakhstan
+    site: https://margin.kz/
+    year: 2016
+    description: Informational and analytical resource about agriculture in Kazakhstan.
+    screenshots: [home, news, agrarian_map, trading_platform, adding_enterprise]
+  # corp.tests-psychology.com
+  - name: corptestspsychology
+    title: Tests-Psychology Corp
+    site: http://corp.tests-psychology.com/
+    year: 2016
+    description: Extension of tests-psychology.com providing psychological tests online for corporate clients.
+    screenshots: [home, passing, results]
+  # snb.kz
+  - name: snb
+    title: SNAB
+    site: http://snb.kz/
+    year: 2015 - 2016
+    description: Delivery of products of narrow appointment on demand.
+    screenshots: [home, products_category, products, product, request]
+  # tnazarenko.com
+  - name: tnazarenko
+    title: Tatyana Nazarenko Photo Studio
+    site: http://tnazarenko.com/
+    year: 2015
+    description: Personal site with portfolio.
+    screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
+  # job.fora.kz
+  - name: jobfora
+    title: Jobs in Fora company
+    site: http://job.fora.kz/
+    year: 2014 - 2016
+    description: Separate service for jobs in Fora company.
+    screenshots: [home, vacancies, vacancy, career, resume_constructor]
+  # fora.kz
+  - name: fora
+    title: Fora
+    site: https://fora.kz/
+    year: 2014 - 2016
+    description: >
+      FORA company is one of the largest sellers of electronic equipment in Kazakhstan. Has many branches across the
+      country.
+    screenshots: [home]
+  # dostawka.kz
+  - name: dostawka
+    title: dostawka.kz
+    site: http://dostawka.kz/
+    year: 2013
+    description: Food's order and delivery service based in Petropavl, Kazakhstan.
+    screenshots: [home, products, product, cart, order, contacts]
+  # fintechn.ru
+  - name: ftconsult
+    title: FT-Consult
+    site: http://fintechn.ru/
+    year: 2013
+    description: >
+      "FT-Consult" is a russian company that specializes on supply, introduction and maintenance of information
+      management systems. Has 2 offices in Novosibirsk and Novokuznetsk.
+    screenshots: [home, menu, service, product, product_details, solutions, clients, contacts, presentation_request]
+  # k1mma.kz
+  - name: k1mma
+    title: MMA Kenturion
+    site: http://k1mma.kz/
+    year: 2013
+    description: Multibrand online store offering clothes and equipment for MMA. Has 2 offices in Petropavl and Astana.
+    screenshots: [home, menu, about_company, news, products, product, cart, order, contacts]
+  # 3zvonka.kz
+  - name: 3zvonka
+    title: 3Zvon'ka
+    site: http://3zvonka.kz/
+    year: 2013
+    description: >
+      Digital devices online store based in Petropavl, Kazakhstan. Products range includes smartphones, tablets,
+      accessories.
+    screenshots: [home, products_menu, news, products, adding_to_cart, product, cart, order]
+  # tests-psychology.com
+  - name: testspsychology
+    title: Psychological tests online
+    site: http://tests-psychology.com/
+    year: 2013 - 2016
+    description: >
+      Service providing a set of different psychological tests for passing online with automatic calculation of results.
+    screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
+  # mchip.kz
+  - name: mchip
+    title: Chip
+    site: http://mchip.kz/
+    year: 2012 - 2013
+    description: >
+      Digital devices and office supply store based in Petropavl, Kazakhstan. Also provides service for repair and
+      service of computers and office equipment.
+    screenshots: [home, office_supply, service, menu, products, office_supply_products, product, quick_order]
+  # bars-stroy.kz
+  - name: barsstroy
+    title: Bars Stroy
+    site: https://bars-stroy.kz/
+    year: 2012 - 2013
+    description: Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan.
+    screenshots:
+      - home
+      - company_history
+      - our_employees
+      - employee
+      - products_catalog
+      - products_category
+      - products
+      - product
 education:
   higher:
     institution: North Kazakhstan State University, named for M. Kozybaev
