@@ -1,7 +1,7 @@
 {% for skills in resume.skills %}
   <div class="bs-callout bs-callout-success">
-    <h4>{{ skills[1].name }}</h4>
-    {% for keyword in skills[1].keywords %}
+    <h4>{{ skills.name }}</h4>
+    {% for keyword in skills.keywords %}
       <span class="label label-primary">{{ keyword }}</span>
     {% endfor %}
   </div>

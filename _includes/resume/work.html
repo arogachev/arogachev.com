@@ -9,9 +9,9 @@
              href="#collapse-{{ forloop.index }}"
              aria-expanded="true"
              aria-controls="collapse-{{ forloop.index }}">
-            {{ job[1].company }}
-            ({{ job[1].start_date | date: '%Y' }} -
-            {% if job[1].end_date %}{{ job[1].end_date | date: '%Y' }}{% else %}Present{% endif %})
+            {{ job.company }}
+            ({{ job.start_date | date: '%Y' }} -
+            {% if job.end_date %}{{ job.end_date | date: '%Y' }}{% else %}Present{% endif %})
           </a>
         </h4>
       </div>
@@ -22,54 +22,54 @@
         <div class="panel-body">
           <p>
             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-            {{ job[1].start_date | date: '%b. %Y' }} -
-            {% if job[1].end_date %}{{ job[1].end_date | date: '%b. %Y' }}{% else %}Present{% endif %}
-            (<b>{{ job[1].start_date | date_diff: job[1].end_date }}</b> in total)
+            {{ job.start_date | date: '%b. %Y' }} -
+            {% if job.end_date %}{{ job.end_date | date: '%b. %Y' }}{% else %}Present{% endif %}
+            (<b>{{ job.start_date | date_diff: job.end_date }}</b> in total)
           </p>
 
           <p>
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            <b>Position:</b> {{ job[1].position }}
+            <b>Position:</b> {{ job.position }}
           </p>
 
           <p>
             <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-            <b>Website:</b> <a href="{{ job[1].website }}">{{ job[1].website }}</a>
+            <b>Website:</b> <a href="{{ job.website }}">{{ job.website }}</a>
           </p>
 
-          <p>{{ job[1].summary }}</p>
+          <p>{{ job.summary }}</p>
 
           <p><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> <b>Technologies:</b></p>
           <p>
-            {% for technology in job[1].technologies %}
+            {% for technology in job.technologies %}
               <span class="label label-primary">{{ technology }}</span>
             {% endfor %}
           </p>
 
           <p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <b>Tasks:</b></p>
           <ul>
-            {% for task in job[1].tasks %}
+            {% for task in job.tasks %}
               <li>{{ task }}</li>
             {% endfor %}
           </ul>
 
           <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <b>Highlights:</b></p>
           <ul>
-            {% for highlight in job[1].highlights %}
+            {% for highlight in job.highlights %}
               <li>{{ highlight }}</li>
             {% endfor %}
           </ul>
 
           <p><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> <b>Results:</b></p>
           <ul>
-            {% for result in job[1].results %}
+            {% for result in job.results %}
               <li>{{ result }}</li>
             {% endfor %}
           </ul>
 
           <p><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> <b>Achievements:</b></p>
           <ul>
-            {% for achievement in job[1].achievements %}
+            {% for achievement in job.achievements %}
               <li>{{ achievement }}</li>
             {% endfor %}
           </ul>

@@ -11,8 +11,8 @@ basics:
     country: Kazakhstan
     region: North Kazakhstan
 work:
-  margin:
-    company: Zernovye & Maslichnye. Kazakhstan
+  # Zernovye & Maslichnye. Kazakhstan
+  - company: Zernovye & Maslichnye. Kazakhstan
     position: Web programmer
     website: https://margin.kz/
     start_date: 2016-04-06
@@ -74,8 +74,8 @@ work:
       - Migration of site and data.
       - Configuring VPS from scratch.
       - Setup of production environment for Django site.
-  fora:
-    company: Baza MTO, LLC
+  # Fora
+  - company: Baza MTO, LLC
     position: Web programmer
     website: https://fora.kz/
     start_date: 2013-12-23
@@ -186,8 +186,8 @@ work:
       - Developed few extensions for Yii 2 and used it in company projects.
       - Started to contribute to StackOverflow, earned "yii2" tag gold badge and became top user by "yii2" tag.
       - Usage of wide set of auxiliary libraries and components.
-  insy:
-    company: INSY, LLC
+  # INSY
+  - company: INSY, LLC
     position: Programmer-analyst
     website: http://insy.kz/
     start_date: 2012-11-01
@@ -246,8 +246,8 @@ work:
       - Started to use VCS - Hg (Mercurial).
       - Active participation in company's life, initiative manifestation.
       - Improved skills of communication with customers.
-  bars_stroy:
-    company: BARS-NORD, LLC
+  # Bars Stroy
+  - company: BARS-NORD, LLC
     position: Web technologies specialist
     website: http://bars-stroy.kz/
     start_date: 2011-08-15
@@ -477,54 +477,54 @@ education:
       - Mat2312 - Mathematics (Course paper)
       - PM4313 - Applied Mathematics (Course paper)
 skills:
-  programming:
-    name: Programming languages
+  # Programming
+  - name: Programming languages
     keywords: [PHP, JavaScript, Ruby, Python]
-  frameworks:
-    name: Web frameworks
+  # Frameworks
+  - name: Web frameworks
     keywords: [Yii, Silex, Ruby on Rails, Jekyll, Django]
-  cms:
-    name: CMS
+  # CMS
+  - name: CMS
     keywords: [UMI.CMS, 1C-Bitrix]
-  frontend:
-    name: Frontend
+  # Frontend
+  - name: Frontend
     keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
-  db:
-    name: Databases
+  # DB
+  - name: Databases
     keywords: [MySQL, PostgreSQL, SQLite, Redis]
-  servers:
-    name: Web servers
+  # Servers
+  - name: Web servers
     keywords: [Nginx, Apache, Unicorn, Gunicorn]
-  deploy:
-    name: Deploy
+  # Deploy
+  - name: Deploy
     keywords: [Deployer, Capistrano]
-  testing:
-    name: Testing
+  # Testing
+  - name: Testing
     keywords: [PHPUnit, Codeception]
-  vcs:
-    name: Version control systems
+  # VCS
+  - name: Version control systems
     keywords: [Git, Hg (Mercurial)]
-  os:
-    name: Operating systems
+  # OS
+  - name: Operating systems
     keywords: [Debian, Ubuntu, CentOS]
-  automation:
-    name: Work automating
+  # Automation
+  - name: Work automating
     keywords: [Vagrant, Puppet, PuPHPet]
-  templates:
-    name: Template engines
+  # Templates
+  - name: Template engines
     keywords: [Twig, Handlebars.js]
-  caching:
-    name: Caching
+  # Caching
+  - name: Caching
     keywords: [memcached]
-  queues:
-    name: Queue systems
+  # Queues:
+  - name: Queue systems
     keywords: [RabbitMQ]
-  misc:
-    name: Miscellaneous
+  # Misc
+  - name: Miscellaneous
     keywords: [XLST]
 references:
-  vaslanov:
-    name: Viktor Aslanov
+  # Viktor Aslanov
+  - name: Viktor Aslanov
     position: founder
     preposition: of
     company: Zernovye & Maslichnye. Kazakhstan
@@ -535,63 +535,70 @@ references:
       more suitable way of solving problem. He is thoughtful and experienced programmer, also punctual and responsible.
       We are happy with his work and support of our site.
 languages:
-  ru:
-    language: Russian
+  # ru
+  - language: Russian
     fluency: Native speaker
-  en:
-    language: English
+  # en
+  - language: English
     fluency: Can pass interviews
-  kz:
-    language: Kazakh
+  # kz
+  - language: Kazakh
     fluency: Basic knowledge
 interests:
-  sports:
-    name: Sports
+  # Sports
+  - name: Sports
     keywords: [gym, running, cycling, stretching]
-  languages:
-    name: Foreign languages studying
+  # Languages
+  - name: Foreign languages studying
     keywords: [english]
-  phogography:
-    name: Photography
+  # Phogography
+  - name: Photography
     keywords: [nature, architecture]
-  psychology:
-    name: Psychology
+  # Psychology
+  - name: Psychology
     keywords: [articles, books]
-  music:
-    name: Music
+  # Music
+  - name: Music
     keywords: []
-  movies:
-    name: Movies
+  # Movies
+  - name: Movies
     keywords: []
-  books:
-    name: Books
+  # Books
+  - name: Books
     keywords: []
 profiles:
-  github:
+  # Github:
+  - key: github
     network: Github
     username: arogachev
     url: https://github.com/arogachev
-  stackoverflow:
-    network: StackOverflow
+  # Stack Overflow:
+  - key: stack-overflow
+    network: Stack Overflow
     username: arogachev
     url: http://stackoverflow.com/users/4323648/arogachev
-  linkedin:
+  # LinkedIn
+  - key: linkedin
     network: LinkedIn
     username: Alexey Rogachev
     url: https://www.linkedin.com/in/alexey-rogachev-182b68109?trk=hp-identity-name
-  twitter:
+  # Twitter
+  - key: twitter
     network: Twitter
     username: arogachev90
     url: https://twitter.com/arogachev90
-  vk:
-    network: Vkontakte
+  # VK
+  - key: vk
+    network: VKontakte
     username: arogachev90
     url: http://vk.com/arogachev90
-  facebook:
+  # Facebook
+  - key: facebook
     network: Facebook
     username: Alexey Rogachev
     url: https://www.facebook.com/profile.php?id=100009774254444
-  instagram:
+  # Instagram
+  - key: instagram
     network: Instagram
     username: arogachev90
     url: https://www.instagram.com/arogachev90/

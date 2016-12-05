@@ -1,14 +1,9 @@
 <ul class="profiles list-inline">
   {% for profile in resume.profiles %}
-    {% if profile[0] == 'stackoverflow' %}
-      {% assign fa_id = 'stack-overflow' %}
-    {% else %}
-      {% assign fa_id = profile[0] %}
-    {% endif %}
-    {% capture link_title %}{{ profile[1].network}}, {{ profile[1].username }}{% endcapture %}
+    {% capture link_title %}{{ profile.network}}, {{ profile.username }}{% endcapture %}
 
     <li>
-      <a href="{{ profile[1].url }}" title="{{ link_title }}" class="fa fa-{{ fa_id }}"></a>
+      <a href="{{ profile.url }}" title="{{ link_title }}" class="fa fa-{{ profile.key }}"></a>
     </li>
   {% endfor %}
 </ul>

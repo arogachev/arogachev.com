@@ -1,19 +1,19 @@
 <div class="references row">
   {% for reference in resume.references %}
     <div class="col-lg-1 col-md-2 col-sm-2 col-lg-12">
-      <img src="/assets/images/resume/{{ reference[1].image }}"
+      <img src="/assets/images/resume/{{ reference.image }}"
            class="photo img-circle center-block"
-           alt="{{ reference[1].name }}"
-           title="{{ reference[1].name }}">
+           alt="{{ reference.name }}"
+           title="{{ reference.name }}">
     </div>
     <div class="col-lg-11 col-md-10 col-sm-10 col-lg-12">
       <blockquote>
-        <p>{{ reference[1].reference }}</p>
+        <p>{{ reference.reference }}</p>
         <footer>
-          {{ reference[1].name }},
-          {% if reference[1].position %}{{ reference[1].position }}{% endif %}
-          {% if reference[1].company %}
-            {{ reference[1].preposition }} <cite title="{{ reference[1].company }}">{{ reference[1].company }}</cite>
+          {{ reference.name }},
+          {% if reference.position %}{{ reference.position }}{% endif %}
+          {% if reference.company %}
+            {{ reference.preposition }} <cite title="{{ reference.company }}">{{ reference.company }}</cite>
           {% endif %}
         </footer>
       </blockquote>
