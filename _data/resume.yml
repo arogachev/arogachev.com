@@ -316,6 +316,20 @@ projects:
     year: 2016
     description: Informational and analytical resource about agriculture in Kazakhstan.
     screenshots: [home, news, agrarian_map, trading_platform, adding_enterprise]
+  # corp.tests-psychology.com
+  - name: corptestspsychology
+    title: Tests-Psychology Corp
+    site: http://corp.tests-psychology.com/
+    year: 2016
+    description: Extension of tests-psychology.com providing psychological tests online for corporate clients.
+    screenshots: [home, passing, results]
+  # snb.kz
+  - name: snb
+    title: SNAB
+    site: http://snb.kz/
+    year: 2015 - 2016
+    description: Delivery of products of narrow appointment on demand.
+    screenshots: [home, products_category, products, product, request]
   # tnazarenko.com
   - name: tnazarenko
     title: Tatyana Nazarenko Photo Studio
