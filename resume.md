@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 
-{% assign resume = page.resume %}
+{% assign resume = site.data.resume %}
 
 {% include resume/basics.html %}
 

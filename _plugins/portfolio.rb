@@ -2,7 +2,7 @@ module Jekyll
   class PortfolioGenerator < Generator
     def generate(site)
       portfolio = site.pages.detect {|page| page.name == 'portfolio.html'}
-      portfolio.data['projects'] = Resume::Resume.from_file()['projects'].each_slice(4).to_a()
+      portfolio.data['projects'] = site.data['resume']['projects'].each_slice(4).to_a()
     end
   end
 
@@ -26,7 +26,7 @@ module Jekyll
 
     def generate(site)
       if site.layouts.key? 'portfolio_project'
-        projects = Resume::Resume.from_file()['projects']
+        projects = site.data['resume']['projects']
         projects.each do |project|
           dir = File.join('portfolio', 'projects', project['name'])
           site.pages << PortfolioProjectPage.new(site, site.source, dir, project)
