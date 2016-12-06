@@ -9,10 +9,27 @@
   <p><b>Area:</b> {{ education.area }}</p>
   <p><b>Degree:</b> {{ education.degree }}</p>
   <p><b>GPA:</b> {{ education.gpa }}</p>
-  <p><b>Courses:</b></p>
-  <ul>
-    {% for course in education.courses %}
-      <li>{{ course }}</li>
-    {% endfor %}
-  </ul>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" id="education-courses-heading">
+      <h4 id="education-courses" class="panel-title">
+        <a href="#education-courses-content"
+           class="collapsed"
+           role="button"
+           data-toggle="collapse"
+           aria-expanded="false"
+           aria-controls="education-courses-content">Courses</a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse"
+         id="education-courses-content"
+         aria-labelledby="education-courses-heading"
+         aria-expanded="false">
+      <ul class="list-group">
+        {% for course in education.courses %}
+          <li class="list-group-item">{{ course }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
