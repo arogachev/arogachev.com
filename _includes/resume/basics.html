@@ -18,6 +18,11 @@
     <p>{{ basics.specialization }}</p>
 
     <p>
+      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      <span class="work-duration">{{ resume.work.last.start_date | date_diff: resume.work.first.end_date }}</span>
+    </p>
+
+    <p>
       <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
       <span class="location">{{ location.city }}, {{ location.country }} ({{ location.region }})</span>
     </p>
