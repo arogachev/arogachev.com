@@ -1,6 +1,7 @@
 basics:
   name: Alexey Rogachev
   specialization: Web programmer
+  birthdate: 1990-02-17
   image: main_photo.jpg
   email: 'arogachev90@gmail.com'
   summary: >
