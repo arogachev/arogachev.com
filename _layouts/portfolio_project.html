@@ -25,9 +25,9 @@ layout: default
   </div>
 
   <div id="screenshot" class="col-lg-9">
-    <a href="/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots[0] }}.png">
+    <a href="/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots.first }}.png">
       <img class="img-responsive"
-           src="/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots[0] }}.png"
+           src="/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots.first }}.png"
            alt="{{ project.screenshots[0] | humanize }}"
            title="{{ project.screenshots[0] | humanize }}">
     </a>
