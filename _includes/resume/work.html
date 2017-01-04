@@ -24,7 +24,7 @@
             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
             {{ job.start_date | date: '%b. %Y' }} -
             {% if job.end_date %}{{ job.end_date | date: '%b. %Y' }}{% else %}Present{% endif %}
-            (<b>{{ job.start_date | date_diff: job.end_date }}</b> in total)
+            (<b>{{ job.start_date | work_duration: job.end_date }}</b> in total)
           </p>
 
           <p>

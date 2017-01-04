@@ -35,6 +35,7 @@ exclude:
   - config
   - log
   - node_modules
+  - test
   # Files
   - bower.json
   - Capfile
