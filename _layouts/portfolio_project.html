@@ -7,9 +7,6 @@ layout: default
 {% endcontentfor %}
 
 {% assign project = page.project %}
-{% capture first_screenshot %}
-/assets/images/portfolio/projects/{{ project.name }}/{{ project.screenshots.first }}.png
-{% endcapture %}
 
 <h2>Screenshots</h2>
 
@@ -17,10 +14,9 @@ layout: default
   <div class="col-lg-3">
     <ul id="screenshot-menu" class="nav nav-pills nav-stacked">
       {% for screenshot in project.screenshots %}
-        <li class="screenshot-menu-item{% if forloop.first %} active{% endif %}">
-          <a class="screenshot-menu-item"
-             href="#"
-             data-src="/assets/images/portfolio/projects/{{ project.name }}/{{ screenshot }}.png"
+        <li class="screenshot-menu-item">
+          <a class="screenshot-trigger"
+             href="/assets/images/portfolio/projects/{{ project.name }}/{{ screenshot }}.png"
              data-title="{{ screenshot | humanize }}">{{ screenshot | humanize }}</a>
         </li>
       {% endfor %}
@@ -33,11 +29,6 @@ layout: default
       <span class="sr-only">Loading...</span>
     </div>
 
-    <a class="screenshot-link" href="{{first_screenshot}}">
-      <img class="screenshot-image img-responsive"
-           src="{{ first_screenshot }}"
-           alt="{{ project.screenshots[0] | humanize }}"
-           title="{{ project.screenshots[0] | humanize }}">
-    </a>
+    <a class="screenshot-link"></a>
   </div>
 </div>
