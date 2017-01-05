@@ -1,0 +1,36 @@
+# key matches Font Awesome icon name http://fontawesome.io/icons/#brand
+
+- key: github
+  network: Github
+  username: arogachev
+  url: https://github.com/arogachev
+
+- key: stack-overflow
+  network: Stack Overflow
+  username: arogachev
+  url: http://stackoverflow.com/users/4323648/arogachev
+
+- key: linkedin
+  network: LinkedIn
+  username: Alexey Rogachev
+  url: https://www.linkedin.com/in/alexey-rogachev-182b68109?trk=hp-identity-name
+
+- key: twitter
+  network: Twitter
+  username: arogachev90
+  url: https://twitter.com/arogachev90
+
+- key: vk
+  network: VKontakte
+  username: arogachev90
+  url: http://vk.com/arogachev90
+
+- key: facebook
+  network: Facebook
+  username: Alexey Rogachev
+  url: https://www.facebook.com/profile.php?id=100009774254444
+
+- key: instagram
+  network: Instagram
+  username: arogachev90
+  url: https://www.instagram.com/arogachev90/
