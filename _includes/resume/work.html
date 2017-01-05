@@ -1,5 +1,7 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  {% for job in resume.work %}
+  {% for job_hash in resume.work reversed %}
+    {% assign job = job_hash[1] %}
+
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="heading-{{ forloop.index }}">
         <h4 class="panel-title">

@@ -19,7 +19,7 @@
 
     <p>
       <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-      <span class="work-duration">{{ resume.work.last.start_date | work_duration: resume.work.first.end_date }}</span>
+      <span class="work-duration">{{ resume.work.first.[1].start_date | work_duration }}</span>
     </p>
 
     <p>

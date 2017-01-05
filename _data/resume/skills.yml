@@ -1,0 +1,44 @@
+- name: Programming languages
+  keywords: [PHP, JavaScript, Ruby, Python]
+
+- name: Web frameworks
+  keywords: [Yii, Silex, Ruby on Rails, Jekyll, Django]
+
+- name: CMS
+  keywords: [UMI.CMS, 1C-Bitrix]
+
+- name: Frontend
+  keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
+
+- name: Databases
+  keywords: [MySQL, PostgreSQL, SQLite, Redis]
+
+- name: Web servers
+  keywords: [Nginx, Apache, Unicorn, Gunicorn]
+
+- name: Deploy
+  keywords: [Deployer, Capistrano]
+
+- name: Testing
+  keywords: [PHPUnit, Codeception]
+
+- name: Version control systems
+  keywords: [Git, Hg (Mercurial)]
+
+- name: Operating systems
+  keywords: [Debian, Ubuntu, CentOS]
+
+- name: Work automating
+  keywords: [Vagrant, Puppet, PuPHPet]
+
+- name: Template engines
+  keywords: [Twig, Handlebars.js]
+
+- name: Caching
+  keywords: [memcached]
+
+- name: Queue systems
+  keywords: [RabbitMQ]
+
+- name: Miscellaneous
+  keywords: [XLST]

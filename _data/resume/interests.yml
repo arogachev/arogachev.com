@@ -1,0 +1,20 @@
+- name: Sports
+  keywords: [gym, running, cycling, stretching]
+
+- name: Foreign languages studying
+  keywords: [English]
+
+- name: Photography
+  keywords: [nature, architecture]
+
+- name: Psychology
+  keywords: [articles, books]
+
+- name: Music
+  keywords: []
+
+- name: Movies
+  keywords: []
+
+- name: Books
+  keywords: []
