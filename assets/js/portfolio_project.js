@@ -1,7 +1,7 @@
 $(function () {
     var SCREENSHOT_MENU_ITEM_SELECTOR = '.screenshot-menu-item';
     var $screenshotMenuItems = $(SCREENSHOT_MENU_ITEM_SELECTOR);
-    var $screenshotTriggers = $('.screenshot-triggers');
+    var $screenshotTriggers = $('.screenshot-trigger');
     var $screenshotBlock = $('#screenshot');
     var $screenshotLoading = $screenshotBlock.find('.loading');
     var $screenshotLink = $screenshotBlock.find('.screenshot-link');
