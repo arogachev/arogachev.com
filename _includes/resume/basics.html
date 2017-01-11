@@ -1,8 +1,8 @@
 {% assign basics = resume.basics %}
 {% assign location = basics.location %}
 {% capture languages %}
-  {% for language in resume.languages %}
-    {{ language.language }} ({{ language.fluency | downcase }}){% unless forloop.last %}, {% endunless %}
+  {% for language in basics.languages %}
+    {{ language.name }} ({{ language.level | downcase }}){% unless forloop.last %}, {% endunless %}
   {% endfor %}
 {% endcapture %}
 
@@ -15,11 +15,11 @@
   </div>
   <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12">
     <p class="name">{{ basics.name }}</p>
-    <p>{{ basics.specialization }}, {{ basics.birthdate | age }} years old</p>
+    <p>{{ basics.specialization }}, {{ basics.age }} years old</p>
 
     <p>
       <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-      <span class="work-duration">{{ resume.work.first.[1].start_date | work_duration }}</span>
+      <span class="work-duration">{{ basics.work_duration }}</span>
     </p>
 
     <p>

@@ -1,7 +1,5 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  {% for job_hash in resume.work reversed %}
-    {% assign job = job_hash[1] %}
-
+  {% for job in resume.work_reversed %}
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="heading-{{ forloop.index }}">
         <h4 class="panel-title">
@@ -11,9 +9,7 @@
              href="#collapse-{{ forloop.index }}"
              aria-expanded="true"
              aria-controls="collapse-{{ forloop.index }}">
-            {{ job.company }}
-            ({{ job.start_date | date: '%Y' }} -
-            {% if job.end_date %}{{ job.end_date | date: '%Y' }}{% else %}Present{% endif %})
+            {{ job.company }} ({{ job.start_date_year }} - {{ job.end_date_year }})
           </a>
         </h4>
       </div>
@@ -24,9 +20,7 @@
         <div class="panel-body">
           <p>
             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-            {{ job.start_date | date: '%b. %Y' }} -
-            {% if job.end_date %}{{ job.end_date | date: '%b. %Y' }}{% else %}Present{% endif %}
-            (<b>{{ job.start_date | work_duration: job.end_date }}</b> in total)
+            {{ job.start_date_text }} - {{ job.end_date_text }} (<b>{{ job.work_duration }}</b> in total)
           </p>
 
           <p>

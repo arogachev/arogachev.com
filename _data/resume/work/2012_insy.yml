@@ -3,7 +3,7 @@ position: Programmer-analyst
 website: http://insy.kz/
 start_date: 2012-11-01
 end_date: 2013-11-15
-summary: >
+summary: >-
   INSY company is a website developing company based in Petropavl, Kazakhstan. Services also include mobile
   applications development, creation of logos and corporate style. Work on company projects in PHP based CMS
   (UMI.CMS and 1C-Bitrix). Full company portfolio can be found here - http://insy.kz/portfolio/.
@@ -32,7 +32,7 @@ tasks:
   - Helping new junior developers.
 highlights:
   - Created miltiple currency plugin supporting synchronization with actual currency rate.
-  - >
+  - >-
     Implemented catalog filter component with support for complex search combinations, different types of inputs
     (according to CMS data types), easy layout integration.
   - Implemented custom integration with 1C for some sites.
@@ -40,7 +40,7 @@ highlights:
   - Integration of payment systems (VISA, QIWI, KASSA 24) and delivery services (Exline).
   - Added notifications in CRM (including sending messages to XMPP).
   - Created mail module in CRM to optimize work with emails and better collaborative actions.
-  - >
+  - >-
     Provided limited access to CRM for customers to be able to view some information (including tasks and their
     state).
 results:

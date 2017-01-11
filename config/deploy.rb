@@ -80,8 +80,8 @@ namespace :assets do
     command.join(' ')
   end
 
-  desc 'Generate assets on production server'
-  task :generate do
+  desc 'Generate images on production server'
+  task :generate_images do
     on roles(:all) do
       within release_path do
         execute portfolio_main_images("#{release_path}")
@@ -89,25 +89,59 @@ namespace :assets do
     end
   end
 
-  desc 'Generate assets locally'
-  task :generate_locally do
+  desc 'Generate images locally'
+  task :generate_images_locally do
     run_locally do
       execute portfolio_main_images('$PWD')
     end
   end
+
+  desc 'Generate files locally'
+  task :generate_files_locally do
+    invoke 'jekyll:build_locally'
+    run_locally do
+      execute 'node _components/resume/docx_export.js --download-template'
+      execute '[ -d assets/files ] || mkdir assets/files'
+      execute 'cp _generated/resume.docx assets/files/'
+    end
+  end
+
+  desc 'Sync files on production server'
+  task :sync_files do
+    run_locally do
+      execute "mkdir #{release_path}/assets/files"
+      rsync = [
+          'rsync',
+          '--ru',
+          '--progress',
+          '--delete',
+          'assets/files/resume.docx',
+          "arogachev@arogachev.com:#{release_path}/assets/files/",
+      ]
+      execute rsync.join(' ')
+    end
+  end
 end
 
-before 'deploy:updated', 'assets:generate'
+before 'deploy:updated', 'assets:generate_images'
+before 'deploy:updated', 'assets:sync_files'
 
 # Static site generation
 
 namespace :jekyll do
-  desc 'Build site using Jekyll'
+  desc 'Build site using Jekyll on production server'
   task :build do
     on roles(:all) do
       within release_path do
         execute "cd #{release_path} && bundle exec jekyll build"
       end
+    end
+  end
+
+  desc 'Build site using Jekyll locally'
+  task :build_locally do
+    run_locally do
+      execute 'bundle exec jekyll build'
     end
   end
 end
