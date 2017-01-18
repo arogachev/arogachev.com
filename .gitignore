@@ -12,10 +12,7 @@ _site
 # Bower packages
 /bower_components
 
-# Node packages
-/node_modules
-
-# Auto generated data
+# Auto generated files
 /_generated
 /assets/files
 

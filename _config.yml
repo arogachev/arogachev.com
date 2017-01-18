@@ -34,7 +34,6 @@ exclude:
   # Folders
   - config
   - log
-  - node_modules
   - test
   # Files
   - bower.json

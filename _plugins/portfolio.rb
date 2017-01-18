@@ -2,7 +2,7 @@ module Jekyll
   class PortfolioGenerator < Generator
     def generate(site)
       portfolio = site.pages.detect {|page| page.name == 'portfolio.html'}
-      portfolio.data['projects'] = site.data['portfolio']['projects'].each_slice(4).to_a()
+      portfolio.data['projects'] = site.data['portfolio']['projects'].each_slice(4).to_a
     end
   end
 
