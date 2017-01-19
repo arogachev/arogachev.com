@@ -35,7 +35,7 @@ Generate assets:
 bundle exec rake
 ```
 
-Serve the site:
+Serve the site (by default it will be available at `localhost:3000`):
 
 ```
 bundle exec jekyll serve
