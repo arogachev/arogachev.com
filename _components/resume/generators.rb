@@ -28,7 +28,7 @@ module Resume
       input_content = File.read(@input_file).encode(universal_newline: true).gsub("%}\n", '%}')
       data = YAML.load_file(@data_file)
       template = Liquid::Template.parse(input_content)
-      content = template.render(data, filters: [TextFilter]).gsub("\n\n\n#", "\n\n#").rstrip
+      content = template.render(data, filters: [TextFilter]).gsub(/\n{3,}/, "\n\n").rstrip
       content << "\n"
       File.open(@output_file, 'w') {|f| f.write(content) }
     end
@@ -37,6 +37,13 @@ module Resume
   module TextFilter
     def sentence(input)
       input.join(', ')
+    end
+
+    def brief(input)
+      sentences = input.split('. ')
+      sentence = sentences.first
+      sentence << '.' if sentences.length > 1
+      sentence
     end
   end
 end

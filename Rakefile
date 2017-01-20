@@ -21,6 +21,11 @@ namespace :resume do
   templates_regex = Regexp.new("#{RESUME_TEMPLATES_DIR}/.+\\.md")
   RESUME_TEMPLATES = RESUME_RAW_TEMPLATES.pathmap("%{^#{RESUME_RAW_TEMPLATES_DIR}/,#{RESUME_TEMPLATES_DIR}/}p")
 
+  downloadable_files_spec = "%{^#{GENERATED_DIR}/,#{FILES_DIR}/}X"
+  docx_files = RESUME_TEMPLATES.pathmap("#{downloadable_files_spec}.docx")
+  pdf_files = RESUME_TEMPLATES.pathmap("#{downloadable_files_spec}.pdf")
+  downloadable_files = docx_files.add(pdf_files)
+
   desc 'Merge separate YAML files into one and decorate it with additional calculated values'
   task generate_data: RESUME_DATA_FILE
 
@@ -47,20 +52,26 @@ namespace :resume do
     end
   end
 
-  desc 'Convert Markdown templates to docx files'
-  task generate_files: RESUME_TEMPLATES.pathmap("%{^#{GENERATED_DIR}/,#{FILES_DIR}/}X.docx")
+  desc 'Convert Markdown templates to downloadable files (docx and pdf)'
+  task generate_files: downloadable_files
 
   directory assets_dir
 
-  rule '.docx' => [->(f) { source_for_docx(f) }, assets_dir] do |t|
+  rule '.docx' => [->(f) { source_for_downloadable_file(f) }, assets_dir] do |t|
     mkdir_p t.name.pathmap('%d')
     puts "Generating file #{t.name}"
     sh "pandoc -o #{t.name} #{t.source}"
   end
 
-  def source_for_docx(docx_file)
+  rule '.pdf' => [->(f) { source_for_downloadable_file(f) }, assets_dir] do |t|
+    mkdir_p t.name.pathmap('%d')
+    puts "Generating file #{t.name}"
+    sh "pandoc -fmarkdown-implicit_figures -V geometry:margin=1in -o #{t.name} #{t.source}"
+  end
+
+  def source_for_downloadable_file(downloadable_file)
     RESUME_TEMPLATES.detect do |f|
-      f.ext == docx_file.pathmap("%{^#{FILES_DIR}/,#{GENERATED_DIR}/}X")
+      f.ext == downloadable_file.pathmap("%{^#{FILES_DIR}/,#{GENERATED_DIR}/}X")
     end
   end
 end

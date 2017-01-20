@@ -2,9 +2,8 @@ company: BARS-NORD, LLC
 position: Web technologies specialist
 website: http://bars-stroy.kz/
 start_date: 2011-08-15
-end_date: 2012-11-01
-summary: >-
-  Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan. Improvement and
+end_date: 2012-10-31
+summary: Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan. Improvement and
   support of the existing main company site based on UMI.CMS (PHP).
 technologies:
   - PHP
@@ -17,7 +16,7 @@ technologies:
 tasks:
   - Working with layout.
   - Minor graphic design fixes.
-  - >-
+  - &programming
     Programming - fixing bugs, development of new functionality using PHP and UMI.CMS API, also JavaScript and
     jQuery.
   - Integration with 1C (products, prices, availability, etc.).
@@ -27,26 +26,27 @@ tasks:
   - Filling of the products catalog.
   - Photographing of the products and editing of the taken photos.
   - Basic SEO.
-  - SMM.
+  - SMM (mainly in "Moy Mir" social network).
   - Corporate mail setup for employees.
   - Clients support in social networks.
   - Participating in planning company budget related to the site.
   - Participating in meetings - reporting about made work, suggestion of new ideas.
 highlights:
-  - Integrated products catalog with 1C.
-  - Filled almost all products for retail sale (filled products count was about 7000).
+  - &1c_integration
+    Integrated products catalog with 1C.
+  - &filling_products
+    Filled almost all products (about 7000) for retail sale.
   - Fixed many bugs left since site creation.
-  - Developed a job module with actual vacancies list and sending resume feature.
+  - &job_module
+    Developed a job module with actual vacancies list and sending resume feature.
   - Wrote company history article (interviewed administration, collected data from archives).
-  - >-
-    Collected and edited photos of key employees (took missing photos) together with info about them, then filled
+  - Collected and edited photos of key employees (took missing photos) together with info about them, then filled
     "Our employees" page which reflected company structure including different departments.
   - Wrote some news, photos were taken where the events took place.
 results:
   - At that time site was the best among the rival companies in Petropavl and helped to stand out from them.
   - Filled products catalog was useful for both customers and company managers and sellers.
-  - >-
-    Filled products catalog in the future became a solid base for e-commerce (after my leaving, because at the
+  - Filled products catalog in the future became a solid base for e-commerce (after my leaving, because at the
     moment of my work administration was not ready to create it yet).
   - Automation of HR department's work, number of candidates was increased.
   - Site appeared in top 10 in Google and Yandex search at certain queries.
@@ -57,7 +57,11 @@ achievements:
     Work was versatile (because I was the only one working with site, at the end designer helped a bit) and wasn't
     limited to programming only: editing images skills, SEO knowledge were improved, learned a lot of new
     information about construction materials.
-  - >-
-    Have got communication experience with people of different positions and from different departments (including
+  - Have got communication experience with people of different positions and from different departments (including
     meetings, etc.) and clients during answering and consultations through messengers and social networks.
   - Showed initiative in many questions related to site.
+brief_highlights:
+  - *programming
+  - *1c_integration
+  - *filling_products
+  - *job_module
