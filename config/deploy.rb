@@ -49,7 +49,6 @@ namespace :bundle do
 end
 
 before 'deploy:updated', 'bundle:install'
-before 'deploy:reverted', 'bundle:install'
 
 # Assets
 
@@ -67,32 +66,12 @@ end
 before 'deploy:updated', 'bower:install'
 
 namespace :assets do
-  def portfolio_main_images(dir)
-    command = [
-      "assets_dir=\"#{dir}/assets/images/portfolio/projects\";",
-      'for f in `ls $assets_dir`;',
-      'do',
-      'cd "$assets_dir/$f";',
-      'echo "Generating assets for $f project";',
-      'convert home.png -crop 1280x1280+0+0 -resize 700x700 main.jpg;',
-      'done',
-    ]
-    command.join(' ')
-  end
-
-  desc 'Generate assets on production server'
+  desc 'Generate assets'
   task :generate do
     on roles(:all) do
       within release_path do
-        execute portfolio_main_images("#{release_path}")
+        execute "cd #{release_path} && bundle exec rake"
       end
-    end
-  end
-
-  desc 'Generate assets locally'
-  task :generate_locally do
-    run_locally do
-      execute portfolio_main_images('$PWD')
     end
   end
 end

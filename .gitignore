@@ -12,5 +12,12 @@ _site
 # Bower packages
 /bower_components
 
+# Auto generated files
+/_generated
+/assets/files
+
+# Sensitive resume information
+/_data/resume/secrets.yml
+
 # Main images in portfolio projects
 /assets/images/portfolio/projects/*/main.jpg

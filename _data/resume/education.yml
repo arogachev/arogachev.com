@@ -1,55 +1,56 @@
-higher:
-  institution: North Kazakhstan State University, named for M. Kozybaev
-  area: 050602 - Computer Science
-  degree: Bachelor
-  start_date: 2007-09-01
-  end_date: 2011-06-15
-  gpa: 3.81
-  courses:
-    - WD3222 - Web-Design
-    - Alg1204 - Algebra
-    - AS2215 - Algebraic Structures
-    - ASD2213 - Algorithms and Structure of Data
-    - AVR4309 - Analysis of Temporal Series
-    - AKS1218 - Computer System Architecture
-    - Geo1205 - Geometry
-    - DMML2210 - Discrete Mathematics and Mathematical Logic
-    - DU2206 - Differential Equations
-    - DGML3219 - Supplementary Chapters on Mathematical Logic
-    - ZI4220 - Information Security
-    - IYa1103 - Foreign Language
-    - Inf1104 - Computer Science
-    - KYa1102 - Kazakh Language
-    - MSKG3221 - Computer Graphics
-    - KS3304 - Computer Networks
-    - MMPP4314 - Mathematical Models of Production Planning
-    - MAAF1202 - Mathematical Analysis. Analysis of Function with one Variable
-    - MAAF2203 - Mathematical Analysis. Analysis of Functions with many Variable Quantities
-    - MAVA1201 - Mathematical Analysis. Introduction to the Analysis
-    - MM3216 - Mathematical Modeling
-    - MPI3214 - Teaching Methods of Computer Science
-    - MOIO3209 - Methods of Optimization and Operations Research
-    - OOP3301 - Object-Oriented Programming
-    - OS2303 - Operating Systems
-    - OBZh4112 - Bases of Life Safety
-    - OP1108 - Basic Law
-    - OS2306 - Bases of Circuitry
-    - OET2107 - Bases of Economic Theory
-    - PV4305 - Parallel Computations
-    - Pol3109 - Political Science
-    - SP2302 - System Programming
-    - SII4308 - Artificial-Intelligence Systems
-    - Soc3110 - Sociology
-    - SA4311 - Statistical Analysis
-    - TBD3307 - Data Base Theory
-    - TVMS3211 - Theory of Probability and Mathematical Statistics
-    - TG3217 - Graph Theory
-    - TYaA2212 - Language and Automatic Machine Theory
-    - Fil2106 - Philosophy
-    - ChM3208 - Numerical Methods
-    - Eko1105 - Environmental Science
-    - EPDO1111 - Ethics and Psychology of Business Communication
-    - YaTP2207 - Programming Languages and Technologies
-    - IS3310 - Information Systems (Course Project)
-    - Mat2312 - Mathematics (Course paper)
-    - PM4313 - Applied Mathematics (Course paper)
+institution: North Kazakhstan State University, named for M. Kozybaev
+area: 050602 - Computer Science
+degree: Bachelor
+start_date: 2007-09-01
+end_date: 2011-06-15
+gpa: 3.81
+highlights:
+  - Diploma with honours
+courses:
+  - WD3222 - Web-Design
+  - Alg1204 - Algebra
+  - AS2215 - Algebraic Structures
+  - ASD2213 - Algorithms and Structure of Data
+  - AVR4309 - Analysis of Temporal Series
+  - AKS1218 - Computer System Architecture
+  - Geo1205 - Geometry
+  - DMML2210 - Discrete Mathematics and Mathematical Logic
+  - DU2206 - Differential Equations
+  - DGML3219 - Supplementary Chapters on Mathematical Logic
+  - ZI4220 - Information Security
+  - IYa1103 - Foreign Language
+  - Inf1104 - Computer Science
+  - KYa1102 - Kazakh Language
+  - MSKG3221 - Computer Graphics
+  - KS3304 - Computer Networks
+  - MMPP4314 - Mathematical Models of Production Planning
+  - MAAF1202 - Mathematical Analysis. Analysis of Function with one Variable
+  - MAAF2203 - Mathematical Analysis. Analysis of Functions with many Variable Quantities
+  - MAVA1201 - Mathematical Analysis. Introduction to the Analysis
+  - MM3216 - Mathematical Modeling
+  - MPI3214 - Teaching Methods of Computer Science
+  - MOIO3209 - Methods of Optimization and Operations Research
+  - OOP3301 - Object-Oriented Programming
+  - OS2303 - Operating Systems
+  - OBZh4112 - Bases of Life Safety
+  - OP1108 - Basic Law
+  - OS2306 - Bases of Circuitry
+  - OET2107 - Bases of Economic Theory
+  - PV4305 - Parallel Computations
+  - Pol3109 - Political Science
+  - SP2302 - System Programming
+  - SII4308 - Artificial-Intelligence Systems
+  - Soc3110 - Sociology
+  - SA4311 - Statistical Analysis
+  - TBD3307 - Data Base Theory
+  - TVMS3211 - Theory of Probability and Mathematical Statistics
+  - TG3217 - Graph Theory
+  - TYaA2212 - Language and Automatic Machine Theory
+  - Fil2106 - Philosophy
+  - ChM3208 - Numerical Methods
+  - Eko1105 - Environmental Science
+  - EPDO1111 - Ethics and Psychology of Business Communication
+  - YaTP2207 - Programming Languages and Technologies
+  - IS3310 - Information Systems (Course Project)
+  - Mat2312 - Mathematics (Course paper)
+  - PM4313 - Applied Mathematics (Course paper)

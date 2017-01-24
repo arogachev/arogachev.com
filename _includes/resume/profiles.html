@@ -1,9 +1,10 @@
 <ul class="profiles list-inline">
-  {% for profile in resume.profiles %}
+  {% for profile_data in resume.profiles %}
+    {% assign profile = profile_data[1] %}
     {% capture link_title %}{{ profile.network}}, {{ profile.username }}{% endcapture %}
 
     <li>
-      <a href="{{ profile.url }}" title="{{ link_title }}" class="fa fa-{{ profile.key }}"></a>
+      <a href="{{ profile.url }}" title="{{ link_title }}" class="fa fa-{{ profile.icon }}"></a>
     </li>
   {% endfor %}
 </ul>

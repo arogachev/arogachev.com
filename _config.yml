@@ -34,7 +34,6 @@ exclude:
   # Folders
   - config
   - log
-  - node_modules
   - test
   # Files
   - bower.json
@@ -43,6 +42,7 @@ exclude:
   - Gemfile.lock
   - gulpfile.js
   - package.json
+  - Rakefile
   - README.md
 sass:
   sass_dir: _assets/scss

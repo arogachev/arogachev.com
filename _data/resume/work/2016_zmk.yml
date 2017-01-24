@@ -1,10 +1,9 @@
 company: Zernovye & Maslichnye. Kazakhstan
 position: Web programmer
 website: https://margin.kz/
-start_date: 2016-04-06
+start_date: 2016-04-18
 end_date:
-summary: >
-  Informational and analytical resource about agriculture in Kazakhstan. The customer already had site written in
+summary: Informational and analytical resource about agriculture in Kazakhstan. The customer already had site written in
   Joomla, but was not satisfied with its work and support. Planned ideas and improvements would be hard to
   implement using Joomla. Because of that the decision was taken to completely rewrite it using Django and
   PostgreSQL and make improvements after that.
@@ -26,7 +25,8 @@ technologies:
   - Gulp
   - Capistrano
 tasks:
-  - Full rewriting of the existing company site based on Joomla in Django from scratch.
+  - &programming
+    Full rewriting of the existing company site based on Joomla in Django from scratch.
   - Changing database from MySQL to PostgreSQL and migrating of all existing data.
   - Switching from shared hosting to VPS, setup of different technology stack.
   - Integration of new graphic design and layout based on Bootstrap 3.
@@ -39,19 +39,21 @@ tasks:
 highlights:
   - Implemented image cropping for news for better images' display.
   - Added convenient way to pick the location of settlements and enterprises.
-  - >
+  - &agrarian_map
     Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
     better UX and page loading) with filter.
-  - Implemented moderation for some site's objects.
-  - Limited access to some site's functionality using custom permissions.
+  - &moderation
+    Implemented moderation for some site's objects.
+  - &limited_access
+    Limited access to some site's functionality using custom permissions.
   - Added notifications (via email and push) for better UX.
   - Shared some functionality between backend and frontend parts of the site.
 results:
-  - New site was released in may of 2016.
-  - Traffic and sales were increased.
+  - New site was released in May of 2016.
+  - &client_base_increase
+    Traffic and sales were increased.
   - The site became more comfortable to view because of a new UI and responsive design.
-  - >
-    Registration and authentication became more user friendly because of adding social auth and extending profile's
+  - Registration and authentication became more user friendly because of adding social auth and extending profile's
     functionality.
   - Managing content became faster and more comfortable.
   - The site became more secure, pages started to load faster.
@@ -60,3 +62,9 @@ achievements:
   - Migration of site and data.
   - Configuring VPS from scratch.
   - Setup of production environment for Django site.
+brief_highlights:
+  - *programming
+  - *agrarian_map
+  - *moderation
+  - *limited_access
+  - *client_base_increase

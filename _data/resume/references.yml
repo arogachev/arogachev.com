@@ -1,10 +1,9 @@
-- name: Viktor Aslanov
+- author: Viktor Aslanov
   position: founder
   preposition: of
   company: Zernovye & Maslichnye. Kazakhstan
   image: vaslanov.jpg
-  reference: >
-    Alexey helped us rewrite our site margin.kz from Joomla to Django, improve functionality, fix bugs and migrate
+  text: Alexey helped us rewrite our site margin.kz from Joomla to Django, improve functionality, fix bugs and migrate
     all existing data. Traffic and sales were increased. Alexey is always ready to help, explain and recommend the
     more suitable way of solving problem. He is thoughtful and experienced programmer, also punctual and responsible.
     We are happy with his work and support of our site.
