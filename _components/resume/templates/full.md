@@ -82,6 +82,12 @@
 
 {% endfor %}
 
+## Extra activity
+
+{% for action in activity %}
+- {{ action }}
+{% endfor %}
+
 ## References
 
 {% for reference in references %}
@@ -100,7 +106,8 @@
 
 ## Profiles
 
-{% for profile in profiles %}
+{% for profile_data in profiles %}
+{% assign profile = profile_data[1] %}
 **{{ profile.network }}:** [{{ profile.url }}]({{ profile.url }})
 
 {% endfor %}

@@ -4,6 +4,8 @@ degree: Bachelor
 start_date: 2007-09-01
 end_date: 2011-06-15
 gpa: 3.81
+highlights:
+  - Diploma with honours
 courses:
   - WD3222 - Web-Design
   - Alg1204 - Algebra

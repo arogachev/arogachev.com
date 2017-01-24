@@ -18,6 +18,9 @@ permalink: /resume/
 ## Skills
 {% include resume/skills.html %}
 
+## Extra activity
+{% include resume/activity.html %}
+
 ## References
 {% include resume/references.html %}
 

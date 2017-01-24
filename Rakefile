@@ -66,7 +66,7 @@ namespace :resume do
   rule '.pdf' => [->(f) { source_for_downloadable_file(f) }, assets_dir] do |t|
     mkdir_p t.name.pathmap('%d')
     puts "Generating file #{t.name}"
-    sh "pandoc -fmarkdown-implicit_figures -V geometry:margin=1in -o #{t.name} #{t.source}"
+    sh "pandoc -fmarkdown-implicit_figures -V geometry:margin=0.2in -o #{t.name} #{t.source}"
   end
 
   def source_for_downloadable_file(downloadable_file)

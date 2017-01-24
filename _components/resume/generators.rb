@@ -28,7 +28,8 @@ module Resume
       input_content = File.read(@input_file).encode(universal_newline: true).gsub("%}\n", '%}')
       data = YAML.load_file(@data_file)
       template = Liquid::Template.parse(input_content)
-      content = template.render(data, filters: [TextFilter]).gsub(/\n{3,}/, "\n\n").rstrip
+      content = template.render(data, filters: [TextFilter])
+      content = content.gsub(/\n{3,}/, "\n\n").gsub("\n ", ' ').gsub(/ {2,}/, ' ').strip
       content << "\n"
       File.open(@output_file, 'w') {|f| f.write(content) }
     end
@@ -44,6 +45,10 @@ module Resume
       sentence = sentences.first
       sentence << '.' if sentences.length > 1
       sentence
+    end
+
+    def profile_link(input)
+      "[#{input['network']} (#{input['username']})](#{input['url']})"
     end
   end
 end

@@ -3,12 +3,15 @@ specialization: Web programmer
 birthdate: 1990-02-17
 image: main_photo.jpg
 email: 'arogachev90@gmail.com'
+site:
+  name: arogachev.com
+  url: http://arogachev.com/
 summary: Full stack web developer. Mostly working with PHP and Yii 2 framework. Perfectionist, but try to find a balance
   between quality, deadlines and requirements.
 location:
   city: Petropavl
   country: Kazakhstan
-  region: North Kazakhstan
+  region: North Kazakhstan Region
 languages:
   - name: Russian
     level: Native speaker

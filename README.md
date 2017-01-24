@@ -88,3 +88,13 @@ Deploy:
 ```
 bundle exec cap production deploy
 ```
+
+### Resume
+
+For specifying sensitive information create file `_data/resume/secrets.yml` with the following contents and fill it:
+
+```yaml
+zip_code: ZIP Code
+address: Street address (where you currently live) 
+phone: Mobile phone number
+ ```
