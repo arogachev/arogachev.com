@@ -355,7 +355,7 @@ after(function () {
 ## Conclusion
 
 I'm satisfied with this solution, it's simple and requires very few code to write. Before figuring that out I had the 
-solution based on custom types and [$.ajaxSetup], it worked but was more verbose.
+[solution based on custom types] and [$.ajaxSetup], it worked but was more verbose.
     
 One more problem solved.
 
@@ -370,6 +370,7 @@ One more problem solved.
 [jQuery.getJson() docs]: http://api.jquery.com/jquery.getjson/
 [Tested yii.js functionality]: https://github.com/yiisoft/yii2/blob/37f19a02569833a9e49d2473439d9739444e78f8/framework/assets/yii.js#L381-L441
 [$.ajaxPrefilter]: http://api.jquery.com/jquery.ajaxprefilter/
-[blank page]: https://en.wikipedia.org/wiki/About_URI_scheme
+[Blank page]: https://en.wikipedia.org/wiki/About_URI_scheme
 [Mocha]: https://mochajs.org/
+[Solution based on custom types]: https://github.com/yiisoft/yii2/blob/37f19a02569833a9e49d2473439d9739444e78f8/tests/js/tests/yii.test.js#L981-L1026
 [$.ajaxSetup]: https://api.jquery.com/jquery.ajaxsetup/
