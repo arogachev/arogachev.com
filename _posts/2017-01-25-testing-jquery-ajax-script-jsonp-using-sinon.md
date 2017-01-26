@@ -2,19 +2,23 @@
 title: Testing jQuery's AJAX "script" and "jsonp" requests using Sinon.JS' fake server 
 date: 2017-01-25 16:28:00 +0600
 categories: programming
-tags: testing yii yii2 javascript jquery ajax nodejs sinon chai mocha 
+tags: testing yii yii2 javascript jquery ajax nodejs sinon chai mocha
 ---
 
 ## Problems
 
 ### Introduction
 
+<!--excerpt-->
+
 During writing [tests for yii.js] in Yii 2 framework I faced with problem of testing AJAX requests with types `script` 
 and `jsonp`. I use [Sinon.JS] as a stubbing library, it has a wonderful feature called [Fake server] which comes in 
-handy exactly for testing AJAX. Unfortunately there are some problems with these types: 
+handy exactly for testing AJAX. Unfortunately there are some problems with these types:
 
-- Cross-domain requests do not work neither in Node nor in browser. 
+- Cross-domain requests do not work neither in Node nor in browser.
 - In Node.js they do not work at all, even the requests within the same site / domain.
+
+<!--excerpt-->
 
 If you are not interested in details you can skip them and read the [Solution section] right away.
 
@@ -308,8 +312,8 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 And it finally dawned on me that we can just make these requests non-cross-domain and act as regular XHRs! We are in 
 testing environment anyway.
 
-Even is's possible by adding `window.location.protocol` to url, it can cause additional troubles in handling of absolute 
-URLs and is not clean and flexible.
+Even is's possible by adding `window.location.protocol` if front of the url, it can cause additional troubles in
+handling of absolute URLs and is not clean and flexible.
 
 Thanks to [$.ajaxPrefilter], we have access to requests's options and can modify them as we need:
 
@@ -355,7 +359,8 @@ after(function () {
 ## Conclusion
 
 I'm satisfied with this solution, it's simple and requires very few code to write. Before figuring that out I had the 
-[solution based on custom types] and [$.ajaxSetup], it worked but was more verbose.
+[solution based on custom types] and [$.ajaxSetup], it worked but was more verbose. What's interesting, I started to
+write this post about it and found a better solution during the process of writing. Yes, sometimes this happens too.
     
 One more problem solved.
 

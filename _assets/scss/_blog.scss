@@ -1,0 +1,11 @@
+.posts {
+  .post {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .date {
+      font-style: italic;
+    }
+  }
+}

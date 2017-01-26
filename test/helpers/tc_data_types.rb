@@ -21,6 +21,23 @@ class TestStringHelper < Test::Unit::TestCase
   def test_humanize
     assert_equal('Products category page', StringHelper.humanize('products_category_page'))
   end
+
+  def test_string_between_markers
+    marker_start = 'start'
+    marker_end = 'end'
+
+    test_string = '... content ...'
+    assert_equal(nil, StringHelper.string_between_markers(test_string, marker_start, marker_end))
+
+    test_string = '... start content end ...'
+    assert_equal(' content ', StringHelper.string_between_markers(test_string, marker_start, marker_end))
+
+    test_string = '... start content1 end start content2 end ...'
+    assert_equal(' content1 ', StringHelper.string_between_markers(test_string, marker_start, marker_end))
+
+    test_string = '... marker content1 marker marker content2 marker ...'
+    assert_equal(' content1 ', StringHelper.string_between_markers(test_string, 'marker', 'marker'))
+  end
 end
 
 class TestDateHelper < Test::Unit::TestCase
