@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="post-detail">
+  {% include blog/post/info.html post=page %}
+  {{ page.content }}
+  {% if page.comments %}
+    {% include blog/post/comments.html %}
+  {% endif %}
+</div>

@@ -10,6 +10,16 @@ module Components
       def self.humanize(str)
         str.gsub('_', ' ').capitalize
       end
+
+      def self.string_between_markers(str, marker_start, marker_end=nil)
+        marker_start = Regexp.escape(marker_start) if marker_start.is_a?(String)
+        if marker_end.nil?
+          marker_end = marker_start
+        elsif marker_end.is_a?(String)
+          marker_end = Regexp.escape(marker_end)
+        end
+        str[/#{marker_start}(.*?)#{marker_end}/m, 1]
+      end
     end
 
     class DateHelper

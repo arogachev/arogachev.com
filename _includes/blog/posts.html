@@ -1,0 +1,13 @@
+<div class="posts">
+  {% for post in include.posts %}
+    <div class="post">
+      {% include blog/post/info.html post=post with_link=true %}
+
+      {{ post.excerpt }}
+
+      <a href="{{ post.url }}" class="btn btn-default">
+        <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Read more
+      </a>
+    </div>
+  {% endfor %}
+</div>

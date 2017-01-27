@@ -1,0 +1,23 @@
+@mixin common-post-info {
+  .date {
+    font-style: italic;
+  }
+}
+
+.posts {
+  .post {
+    @include common-post-info;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .title {
+      font-size: 22px;
+    }
+  }
+}
+
+.post-detail {
+  @include common-post-info;
+}
