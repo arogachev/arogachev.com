@@ -1,28 +1,9 @@
 <div class="posts">
   {% for post in include.posts %}
     <div class="post">
-      <p>
-        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-        <span class="date">{{ post.date | date: '%e %b %Y' }}</span>
-      </p>
+      {% include blog/post/info.html post=post with_link=true %}
 
-      <p><a class="title" href="{{ post.url }}">{{ post.title }}</a></p>
-
-      <p>
-        <span class="glyphicon glyphicon-book" aria-hidden="true"></span> <b>Categories:</b>
-        {% for category in post.categories %}
-          <span class="label label-success">{{ category | capitalize }}</span>
-        {% endfor %}
-      </p>
-
-      <p>
-        <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> <b>Tags:</b>
-        {% for tag in post.tags %}
-          <span class="label label-primary">{{ tag }}</span>
-        {% endfor %}
-      </p>
-
-      {{ post.content | post_excerpt }}
+      {{ post.excerpt }}
 
       <a href="{{ post.url }}" class="btn btn-default">
         <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Read more

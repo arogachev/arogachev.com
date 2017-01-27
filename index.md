@@ -6,7 +6,7 @@ layout: default
 title: Alexey Rogachev's personal website
 ---
 
-{% assign latest_posts=site.posts | latest_posts: 5 %}
+{% assign latest_posts = site.posts | latest_posts: 5 %}
 
 ## Latest blog posts
 {% include blog/posts.html posts=latest_posts %}

@@ -9,7 +9,7 @@ tags: testing yii yii2 javascript jquery ajax nodejs sinon chai mocha
 
 ### Introduction
 
-<!--excerpt-->
+***
 
 During writing [tests for yii.js] in Yii 2 framework I faced with problem of testing AJAX requests with types `script` 
 and `jsonp`. I use [Sinon.JS] as a stubbing library, it has a wonderful feature called [Fake server] which comes in 
@@ -18,7 +18,7 @@ handy exactly for testing AJAX. Unfortunately there are some problems with these
 - Cross-domain requests do not work neither in Node nor in browser.
 - In Node.js they do not work at all, even the requests within the same site / domain.
 
-<!--excerpt-->
+***
 
 If you are not interested in details you can skip them and read the [Solution section] right away.
 
