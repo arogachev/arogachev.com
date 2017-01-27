@@ -1,8 +1,16 @@
-{% for skills in resume.skills %}
-  <div class="bs-callout bs-callout-success">
-    <h4>{{ skills.name }}</h4>
-    {% for keyword in skills.keywords %}
-      <span class="label label-primary">{{ keyword }}</span>
+{% assign skills = resume.skills | group_by_count: 3 %}
+
+{% for group in skills %}
+  <div class="row">
+    {% for skills_set in group %}
+      <div class="col-sm-4">
+        <div class="bs-callout bs-callout-success">
+          <h4>{{ skills_set.name }}</h4>
+          {% for keyword in skills_set.keywords %}
+            <span class="label label-primary">{{ keyword }}</span>
+          {% endfor %}
+        </div>
+      </div>
     {% endfor %}
   </div>
 {% endfor %}

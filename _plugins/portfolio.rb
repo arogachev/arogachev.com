@@ -1,11 +1,4 @@
 module Jekyll
-  class PortfolioGenerator < Generator
-    def generate(site)
-      portfolio = site.pages.detect {|page| page.name == 'portfolio.html'}
-      portfolio.data['projects'] = site.data['portfolio']['projects'].each_slice(4).to_a
-    end
-  end
-
   class PortfolioProjectPage < Page
     def initialize(site, base, dir, project)
       @site = site
