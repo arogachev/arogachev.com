@@ -85,7 +85,7 @@ namespace :jekyll do
   task :build do
     on roles(:all) do
       within release_path do
-        execute "cd #{release_path} && bundle exec jekyll build"
+        execute "cd #{release_path} && JEKYLL_ENV=production bundle exec jekyll build"
       end
     end
   end

@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    {% if jekyll.environment == 'production' %}
+      <script src="/assets/js/google_analytics.js"></script>
+    {% endif %}
+
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/bower_components/anchor-js/anchor.min.js"></script>
@@ -15,6 +20,10 @@
     {% contentblock extrahead %}
   </head>
   <body>
+    {% if jekyll.envinronment == 'production' %}
+      {% include yandex_metrika_counter.html %}
+    {% endif %}
+
     <div class="wrap">
       <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
