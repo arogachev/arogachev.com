@@ -41,7 +41,7 @@ $.post('/js/test.js');
 $.get('http://external.site/js/test.js');
 $.post('http://external.site/js/test.js');
 
-console.log(server.requests);
+console.log(server.requests.length);
 ```
 
 in both browser and Node the output will be `4` meaning that all requests were created and stubbed (even cross-domain 
