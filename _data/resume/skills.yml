@@ -1,5 +1,5 @@
 - name: Programming languages
-  keywords: [PHP, JavaScript, Ruby, Python]
+  keywords: [PHP, JavaScript, Ruby, Python, Node.js]
 
 - name: Web frameworks
   keywords: [Yii, Silex, Ruby on Rails, Jekyll, Django]
