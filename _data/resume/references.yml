@@ -1,3 +1,14 @@
+- author: Alexander Makarov
+  position: core developer
+  preposition: of
+  company: Yii Framework
+  image: amakarov.jpg
+  text: Alexey contributed significantly to Yii PHP framework last year. I can mention that his communication style
+    stands out. Very calm and reasonable. Mind is sharp about problem-solving and approaches are good. Based on best
+    practices and experience. Besides regular PHP stuff he did a very important job of refactoring JavaScript part and
+    covering it with automated tests properly which usually is the part lazy developers try to avoid. It was a pleasure
+    to work with him and I hope to do it again.
+
 - author: Viktor Aslanov
   position: founder
   preposition: of
