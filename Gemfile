@@ -25,5 +25,5 @@ end
 
 group :development do
   gem "capistrano", "~> 3.6"
-  gem "mocha"
+  gem "rspec"
 end
