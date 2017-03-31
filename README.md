@@ -89,6 +89,12 @@ Deploy:
 bundle exec cap production deploy
 ```
 
+### Running tests
+
+```
+rspec
+```
+
 ### Resume
 
 For specifying sensitive information create file `_data/resume/secrets.yml` with the following contents and fill it:
