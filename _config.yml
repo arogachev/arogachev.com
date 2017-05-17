@@ -37,6 +37,7 @@ port: 3000
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jemoji
 exclude:
   # Folders
   - config

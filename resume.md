@@ -1,13 +1,13 @@
 ---
-layout: resume
+layout: default
 title: Resume
 permalink: /resume/
+content_class: resume anchored
 ---
 
 {% assign resume = site.data.resume %}
 
 {% include resume/basics.html %}
-{% include resume/download.html %}
 
 ## Work
 {% include resume/work.html %}
@@ -22,7 +22,7 @@ permalink: /resume/
 {% include resume/activity.html %}
 
 ## References
-{% include resume/references.html %}
+{% include resume/references.html references=resume.references %}
 
 ## Interests
 {% include resume/interests.html %}

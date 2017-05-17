@@ -1,0 +1,98 @@
+.home {
+  .jumbotron {
+    padding: 20px;
+
+    p {
+      font-size: 16px;
+    }
+
+    hr {
+      border-top-color: #d5d5d5;
+    }
+  }
+
+  .fa-stack {
+    color: #f48024;
+  }
+
+  // Basic info
+
+  .basic-info {
+    .photo {
+      width: 200px;
+      height:200px;
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .description {
+      font-size: 20px;
+
+      p {
+        font-size: 20px;
+      }
+
+      .fa-li {
+        color: darkgreen;
+      }
+    }
+  }
+
+  // Feed
+
+  .feed {
+    margin-bottom: 30px;
+
+    h2 {
+      margin-top: 10px;
+    }
+  }
+
+  .latest-posts {
+    .post {
+      font-size: 18px;
+      text-align: left;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+      }
+
+      .date {
+        font-style: italic;
+
+        @media (max-width: $screen-xs-max) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .latest-project {
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      margin-bottom: 0;
+    }
+  }
+
+  // Grouped info
+
+  .grouped-info {
+    .location {
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+}

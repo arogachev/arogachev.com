@@ -31,9 +31,6 @@
 - name: Work automating
   keywords: [Vagrant, Puppet, PuPHPet]
 
-- name: Template engines
-  keywords: [Twig, Handlebars.js]
-
 - name: Caching
   keywords: [memcached]
 

@@ -8,7 +8,9 @@ module Resume
       @data['work'] = @data['work'].values
 
       @data['basics']['age'] = DateHelper.age(@data['basics']['birthdate'])
-      @data['basics']['work_duration'] = DateHelper.work_duration(@data['work'].first['start_date'])
+      work_start_date = @data['work'].first['start_date']
+      @data['basics']['work_duration'] = DateHelper.work_duration(work_start_date)
+      @data['basics']['work_duration_years'] = DateHelper.work_duration(work_start_date, years_only: true)
 
       @data['education']['start_date_text'] = @data['education']['start_date'].strftime('%b. %Y')
       @data['education']['end_date_text'] = @data['education']['end_date'].strftime('%b. %Y')

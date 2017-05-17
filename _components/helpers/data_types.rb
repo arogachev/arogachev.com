@@ -23,7 +23,7 @@ module Components
     end
 
     class DateHelper
-      def self.work_duration(start_date, end_date=nil)
+      def self.work_duration(start_date, end_date=nil, years_only: false)
         end_date = DateTime.now.to_date if end_date.nil?
         days_total = (end_date - start_date).to_i
         months_total, extra_days = days_total.divmod(365.0 / 12)
@@ -34,7 +34,7 @@ module Components
         unless years == 0
           duration_parts.push(StringHelper.pluralize(years, 'year'))
         end
-        unless months == 0
+        unless years_only || months == 0
           duration_parts.push(StringHelper.pluralize(months, 'month'))
         end
         duration_parts.join(' ')

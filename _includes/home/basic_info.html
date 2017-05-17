@@ -1,0 +1,20 @@
+<div class="basic-info jumbotron">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+      <img src="/assets/images/resume/{{ resume.basics.image }}" class="photo center-block" alt="{{ basics.name }}"
+           title="{{ basics.name }}">
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+      <div class="description">
+        <p>{{ resume.basics.summary }}</p>
+        <hr>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-hand-o-right"></i>{{ resume.basics.work_duration_years }} experience</li>
+          <li><i class="fa-li fa fa-hand-o-right"></i>Yii 2 PHP framework contributor and core member</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="resume">{% include resume/profiles.html %}</div>
+    </div>
+  </div>
+</div>
