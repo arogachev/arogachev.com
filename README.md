@@ -8,7 +8,7 @@ Requirements (recommended):
 
 - Ruby >= 2.2.2 with Bundler gem
 - Node.js with NPM and Bower
-- Pandoc >= 1.19.1
+- Pandoc >= 1.19.2.1
 - TeX Live
 - ImageMagick
 
@@ -18,8 +18,8 @@ going to work with resume.
 Install Pandoc:
 
 ```
-sudo wget https://github.com/jgm/pandoc/releases/download/1.19.1/pandoc-1.19.1-1-amd64.deb
-sudo dpkg -i pandoc-1.19.1-1-amd64.deb
+sudo wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
+sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb
 ```
 
 Install Tex Live. This can take a very long time.
