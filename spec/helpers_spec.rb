@@ -163,28 +163,28 @@ RSpec.describe StringHelper do
   describe '.age' do
     context 'with more than month before birthday' do
       it 'does not round age' do
-        allow(Time).to receive(:now).and_return(Time.mktime(2017, 1, 7))
+        allow(Date).to receive(:today).and_return(Date.parse('2017-01-07'))
         expect(DateHelper.age(Date.parse('1990-02-17'))).to eq(26)
       end
     end
 
     context 'with less than month before birthday' do
       it 'does not round age' do
-        allow(Time).to receive(:now).and_return(Time.mktime(2017, 2, 7))
+        allow(Date).to receive(:today).and_return(Date.parse('2017-02-07'))
         expect(DateHelper.age(Date.parse('1990-02-17'))).to eq(26)
       end
     end
 
     context 'with birthday' do
       it 'shows new age' do
-        allow(Time).to receive(:now).and_return(Time.mktime(2017, 2, 17))
+        allow(Date).to receive(:today).and_return(Date.parse('2017-02-17'))
         expect(DateHelper.age(Date.parse('1990-02-17'))).to eq(27)
       end
     end
 
     context 'with less than month after birthday' do
       it 'does not round age' do
-        allow(Time).to receive(:now).and_return(Time.mktime(2017, 3, 7))
+        allow(Date).to receive(:today).and_return(Date.parse('2017-03-07'))
         expect(DateHelper.age(Date.parse('1990-02-17'))).to eq(27)
       end
     end
@@ -192,21 +192,21 @@ RSpec.describe StringHelper do
     context 'with leap years' do
       context 'with birthday' do
         it 'shows new age' do
-          allow(Time).to receive(:now).and_return(Time.mktime(2016, 2, 29))
+          allow(Date).to receive(:today).and_return(Date.parse('2016-02-29'))
           expect(DateHelper.age(Date.parse('2000-02-29'))).to eq(16)
         end
       end
 
       context 'with not leap year, day before birthday' do
         it 'does not round age' do
-          allow(Time).to receive(:now).and_return(Time.mktime(2015, 2, 28))
+          allow(Date).to receive(:today).and_return(Date.parse('2015-02-28'))
           expect(DateHelper.age(Date.parse('2000-02-29'))).to eq(14)
         end
       end
 
       context 'with not leap year, day after birthday' do
         it 'shows new age' do
-          allow(Time).to receive(:now).and_return(Time.mktime(2015, 3, 1))
+          allow(Date).to receive(:today).and_return(Date.parse('2015-03-01'))
           expect(DateHelper.age(Date.parse('2000-02-29'))).to eq(15)
         end
       end
