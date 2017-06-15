@@ -92,7 +92,7 @@ bundle exec cap production deploy
 ### Running tests
 
 ```
-rspec
+bundle exec rspec
 ```
 
 ### Resume
