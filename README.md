@@ -77,7 +77,7 @@ For portfolio:
 bundle exec rake portfolio:generate_main_images
 ```
 
-Serve the site (by default it will be available at `localhost:3000`):
+Serve the site:
 
 ```
 bundle exec jekyll serve
