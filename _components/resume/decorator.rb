@@ -3,9 +3,9 @@ module Resume
     def initialize(data)
       @data = data
     end
-    
+
     def decorate
-      @data['work'] = @data['work'].values
+      @data['work'] = @data['work'].values.sort_by {|j| j['start_date']}
 
       @data['basics']['age'] = DateHelper.age(@data['basics']['birthdate'])
       @data['basics']['work_duration'] = DateHelper.work_duration(@data['work'].first['start_date'])
