@@ -50,6 +50,16 @@
     }
   }
 
+  .latest-project {
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      margin-bottom: 0;
+    }
+  }
+
   .latest-posts {
     .post {
       font-size: 18px;
@@ -70,16 +80,6 @@
           margin-bottom: 5px;
         }
       }
-    }
-  }
-
-  .latest-project {
-    @media (max-width: $screen-xs-max) {
-      margin-bottom: 20px;
-    }
-
-    .thumbnail {
-      margin-bottom: 0;
     }
   }
 
