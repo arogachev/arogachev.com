@@ -1,10 +1,13 @@
+# IDE files
+.idea
+
+# Ruby gems
+/vendor
+
 # Jekyll related directories
 _site
 .sass-cache
 .jekyll-metadata
-
-# IDE files
-.idea
 
 # Capistrano log
 /log

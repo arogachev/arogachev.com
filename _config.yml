@@ -32,8 +32,6 @@ defaults:
       comments: true
 
 # Build settings
-host: 0.0.0.0
-port: 3000
 markdown: kramdown
 gems:
   - jekyll-feed
@@ -42,7 +40,9 @@ exclude:
   # Folders
   - config
   - log
+  - spec
   - test
+  - vendor
   # Files
   - bower.json
   - Capfile
