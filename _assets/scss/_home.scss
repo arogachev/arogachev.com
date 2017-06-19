@@ -12,7 +12,7 @@
   }
 
   .fa-stack {
-    color: #f48024;
+    color: #ee7e18;
   }
 
   // Basic info
@@ -21,6 +21,7 @@
     .photo {
       width: 200px;
       height:200px;
+      border-radius: 6px;
 
       @media (max-width: $screen-xs-max) {
         margin-bottom: 10px;
