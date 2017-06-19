@@ -8,6 +8,7 @@ content_class: resume anchored
 {% assign resume = site.data.resume %}
 
 {% include resume/basics.html %}
+{% include resume/download.html %}
 
 ## Work
 {% include resume/work.html %}
