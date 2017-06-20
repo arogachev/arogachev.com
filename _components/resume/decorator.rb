@@ -8,9 +8,7 @@ module Resume
       @data['work'] = @data['work'].values.sort_by {|j| j['start_date']}
 
       @data['basics']['age'] = DateHelper.age(@data['basics']['birthdate'])
-      work_start_date = @data['work'].first['start_date']
-      @data['basics']['work_duration'] = DateHelper.work_duration(work_start_date)
-      @data['basics']['work_duration_years'] = DateHelper.work_duration(work_start_date, years_only: true)
+      add_work_duration
 
       @data['education']['start_date_text'] = @data['education']['start_date'].strftime('%b. %Y')
       @data['education']['end_date_text'] = @data['education']['end_date'].strftime('%b. %Y')
@@ -20,7 +18,8 @@ module Resume
         job['end_date_year'] = job['end_date'] ? job['end_date'].strftime('%Y') : 'Present'
         job['start_date_text'] = job['start_date'].strftime('%b. %Y')
         job['end_date_text'] = job['end_date'] ? job['end_date'].strftime('%b. %Y') : 'Present'
-        job['work_duration'] = DateHelper.work_duration(job['start_date'], job['end_date'])
+        job['work_duration'] = {}
+        job['work_duration']['label'] = DateHelper.work_duration_label(job['start_date'], job['end_date'])
       end
       @data['work_reversed'] = @data['work'].reverse
 
@@ -32,6 +31,16 @@ module Resume
       end
 
       @data
+    end
+
+    private
+
+    def add_work_duration
+      start_date = @data['work'].first['start_date']
+      work_duration = DateHelper.work_duration(start_date, years_only: true)
+      @data['basics']['work_duration'] = {}
+      @data['basics']['work_duration']['years'] = work_duration[:years].to_s
+      @data['basics']['work_duration']['label'] = DateHelper.work_duration_label(start_date, years_only: true)
     end
   end
 end

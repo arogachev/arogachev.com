@@ -81,27 +81,30 @@ RSpec.describe StringHelper do
   describe '.work_duration' do
     context 'with months' do
       context 'with last month less than a half' do
-        it 'returns according message' do
-          duration = 'less than a month'
+        it 'rounds down to 1 month' do
+          duration = {years: 0, months: 0}
           expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-08-20'))).to eq(duration)
         end
       end
 
       context 'last month more than a half' do
         it 'rounds up to 1 month' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-09-05'))).to eq('1 month')
+          duration = {years: 0, months: 1}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-09-05'))).to eq(duration)
         end
       end
 
       context 'last full month' do
         it 'counts last month as 1' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-09-15'))).to eq('1 month')
+          duration = {years: 0, months: 1}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-09-15'))).to eq(duration)
         end
       end
 
       context 'last month less than a half' do
         it 'rounds down to 1 month' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-09-20'))).to eq('1 month')
+          duration = {years: 0, months: 1}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2011-09-20'))).to eq(duration)
         end
       end
     end
@@ -109,19 +112,22 @@ RSpec.describe StringHelper do
     context 'with years' do
       context 'with last month less than a half' do
         it 'rounds down to 1 month and shows years only' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-08-20'))).to eq('1 year')
+          duration = {years: 1, months: 0}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-08-20'))).to eq(duration)
         end
       end
 
       context 'with no extra days' do
         it 'shows years only' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-08-15'))).to eq('1 year')
+          duration = {years: 1, months: 0}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-08-15'))).to eq(duration)
         end
       end
 
       context 'with last month more than a half' do
         it 'rounds up to 1 month and shows years only' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-08-05'))).to eq('1 year')
+          duration = {years: 1, months: 0}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-08-05'))).to eq(duration)
         end
       end
     end
@@ -129,33 +135,95 @@ RSpec.describe StringHelper do
     context 'with years and months' do
       context 'with last month more than a half' do
         it 'rounds up to 1 month and shows both years and months' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-09-05'))).to eq('1 year 1 month')
+          duration = {years: 1, months: 1}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-09-05'))).to eq(duration)
         end
       end
 
       context 'with last full month' do
         it 'counts last month as 1 and shows both years and months' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-09-15'))).to eq('1 year 1 month')
+          duration = {years: 1, months: 1}
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-09-15'))).to eq(duration)
         end
       end
 
       context 'with last month less than a half' do
+        duration = {years: 1, months: 1}
         it 'rounds down to 1 month and shows both years and months' do
-          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-09-20'))).to eq('1 year 1 month')
+          expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2012-09-20'))).to eq(duration)
         end
-      end
-    end
-
-    context 'with plural nouns' do
-      it 'shows correct names' do
-        expect(DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2017-01-04'))).to eq('5 years 5 months')
       end
     end
 
     context 'with no end date' do
       it 'returns duration from start date to current date' do
         allow(DateTime).to receive(:now).and_return(DateTime.new(2017, 1, 4))
-        expect(DateHelper.work_duration(Date.parse('2011-08-15'))).to eq('5 years 5 months')
+        duration = {years: 5, months: 5}
+        expect(DateHelper.work_duration(Date.parse('2011-08-15'))).to eq(duration)
+      end
+    end
+
+    context 'with years_only set' do
+      context 'with months less than half of year' do
+        it 'rounds down to 1 year' do
+          duration = {years: 5, months: 0}
+          result = DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2017-01-04'), years_only: true)
+          expect(result).to eq(duration)
+        end
+      end
+
+      context 'with months more than half of year' do
+        it 'rounds up to 1 year' do
+          duration = {years: 6, months: 0}
+          result = DateHelper.work_duration(Date.parse('2011-08-15'), Date.parse('2017-03-04'), years_only: true)
+          expect(result).to eq(duration)
+        end
+      end
+    end
+  end
+
+  describe '.work_duration_label' do
+    context 'with duration less than a month' do
+      it 'returns according label' do
+        label = 'less than a month'
+        expect(DateHelper.work_duration_label(Date.parse('2011-08-15'), Date.parse('2011-08-20'))).to eq(label)
+      end
+    end
+
+    context 'with duration less than a year' do
+      it 'shows months only' do
+        expect(DateHelper.work_duration_label(Date.parse('2011-08-15'), Date.parse('2011-09-05'))).to eq('1 month')
+      end
+    end
+
+    context 'with round years' do
+      it 'shows years only' do
+        expect(DateHelper.work_duration_label(Date.parse('2011-08-15'), Date.parse('2012-08-20'))).to eq('1 year')
+      end
+    end
+
+    context 'with not round years' do
+      it 'shows years and months' do
+        label = '5 years 5 months'
+        expect(DateHelper.work_duration_label(Date.parse('2011-08-15'), Date.parse('2017-01-04'))).to eq(label)
+      end
+    end
+
+    context 'with years_only set' do
+      context 'with months less than half of year' do
+        it 'rounds down to 1 year' do
+          label = '5 years'
+          result = DateHelper.work_duration_label(Date.parse('2011-08-15'), Date.parse('2017-01-04'), years_only: true)
+          expect(result).to eq(label)
+        end
+      end
+
+      context 'with months more than half of year' do
+        it 'rounds up to 1 year' do
+          label = '6 years'
+          result = DateHelper.work_duration_label(Date.parse('2011-08-15'), Date.parse('2017-03-04'), years_only: true)
+          expect(result).to eq(label)
+        end
       end
     end
   end

@@ -7,6 +7,11 @@ module Jekyll
     def linebreaks(input)
       input.encode(universal_newline: true).gsub("\n", '<br>')
     end
+
+    def liquidify(input, data)
+      template = Liquid::Template.parse(input)
+      template.render(data)
+    end
   end
 
   module ArrayFilter

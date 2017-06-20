@@ -9,8 +9,9 @@
         <p>{{ resume.basics.summary }}</p>
         <hr>
         <ul class="fa-ul">
-          <li><i class="fa-li fa fa-hand-o-right"></i>{{ resume.basics.work_duration_years }} experience</li>
-          <li><i class="fa-li fa fa-hand-o-right"></i>Yii 2 PHP framework contributor and core member</li>
+          {% for fact in home.basic_info.quick_facts %}
+            <li><i class="fa-li fa fa-hand-o-right"></i> {{ fact | liquidify: site.data | markdownify }}</li>
+          {% endfor %}
         </ul>
       </div>
       <hr>
