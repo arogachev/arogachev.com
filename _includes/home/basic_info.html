@@ -10,7 +10,9 @@
         <hr>
         <ul class="fa-ul">
           {% for fact in home.basic_info.quick_facts %}
-            <li><i class="fa-li fa fa-hand-o-right"></i> {{ fact | liquidify: site.data | markdownify }}</li>
+            <li class="quick-fact">
+              <i class="fa-li fa fa-hand-o-right"></i> {{ fact | liquidify: site.data | markdownify }}
+            </li>
           {% endfor %}
         </ul>
       </div>

@@ -24,7 +24,7 @@
       border-radius: 6px;
 
       @media (max-width: $screen-xs-max) {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
     }
 
@@ -35,8 +35,14 @@
         font-size: 18px;
       }
 
-      .fa-li {
-        color: darkgreen;
+      .quick-fact {
+        .fa-li {
+          color: darkgreen;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
       }
     }
   }
