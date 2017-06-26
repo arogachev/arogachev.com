@@ -2,7 +2,7 @@
   <div class="row">
     {% for group in home.grouped_info %}
       <div class="col-sm-4">
-        {% include home/_heading_with_icon.html name=group.title icon=group.icon %}
+        {% include home/_visual_heading.html name=group.title icon=group.icon %}
 
         {% if group.geo_link %}
           {% assign location = geo[group.content] %}
