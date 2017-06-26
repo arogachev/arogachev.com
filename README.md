@@ -2,62 +2,84 @@
 
 Personal site powered by Jekyll.
 
-## Development
+## System dependencies
 
-Requirements (recommended):
+Recommended OS - Ubuntu 16.04.
 
-- Ruby >= 2.2.2 with Bundler gem
-- Node.js with NPM and Bower
-- Pandoc >= 1.19.2.1
-- TeX Live
-- ImageMagick
+### Ruby
 
-Pandoc and Tex Live are needed for generating resume in `docx` and `pdf` format. They can be skipped if you are not 
+- [Installation instructions](Ruby installation)
+- Recommended version - 2.4.0
+
+#### Bundler
+
+```
+gem install bundler
+```
+
+### Node.js
+
+- [Installation instructions](Node.js installation)
+- Recommended version - 7.9.0
+
+#### Bower
+
+```
+npm install -g bower
+```
+
+### Pandoc
+
+Pandoc and Tex Live are needed for generating resume in `docx` and `pdf` formats. They can be skipped if you are not 
 going to work with resume.
 
-Install Pandoc:
+Recommended version - 1.19.2.1.
 
 ```
 sudo wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
 sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb
 ```
 
-Install Tex Live. This can take a very long time.
+#### Tex Live
 
 ```
 sudo apt-get install texlive-full
 ```
 
-If there will be errors at the very end of installation (I am using Ubuntu 14.04 with Vagrant locally), generating PDF 
-with Pandoc can cause some errors related with pdflatex. To solve them you might need to explicitly install the 
-following packages:
+> This can take a long time.
 
-```
-sudo apt-get install texlive-latex-base
-sudo apt-get install texlive-fonts-recommended
-sudo apt-get install texlive-latex-extra
-```
+### ImageMagick
 
 ImageMagick is needed for generating main images for portfolio projects. This can be skipped if you are not going to 
-work with portfolio. It can be installed using `apt` too:
+work with portfolio.
 
 ```
 sudo apt-get install imagemagick
 ```
 
-Install gems:
+## Project dependencies
+
+### Gems
 
 ```
 bundle install 
 ```
 
-Install Bower packages:
+#### jemoji
+
+zlib is necessary for Nokogiri dependency:
+
+```
+sudo apt-get install zlib1g-dev
+```
+
+### Client side packages
 
 ```
 bower install
 ```
 
-Generate assets:
+### Build files
 
 ```
 bundle exec rake
@@ -65,37 +87,37 @@ bundle exec rake
 
 If you are not going to work with resume or / and portfolio you can skip this step completely or run specific commands.
 
-For resume:
+#### Generating downloadable resume files
 
 ```
 bundle exec rake resume:generate_files
 ```
 
-For portfolio:
+#### Generating portfolio main images
 
 ```
 bundle exec rake portfolio:generate_main_images
 ```
 
-Serve the site:
+## Running server
 
 ```
 bundle exec jekyll serve
 ```
 
-Deploy:
+## Deploy
 
 ```
 bundle exec cap production deploy
 ```
 
-### Running tests
+## Running tests
 
 ```
 bundle exec rspec
 ```
 
-### Resume
+## Resume
 
 For specifying sensitive information create file `_data/resume/secrets.yml` with the following contents and fill it:
 
@@ -104,3 +126,6 @@ zip_code: ZIP Code
 address: Street address (where you currently live) 
 phone: Mobile phone number
  ```
+ 
+[Ruby installation]: https://gorails.com/setup/ubuntu/16.04
+[Node.js installation]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
