@@ -1,5 +1,5 @@
 ---
-title: Testing jQuery's AJAX "script" and "jsonp" requests using Sinon.JS' fake server 
+title: Testing jQuery's AJAX "script" and "jsonp" requests using Sinon.JS' fake server
 date: 2017-01-25 16:28:00 +0600
 categories: programming
 tags: testing yii yii2 javascript jquery ajax nodejs sinon chai mocha
@@ -58,7 +58,7 @@ and then call `server.respond()` after specific request and it will be resolved.
 Or we can respond to single request:
 
 ```js
-server.requeests[0].respond(200, {'Content-Type': 'text/javascript'}, 'var foobar = 1;');
+server.requests[0].respond(200, {'Content-Type': 'text/javascript'}, 'var foobar = 1;');
 ```
 
 So far, so good. Everything works fine with regular `GET` and `POST` requests.
