@@ -8,7 +8,7 @@ Recommended OS - Ubuntu 16.04.
 
 ### Ruby
 
-- [Installation instructions](Ruby installation)
+- [Installation instructions][Ruby installation]
 - Recommended version - 2.4.0
 
 #### Bundler
@@ -19,7 +19,7 @@ gem install bundler
 
 ### Node.js
 
-- [Installation instructions](Node.js installation)
+- [Installation instructions][Node.js installation]
 - Recommended version - 7.9.0
 
 #### Bower
