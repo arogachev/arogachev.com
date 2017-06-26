@@ -39,7 +39,7 @@ module Resume
       start_date = @data['work'].first['start_date']
       work_duration = DateHelper.work_duration(start_date, years_only: true)
       @data['basics']['work_duration'] = {}
-      @data['basics']['work_duration']['years'] = work_duration[:years].to_s
+      @data['basics']['work_duration']['years'] = work_duration[:years]
       @data['basics']['work_duration']['label'] = DateHelper.work_duration_label(start_date, years_only: true)
     end
   end

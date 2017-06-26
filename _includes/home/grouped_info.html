@@ -1,4 +1,4 @@
-<div class="grouped-info jumbotron text-center">
+<div class="grouped-info jumbotron">
   <div class="row">
     {% for group in home.grouped_info %}
       <div class="col-sm-4">
@@ -6,7 +6,9 @@
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-{{ group.icon }} fa-stack-1x fa-inverse"></i>
         </span>
+
         <h2>{{ group.title }}</h2>
+
         {% if group.geo_link %}
           {% assign location = geo[group.content] %}
           <p class="location">
