@@ -1,4 +1,4 @@
-{% assign posts = site.posts | latest_items: 10 %}
+{% assign posts = site.posts | latest_items: 3 %}
 
 <div class="latest-posts">
   <span class="fa-stack fa-2x">
@@ -6,12 +6,20 @@
     <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
   </span>
 
-  <h2>Latest posts</h2>
+  <h2>Latest articles</h2>
 
-  {% for post in posts %}
-    <div class="post row">
-      <div class="col-md-2 col-sm-3 col-xs-12 date">{{ post.date | date: '%e %b %Y' }}</div>
-      <div class="col-md-10 col-sm-9 col-xs-12"><a href="{{ post.url }}">{{ post.title }}</a></div>
+  <div class="thumbnail">
+    <div class="caption">
+      {% for post in posts %}
+        <div class="post">
+          <p class="date">{{ post.date | date: '%e %b %Y' }}</p>
+          <p class="title"><a href="{{ post.url }}">{{ post.title }}</a></p>
+        </div>
+      {% endfor %}
+
+      <a href="/blog/" class="btn btn-info view-all" aria-label="View all articles">
+        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> View all articles
+      </a>
     </div>
-  {% endfor %}
+  </div>
 </div>

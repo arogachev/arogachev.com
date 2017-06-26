@@ -22,8 +22,8 @@
         {% else %}
           <p>{{ group.content | linebreaks }}</p>
         {% endif %}
-        <a href="/resume/{% if group.resume_section %}#{{ group.resume_section }}{% endif %}" class="btn btn-default"
-           aria-label="Left Align">
+        <a href="/resume/{% if group.resume_section %}#{{ group.resume_section }}{% endif %}"
+           class="btn btn-default view-more" aria-label="View more">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span> View more
         </a>
       </div>
