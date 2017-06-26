@@ -1,0 +1,34 @@
+basic_info:
+  quick_facts:
+    - "**{{ resume.basics.work_duration.years }}** years' [experience](/resume/#work) in web development"
+    - Participated in development of more than **20** [projects](/portfolio/)
+    - "[Open source contributor](https://github.com/arogachev) (mainly to [Yii 2](https://github.com/yiisoft/yii2) PHP
+      framework)"
+grouped_info:
+  - icon: map-marker
+    title: From
+    content: petropavl
+    geo_link: true
+
+  - icon: code
+    title: Programming
+    content: |-
+      PHP
+      JavaScript
+      Ruby
+      Python
+      Node.js
+    resume_section: skills
+
+  - icon: heart
+    title: Interests
+    content: |-
+      :muscle: Gym
+      :runner: Running
+      :bicyclist: Cycling
+      :man_cartwheeling: Yoga
+      :snowboarder: Snowboarding
+      :uk: Foreign languages
+      :camera: Photography
+      :books: Psychohogy
+    resume_section: interests

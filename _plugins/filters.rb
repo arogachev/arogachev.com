@@ -3,21 +3,27 @@ module Jekyll
     def humanize(input)
       StringHelper.humanize(input)
     end
+
+    def linebreaks(input)
+      input.encode(universal_newline: true).gsub("\n", '<br>')
+    end
+
+    def liquidify(input, data)
+      template = Liquid::Template.parse(input)
+      template.render(data)
+    end
   end
 
   module ArrayFilter
     def group_by_count(arr, count)
       arr.each_slice(count).to_a
     end
-  end
 
-  module PostFilter
-    def latest_posts(posts, limit)
-      posts[0..limit - 1]
+    def latest_items(items, limit)
+      items[0..limit - 1]
     end
   end
 end
 
 Liquid::Template.register_filter(Jekyll::StringFilter)
 Liquid::Template.register_filter(Jekyll::ArrayFilter)
-Liquid::Template.register_filter(Jekyll::PostFilter)

@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Philosopher:700|PT+Mono" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     {% if jekyll.environment == 'production' %}
@@ -25,7 +25,7 @@
     {% endif %}
 
     <div class="wrap">
-      <nav class="navbar navbar-inverse" role="navigation">
+      <nav class="main-menu navbar navbar-inverse" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
@@ -48,7 +48,12 @@
       <div class="container">
         <h1>{{ page.title }}</h1>
         <hr>
-        <div class="content">{{ content }}</div>
+        {% if layout.content_class %}
+          {% assign content_class = layout.content_class %}
+        {% elsif page.content_class %}
+          {% assign content_class = page.content_class %}
+        {% endif %}
+        <div class="content{% if content_class %} {{ content_class }}{% endif %}">{{ content }}</div>
       </div>
     </div>
     <footer class="footer">
