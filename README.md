@@ -1,6 +1,6 @@
 # arogachev.com
 
-Personal site powered by Jekyll.
+[arogachev.com][arogachev.com] is my personal site powered by Jekyll.
 
 ## System dependencies
 
@@ -126,6 +126,7 @@ zip_code: ZIP Code
 address: Street address (where you currently live) 
 phone: Mobile phone number
  ```
- 
+
+[arogachev.com]: http://arogachev.com/
 [Ruby installation]: https://gorails.com/setup/ubuntu/16.04
 [Node.js installation]: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
