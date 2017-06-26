@@ -1,12 +1,7 @@
 {% assign project = site.data.portfolio.projects.first %}
 
 <div class="latest-project">
-  <span class="fa-stack fa-2x">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-keyboard-o fa-stack-1x fa-inverse"></i>
-  </span>
-
-  <h2>Latest project</h2>
+  {% include home/_heading_with_icon.html name='Latest project' icon='keyboard-o' %}
 
   <div class="project thumbnail">
     <div class="row">
