@@ -25,10 +25,8 @@ grouped_info:
     content: |-
       :muscle: Gym
       :runner: Running
-      :bicyclist: Cycling
       :man_cartwheeling: Yoga
-      :snowboarder: Snowboarding
+      :bicyclist: Cycling
       :uk: Foreign languages
       :camera: Photography
-      :books: Psychology
     resume_section: interests

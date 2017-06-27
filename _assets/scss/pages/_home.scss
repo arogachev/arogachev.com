@@ -11,8 +11,14 @@
     }
   }
 
-  .fa-stack {
-    color: #ee7e18;
+  .visual-heading {
+    .icon {
+      color: #ee7e18;
+    }
+
+    .heading {
+      margin-top: 5px;
+    }
   }
 
   .view-more {
@@ -58,10 +64,6 @@
   .feed {
     margin-bottom: 30px;
     text-align: center;
-
-    h2 {
-      margin-top: 10px;
-    }
   }
 
   .latest-project {
@@ -102,6 +104,7 @@
 
   .latest-posts {
     .thumbnail {
+      margin-bottom: 0;
       padding: 10px;
     }
 
