@@ -1,4 +1,5 @@
-{% assign project = site.data.portfolio.projects.first %}
+{% assign projects = site.pages | projects %}
+{% assign project = projects.first %}
 
 <div class="latest-project">
   {% include home/_visual_heading.html name='Latest project' icon='keyboard-o' %}
@@ -7,16 +8,15 @@
     <div class="row">
       <div class="col-md-6">
         <div class="screenshot thumbnail">
-          <a href="/portfolio/projects/{{ project.name }}/">
-            <img src="/assets/images/portfolio/projects/{{ project.name }}/main.jpg" alt="{{ project.title }}"
-                 title="{{ project.title }}">
+          <a href="{{ project.permalink }}">
+            <img src="{{ project.image }}" alt="{{ project.title }}" title="{{ project.title }}">
           </a>
         </div>
       </div>
       <div class="col-md-6">
         <div class="caption">
           <p class="period">{{ project.year }}</p>
-          <p class="title"><a href="/portfolio/projects/{{ project.name }}/">{{ project.title }}</a></p>
+          <p class="title"><a href="{{ project.permalink }}">{{ project.title }}</a></p>
           <p class="description">{{ project.description }}</p>
           <a href="/portfolio/" class="btn btn-info view-all" aria-label="View all projects">
             <span class="glyphicon glyphicon-th" aria-hidden="true"></span> View all projects

@@ -1,9 +1,5 @@
 module Jekyll
   module StringFilter
-    def humanize(input)
-      StringHelper.humanize(input)
-    end
-
     def linebreaks(input)
       input.encode(universal_newline: true).gsub("\n", '<br>')
     end
@@ -23,7 +19,14 @@ module Jekyll
       items[0..limit - 1]
     end
   end
+
+  module PagesFilter
+    def projects(pages)
+      pages.select {|page| page.data['layout'] == 'portfolio_project'}.reverse
+    end
+  end
 end
 
 Liquid::Template.register_filter(Jekyll::StringFilter)
 Liquid::Template.register_filter(Jekyll::ArrayFilter)
+Liquid::Template.register_filter(Jekyll::PagesFilter)
