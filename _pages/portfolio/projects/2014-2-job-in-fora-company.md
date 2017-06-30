@@ -16,12 +16,12 @@ screenshots: [home, vacancies, vacancy, career, resume_constructor]
 
 ## Story
 
-Before this project was developed there was a separate "Jobs" section on ["Fora"](https://fora.kz/) company's main site 
-where users could view the list of actual jobs and respond to suitable one. In turn HR department specialists had access
-to corresponding section of administrative site's part for viewing received responses. However over time this
-functionality became insufficient in both administrative and public parts of the site. Because jobs part was not coupled 
-neither with product nor other components of online store, and code base continued growing considerably, the decision 
-was taken to move this functionality to separate project.
+Before this project was developed there was a separate "Jobs" section on ["Fora"][Fora] company's main site  where users 
+could view the list of actual jobs and respond to suitable one. In turn HR department specialists had access to 
+corresponding section of administrative site's part for viewing received responses. However over time this functionality 
+became insufficient in both administrative and public parts of the site. Because jobs part was not coupled neither with 
+product nor other components of online store, and code base continued growing considerably, the decision was taken to 
+move this functionality to separate project.
 
 The project was developed in Yii 2 PHP framework with use of MySQL RDBMS.
 
@@ -59,3 +59,5 @@ main site was still written in Yii 1 which became strongly outdated even at that
 After collective work and project's launch, its further development and support was fully delegated to me. Besides
 technical aspect, the active communication directly with HR department main specialist was occuring, during which the 
 bugs and the new tasks were being discussed and consultations about system's work were being given.
+
+[Fora]: https://fora.kz/
