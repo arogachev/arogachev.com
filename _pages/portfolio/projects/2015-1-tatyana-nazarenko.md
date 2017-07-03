@@ -3,7 +3,6 @@ title: Tatyana Nazarenko
 site: http://tnazarenko.com/
 year: 2015
 description: Personal site with portfolio.
-screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
 technologies:
   - Ruby
   - Ruby on Rails
@@ -12,6 +11,7 @@ technologies:
   - jQuery
   - Bootstrap
   - Sass
+screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
 ---
 
 ## История
