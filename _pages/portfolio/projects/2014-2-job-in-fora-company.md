@@ -14,50 +14,50 @@ technologies:
 screenshots: [home, vacancies, vacancy, career, resume_constructor]
 ---
 
-## История
+## Story
 
-До появления этого проекта на основном сайте компании [Fora](https://fora.kz/) существовал отдельный раздел "Вакансий",
-где можно было посмотреть список актуальных вакансий и откликнуться на подходяшую. Специалисты отдела кадров, в свою
-очередь, имели доступ к соответствующему разделу в административной части сайта для просмотра пришедших откликов. Однако
-со временем данной функциональности стало недостаточно как в административной, так и в публичной части сайта. Поскольку
-вакансии не связаны с товарной и другими составляющими интернет-магазина, а кодовая база значительно выросла, было 
-принято решение о выделении данной функциональности в отдельный проект.
+Before this project was developed there was a separate "Jobs" section on ["Fora"][Fora] company's main site  where users 
+could view the list of actual jobs and respond to suitable one. In turn HR department specialists had access to 
+corresponding section of administrative site's part for viewing received responses. However over time this functionality 
+became insufficient in both administrative and public parts of the site. Because jobs part was not coupled neither with 
+product nor other components of online shop, and code base continued growing considerably, the decision was taken to 
+move this functionality to separate project.
 
-Проект был написан на PHP фреймворке Yii 2 с использованием СУБД MySQL. Также использовался Javascript.
+The project was developed in Yii 2 PHP framework with use of MySQL RDBMS.
 
-## Преимущества
+## Benefits
 
-### Для кандидатов
+### For candidates
 
-Из появившихся нововведений в публичной части можно отметить следующие:
+From appeared innovations in public part these are worth mentioning:
 
-- Структуризация вакансий и введение фильтров позволило быстрее найти работу в нужном городе и в соответствии со своей 
-сферой знаний / умений.
-- Появился конструктор резюме, с помощью которого можно быстро создать резюме с нуля. Как показывает практика, многие
-испытывают с этим трудности, особенно представители нетехнических специальностей. К тому же, конструктор устанавливает
-свой стандарт и лишает кандидата сомнений насчет неправильного оформления и т.д.
-- Улучшился контент - стало доступно больше информации о компании, ее сотрудниках, появились ответы на часто задаваемые
-вопросы.
+- Structurization of jobs and introduction of filters allowed to find job quicker according to required city and 
+knowledge / skills area.
+- The resume constructor allowing quicker creation of the resume from scratch appeared. As practice shows, many 
+candidates still have difficulties with it, especially representatives of non-technical specialities. Besides that
+constructor sets own standard and takes away candidate's extra doubts about incorrect design etc.
+- The contents improved - more information about company and its employees, answers to frequently asked questions became 
+available.
 
-### Для сотрудников
+### For employees
 
-Проект способствовал автоматизации и оптимизации работы отделов кадров во всех филиалах компании:
+The project promoted automation and optimization of HR department work in all company's branches:
 
-- Улучшенная система прав позволила специалистам работать с вакансиями в соответствии со своей должностью и 
-географическим местоположением.
-- Стало возможным вести учет по каждому кандидату, проводить планирование, заполнять расписание и итоги собеседований.
-- Улучшилась система коммуникации сотрудников разных филиалов и должностей. Стали быстрее приниматься решения о взятии
-кандидата в штат или отказе.
-- Система уведомлений уменьшила время реагирования сотрудников на пришедшие резюме и другие события в системе.
-- Появилась возможность ответа кандидату с сайта с использованием разных шаблонов.
+- Improved permission system allowed specialists to work with jobs according to their position and geographic location.
+- Maintaining the account on each candidate, carrying out planning, filling of schedule and interview results became 
+possible.
+- Communication system for employees from different branches and with different positions was improved. The decisions
+about taking candidate to staff or refusal began to be made quicker.
+- Notifications reduced employees' reaction time to sent resume and other events in the system.
+- The feature to respond candidate directly from the site with use of different templates appeared.
 
-Еще один немаловажный плюс создания этого проекта - это избавление от устаревшего кода и упрощение поддержки проекта.
-Основной сайт по-прежнему был написан на Yii 1, который даже в то время уже сильно устарел.
+One more important plus of creating this project is a disposal from legacy code and simplification of its support. The
+main site was still written in Yii 1 which became strongly outdated even at that time.
 
-## Особенности работы
+## Work features
 
-После коллективной работы и запуска проекта, дальнейшее его развитие и поддержка были полностью делегированы мне.
-Помимо технического аспекта, происходила активная коммуникация непосредственно с главным специалистом отдела кадров, в 
-ходе которой обсуждались ошибки и новые задачи, а также давались консультации по работе в системе.
+After collective work and project's launch, its further development and support was fully delegated to me. Besides
+technical aspect, the active communication directly with HR department main specialist was occuring, during which the 
+bugs and the new tasks were being discussed and consultations about system's work were being given.
 
 [Fora]: https://fora.kz/
