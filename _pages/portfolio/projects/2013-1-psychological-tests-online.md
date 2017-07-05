@@ -11,6 +11,8 @@ technologies:
   - MySQL
   - JavaScript
   - jQuery
+  - Bootstrap
+  - Sass
 screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
 ---
 
