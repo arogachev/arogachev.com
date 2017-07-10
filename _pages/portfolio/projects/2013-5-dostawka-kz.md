@@ -12,32 +12,35 @@ technologies:
 screenshots: [home, products, product, cart, order, contacts]
 ---
 
-## История
+## Background
 
-Это последний проект, разработанный мной во время работы в компании "INSY". Заказчику требовался полноценный 
-интернет-магазин с корзиной, заказами и возможностью оплаты банковской картой через интернет.
+This is a last project developed by me during work at "INSY" company. Full-fledged online shop with cart, orders and 
+opportunity of payment with credit card online was required by the customer.
 
-## Разработка
+## Development
 
-Классическая схема работы в компании (один специалист занимается и версткой, и программированием) в данном проекте была 
-немного нарушена. Верстка была выполнена другим специалистом, мне же оставалось связать ее с CMS и реализовать 
-необходимую функциональность. Сайт был реализован на системе управления контентом 1C-Bitrix. И хотя она подвергается 
-сильной критике, для данного проекта это был неплохой выбор. Наличие большого количества встроенной функциональности и 
-адаптация под рынок СНГ уменьшают время разработки, практически исключают работу по backend части сайта и делают продукт
-более доступным для заказчика. 
+The classic workflow scheme used in company (one specialist is engaged in both layout and programming) was violated a 
+bit in this project. Layout was made by other employee, binding it to CMS and implementing necessary functionality were 
+the things left for me to do. The site was implemented using 1C-Bitrix content management system. Even it's a subject of
+strong criticism, for this project that was quite good choice. While the presence of a big amount of built-in 
+functionality reduces the development time and almost excludes backend related work, adaptation for CIS market makes 
+product more affordable for the customer.
 
-Из наиболее интересных особенностей можно выделить:
+### Features
 
-- Детальный просмотр товара в модальном окне.
-- Большое количество действий (в основном, связанных с товарами), происходит без перезагрузки страницы.
-- Возможность продажи товара по несколько штук в порции; возможность заказа количества еды, кратного половине порции.
-- Расширенные опции при оформлении заказа.
+From the most interesting features these can be highlighted:
 
-## Дальнейшее развитие
+- Detail view of a product in modal window.
+- Big amount of actions (mainly related with products) happens without page reload.
+- Opportunity to sell product as a portion containing few pieces, opportunity to order amount of food multiple to half
+of the portion.
+- Enhanced options during making order.
 
-Сервис стал одним из первых в сфере заказа и доставки еды с использованием интернета в Петропавловске.
- 
-Сайт работает до сих пор, какое-то время активно рекламировался по местному радио. Новой функциональности добавлено не 
-было, но присутствуют некоторые баги, которых не было на момент разработки, что свидетельствует о слабой поддержке или 
-ее отсутствии. Ссылка на группу ВКонтакте ведет на другой ресторан, что наводит на мысли о реорганизации или 
-приостановлении работы сервиса.
+## Further development
+
+"dostawka.kz" became one of the first services to order and deliver food using internet in Petropavl.
+
+Site still works, it was being promoted on local radio for some time. No new functionality was added, but some new bugs 
+appeared, which were not there at the development stage. This indicates that either support is poor or it is not offered 
+at all. Also link to VKontakte group points to other restaurant, this gives an impression about reorganization or 
+suspension of service' work.
