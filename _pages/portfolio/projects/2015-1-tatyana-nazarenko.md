@@ -14,62 +14,66 @@ technologies:
 screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
 ---
 
-## История
+## Background
 
-В какой-то момент, работая в компании "Fora", я решил выйти за рамки PHP / Yii, изучить и попробовать другие языки
-и фреймворки. Мой выбор остановился на языке Ruby и фреймворке Ruby on Rails. Я был наслышан о быстроте и удобстве 
-разработки сайтов на Rails, а также влиянии его на другие фреймворки. 
+Working at "Fora" company, at some point I decided to move beyond PHP / Yii, learn and try other languages and 
+frameworks.
 
-Я вспомнил, что моей знакомой Татьяне Назаренко (начальнику отдела, в котором я работал в "БАРС-NORD") как раз
-требовался персональный сайт. Она занимается профессиональной фотосъемкой как в своей студии, так и за ее пределами.
-Татьяна жаловалась на то, что хоть и социальные сети по большей части покрывают ее потребности, тем не менее имеют 
-некоторые минусы:
+I chose Ruby language and Ruby on Rails framework. I heard a lot about speed and convenience of development with Rails
+and also about its influence on other frameworks.
 
-- невозможно без риска удаления опубликовать интимные фото;
-- отсутствие фильтра по нескольким критериям (год, пол, тематика и т.д.);
-- вероятность полного бана аккаунта.
+I remembered that my friend Tatyana (head of the department where I worked at "Bars Stroy") was needing a personal site.
+She does professional photographing in own studio and outside. Tatyana complained that though social networks cover her
+needs, nevertheless they have some cons:
 
-Помимо этого, хотелось чем-то выделяться от других (так как конкуренция в этом секторе даже в нашем небольшом городе 
-довольно высока), а также добавить на сайт дополнительной функциональности.
+- It's impossible to publish intimate photos without risk of removal.
+- Lack of the filter by several criteria (year, gender, subject, etc.).
+- A probability of account being fully banned.
 
-Вместе с этим выяснилась еще одна деталь - бюджета на сайт на тот момент не было, поэтому по-большому счету было 2 
-варианта - ждать появления денежных средств или делать сайт на волонтерской основе. Я выбрал последнее, тем более всегда
-интереснее изучать что-то новое на реальном проекте, который принесет какую-то пользу, а не на абстрактных примерах.
+In addition, there was also a desire to stand out from the others (because competition in this sector even in our small 
+town is quite high) and also add extra functionality to the site.
 
-## Разработка
+At the same time one more detail came out - there was no budget for the site at that time, so basically I had 2 main
+options - either wait for emergence of money or do the site on a volunteer basis. I chose the latter, all the more it's
+always more interesting to learn something new on the real project that will benefit someone rather than abstract 
+examples.
 
-Несмотря на относительную простоту сайта, разработка шла не очень быстро:
+## Development
 
-- я потратил некоторое время на изучение основ Ruby и Ruby on Rails (на тот момент 4й версии). В любом языке заложены 
-свои особенности и философия. Их важно понять и соблюдать для максимальной эффективности. Например, применение стиля 
-кодирования предыдущего освоенного языка / фреймворка с новым синтаксисом мало того, что будет неэффективным, так еще и 
-затруднит восприятие другими разработчиками. Ruby on Rails - не исключение, ведь основной его принцип - "convention over 
-configuration".
-- я занимался проектом в свободное от работы время, а летом его было не так много.
+Despite the relative simplicity of the site, development was not going too fast.
 
-Для ускорения работы я решил взять бесплатный HTML шаблон портфолио для Bootstrap и адаптировать его под наши нужды. Из
-выполненных задач можно отметить следующие:
+- I spent some time for learning Ruby and Ruby on Rails (4th version at that time) basics. Each language has own 
+features and philosophy. It's important to understand and follow them for the maximum efficiency. For example, using the
+code style of previously mastered language / framework with new syntax besides the probability of being non optimum in
+terms of spent / execution time, can also obstruct perception for other developers. Ruby on Rails is not an exception, 
+after all, its main principle - "convention over configuration".
+- I was doing project in free from main work time, and there was not so much free time in summer.
 
-- Добавил возможность группировать фотографии и загружать альбомы целиком в соответствии с пожеланиями заказчика.
-- Интегрировал и модифицировал расширение для обрезки фотографий. Несмотря на популярные тренды стыковки изображений
-с разными соотношениями сторон, заказчиком было принято решение о выделении нужной области вручную для уменьшенной копии
-картинки с целью формирования ровной сетки.
-- Подобрал и интегрировал расширение для удобного просмотра фотографий как с компьютера, так и с мобильных устройств - 
+To speed up the process I decided to take free Bootstrap portfolio template and customize it for our needs. From 
+executed tasks the following can be highlighted:
+
+- Added a feature to group photos and upload whole albums in accordance to customer's wishes.
+- Integrated and modified the extension for cropping of photos. Despite the popular trends of aligning images with 
+different aspect ratio, the decision about manual selection of necessary area for thumbnail to form flat grid was taken
+by the customer.
+- Selected and integrated the extension for convenient viewing of photos from both desktop PC and mobile devices - 
 PhotoSwipe.
-- Настроил развертывание сайта на виртуальном хостинге, используя Capistrano (для уменьшения денежных затрат).
+- Set up site's deploy on shared hosting using Capistrano (for reduction of monetary expenses).
 
-Были использованы и другие гемы для решения остальных задач и улучшения UX.
+For solving the rest of the tasks and improving UX some other gems were used too. 
 
-## Итоги
+## Results
 
-Сайт был запущен осенью 2015 года. 
+The site was launched in the autumn of 2015.
 
-Пользователи получили возможность:
+Users received opportunities:
 
-- более удобного просмотра информации и фотографий с использованием тегов;
-- заказать фотосессию или задать вопросы фотографу напрямую с сайта.
+- More convenient viewing of information and photos using tags.
+- Order of photoshoot or asking photographer a question directly from the site. 
 
-Я помог заказчику с заполнением начального текстового контента, а также отбором и загрузкой стартового набора 
-фотографий. Однако впоследствии она отказалась заполнять контент и развивать сайт. Проект проработал до истечения оплаты
-хостинга и был закрыт, Дальнейшие улучшения не имели смысла. В свою очередь, для меня, это была первая ступень в 
-освоении Ruby и Ruby on Rails.
+## Further development
+
+I helped the customer with filling of initial text content, also with selection and uploading of starting set of photos.
+However, subsequently she refused to fill the content and develop the site. The project was working until expiration of 
+payment for hosting and then was closed. Further improvements did not make any sense. For me, in turn, this was a first
+step in learning Ruby and Ruby on Rails.
