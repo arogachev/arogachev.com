@@ -40,7 +40,7 @@ of the portion.
 
 "dostawka.kz" became one of the first services to order and deliver food using internet in Petropavl.
 
-Site still works, it was being promoted on local radio for some time. No new functionality was added, but some new bugs 
+The site still works, it was being promoted on local radio for some time. No new functionality was added, but some new bugs 
 appeared, which were not there at the development stage. This indicates that either support is poor or it is not offered 
 at all. Also link to VKontakte group points to other restaurant, this gives an impression about reorganization or 
 suspension of service' work.
