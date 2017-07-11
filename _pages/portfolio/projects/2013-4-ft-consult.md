@@ -15,46 +15,47 @@ technologies:
 screenshots: [home, menu, service, product, product_details, solutions, clients, contacts, presentation_request]
 ---
 
-## История
+## Background
 
-Сайт разработан во время работы в компании "INSY". Одна из российских компаний - партнеров отдала данный проект на 
-аутсорсинг.
+The site was developed during work at "INSY" company. One of the russian partner companies gave this project for
+outsourcing.
 
-## Разработка
+## Development
 
-В качестве системы управления контентом была выбрана UMI.CMS, а в качестве используемого шаблонизатора - XSLT.
+UMI.CMS and XSLT were chosen as a content management system and used template engine accordingly.
 
-Верстка была выполнена специалистами компании - партнера, однако она подверглась доработкам в связи с дополнительными
-требованиями заказчика.
+Layout was implemented by specialists of the partner company, however, it was further customized according to customer's 
+additional requiremenents.
 
-### Представление информации
+### Representation of information
 
-Сайт содержит большое количество иерархической информации с глубоким уровнем вложенности (отдельные страницы имеют 5й 
-уровень вложенности). Поэтому важно было заложить средства для удобного ее структурирования и восприятия. Для этого 
-использовались:
+The site contains a big amount of hierarchical information with deep nesting level (some pages have 5th nesting level).
+So it was important to provide tools for both better structuring and perception of information. Here are the elements 
+and approaches that were used for it:
 
-- Меню, поддерживающее до 4х уровней вложенности (введение большего количества негативно бы сказалось на UX).
-- Отображение контента, при котором можно было увидеть превью дочерних элементов и перейти к детальному их просмотру;
-- Хлебные крошки для быстрого просмотра и возврата к родительским элементам.
+- Menu supporting up to 4 levels of nesting (introduction of bigger amount of levels would have a negative impact on 
+UX).
+- Content display with opportunity to see preview of child pages and go to their detail view.
+- Breadcrumbs for quick view of parent pages and returning to them.
 
-В backend части сайта уже было практически все необходимое для работы с иерархическими структурами данных за счет 
-используемой CMS, поэтому доработки практически не потребовались.
+Back-end part of the site already contained necessary things for work with hierarchical data structures, available
+through used CMS, so customizations were almost not needed.
 
-### Особенности
+### Features
 
-Коротко об остальных особенностях сайта:
+Here is a brief list of site's other features:
 
-- Продукты можно выбрать как по названию, так и по сфере применения.
-- Ключевые продукты были включены в слайдер на главной странице, который включал не только загружаемые изображения, но и
-редактируемые названия, иконки, и превью описания продукта. Для быстрой навигации, помимо стандартных переключателей,
-имеется дополнительный блок со списком названий.
-- Раздел "Наши клиенты" позволяет просмотреть список клиентов с группировкой по отрасли или первой букве названия. 
-Поддерживается альтернативный более компактный режим отображения в виде списка. Для каждого клиента добавлено детальное
-описание с перечнем внедренных продуктов и модулей со ссылками.
-- Имеется возможность заказа презентации или получения консультации по любому продукту. Реализовано в виде модальных
-окон без перезагрузки страницы.
+- Products can be chosen by both name and scope of application.
+- Key products were included in slider on main page which contained not only uploaded images but editable names, icons
+and preview of product's description displayed on top of these images. Besides standard switches there is an additional 
+block with names list.
+- "Our clients" section allows to view the list of clients with grouping either by branch or first letter of the name. 
+Alternative, more compact display mode in text list form is supported. Detailed description with list of implemented 
+products and modules with links was added for each client.
+- There is an opportunity of ordering presentation or receiving a consultation on any product. This functionality was 
+implemented in a form of modal windows without page reload.
 
-## Дальнейшее развитие
+## Further development
 
-Сайт работает до сих пор. Заказчик ответственно подошел к заполнению контента и максимально заполнил все имеющиеся 
-разделы сайта. Ключевые моменты отражаются в новостях компании. 
+The site still works. The customer was responsible in terms of filling of content and filled all existing site sections 
+as much as possible. Key moments are being reflected in company's news.
