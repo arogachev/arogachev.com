@@ -13,52 +13,52 @@ technologies:
 screenshots: [home, menu, about_company, news, products, product, cart, order, contacts]
 ---
 
-## История
+## Background
 
-Заказчик обратился в компанию "INSY" с целью создания интернет-магазина, призванного облегчить приобретение одежды и 
-экипировки для MMA в Петропавловске, а также популяризовать данный вида спорта. Помимо ведения бизнеса, он сам активно
-занимается MMA.
+The customer reached out to "INSY" company with purpose of creating online shop aimed at facilitation of purchasing 
+clothes and equipment for MMA in Petropavl and also popularization of this sport. In addition to doing business, he is
+himself actively involved in MMA.
 
-## Разработка
+## Development
 
-После создания и утверждения дизайна, я был назначен единственным разработчиком проекта. Компания только открывалась и 
-не имела существующей товарной базы, к тому же количество товаров было невелико. Было принято решение о ручном 
-заполнении товаров. Таким образом, интеграции каталога не требовалось, и основными задачами являлись верстка и 
-программирование.
- 
-В качестве системы управлениям контентом была выбрана UMI.CMS. Использовался XSLT шаблонизатор с небольшими доработками
-на стороне PHP.
+I was appointed as the only project's developer once design was created and approved. At that time the customer's 
+company was about to open and did not have existing commodity base in electronic format, furthermore the number of 
+products was not high. The decision about manual filling of products was taken. Thus, integration of catalogue was not 
+required and layout and programming were the main tasks.
 
-### Верстка
+UMI.CMS was chosen as a content management system. XSLT template engine with small customizations on PHP side was used.
 
-Среди особенностей верстки можно выделить следующие:
+### Layout
 
-- В фоне используется паттерн и изображения бойцов MMA. 
-- Использованы визуальные эффекты, такие как градиентная заливка, тени. Они были адаптированы для работы в более старых 
-браузерах (например, Internet Explorer 8).
-- Доступно 2 версии футера - расширенная и компактная. Переключаться между ними можно в любой момент с помощью
-соответствующей кнопки.
+From the layout's features the following can be highlighted:
 
-### Программирование
+- The pattern and images of MMA fighters are used in the background.
+- The visual effects, such as gradient fill, shadows were used. They were adapted to work in older browsers (Internet
+Explorer 8, for example).
+- 2 versions of footer - extended and compact are available. A user can switch between them at any moment via 
+corresponding button.
 
-Из-за использования CMS и направленности сайта, основная часть работы пришлась на frontend часть и каталог товаров:
+### Programming
 
-- Каждая товарная группа имеет тематическое изображение для быстрой идентификации.
-- Товары можно дополнительно помечать как новинки, хиты продаж и рекомендуемые, либо связывать с проходящими акциями. 
-Быстрый доступ к таким товарам возможен с главной страницы. Новинки и хиты продаж дополнительно помечаются 
-соответствующими значками.
-- Наиболее значимые бренды включены в "карусель" на главной странице с соответствующами фильтрующими ссылками на каталог
-товаров.
-- В списке товаров доступны расширенные фильтры по цене, производителю и т.д.
-- Возможность загрузки дополнительных изображений для товара (например, фото с другого ракурса).
-- В товар добавлена дополнительная опция размера.
+Because of using CMS and and site's focus, front-end and products catalogue accounted for the work's main part:
 
-Сайт, помимо электронной витрины товаров, является также агрегатором наиболее интересных и значимых новостей из мира
-MMA. В целом же, проект представляет собой классический интернет-магазин с корзиной, заказами, историей покупок и 
-остальная его часть довольно стандартна для сайтов такого рода.
+- Each product group has thematic icon for fast identification.
+- Products can be additionally marked as novelties, best sellers and recommendations or linked with sales that take 
+place. Quick access for such products is possible from the main page. Novelties and best sellers are additionally marked
+with corresponding icons.
+- The most important brands are included in "carousel" on the main page with corresponding filter links to products
+catalogue.
+- Extended filters by price, manufacturer, etc. are available for the products list.
+- The functionality of uploading additional images for the product (for example, the photo from the other angle) was 
+implemented.
+- Additional size option was added to the product.
 
-## Дальнейшее развитие
+Besides being an online products showcase, the site is also the aggregator of the most interesting and important news
+from MMA world. Generally speaking, however, the project is a classic online store with shopping cart, orders, purchase
+history and the rest of it is pretty standard for such sites.
 
-Домен и брендинг менялись несколько раз. Сайт проработал недолгое время, потом был закрыт на технические работы, после 
-чего совсем перестал быть доступен. Возможно, в очередной раз сменился домен, но, что более вероятно, проект оказался 
-нерентабельным и окончательно закрылся.
+## Further development
+
+The domain and branding were being changed several times. The site worked for a short time, then was closed for
+maintenance, after which it became fully inaccessible. Maybe, once again, domain was changed, but, more likely, the 
+project turned out to be unprofitable and was closed completely.
