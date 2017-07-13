@@ -13,109 +13,109 @@ technologies:
 screenshots: [home, company_history, our_employees, employee, products_catalog, products_category, products, product]
 ---
 
-## История
+## Background
 
-С этого проекта начался мой путь как веб-разработчика. На момент моего прихода, cайт уже существовал, требовалась его 
-дальнейшая поддержка и развитие. Приоритетной задачей было создание электронного каталога товаров (на тот момент 
-руководство было еще не готово к созданию полноценного интернет-магазина). Проект был разработан местной компанией 
-"INSY", которая впоследствии станет моим следующим местом работы.
+My path as a web developer started from this project. At the moment of my coming to company the site already existed, 
+its support and further development were required. Creating of online products catalogue was priority task (at that 
+moment management was not ready for creation of full-fledged online shop yet). The project was developed by "INSY" - 
+local company which will become my next work afterwards.
 
-Поскольку я был единственным человеком, который занимался сайтом, на меня был возложен большой объем работы помимо
-программирования.
+In addition to programming a big amount of other work was entrusted to me because I was the only employee fully engaged 
+in the site.
 
-## Этап 1 - работа в компании Bars Stroy
+## Phase 1 - Work in "Bars Stroy" company
 
-### Верстка и дизайн
+### Layout and design
 
-Был внесен ряд корректировок и доработок по верстке в соответствии с найденными багами и новыми требованиями 
-руководства. Работа осложнялась особенностями верстки - она была "резиновой", поэтому приходилось адаптировать изменения
-под большие разрешения экрана.
+In accordance with found bugs and new managenent's requirements a number of corrections and customizations related with 
+layout were made. The work was complicated by layout's features - it was "rubber" (with no fixed width) thus I had to 
+adapt the changes for big screen resolutions.
 
-Также проводились небольшие доработки по дизайну. Для более сложных задач по возможности привлекался дизайнер компании 
-"INSY".
+Also small design related customizations were being carried out. For more complex tasks designer of "INSY" company was
+being involved wherever possible.
 
-### Программирование
+### Programming
 
-Работа по программированию в основном состояла из исправления багов и доработки имеющихся разделов сайта. Из 
-разработанной новой функциональности можно отметить:
+Programming related work mainly consisted of fixing bugs and customizations of existing site sections. From new 
+developed functionality that can be noted:
 
-- Добавление основных торговых марок и принципов компании, настройка вывода последних обновлений сайта.
-- Трансформация частей текста в сворачиваемые блоки для компактного отображения, организация галерей из набора
-изображений.
-- Возможность просмотреть подчиненных руководителей отдела в разделе "Наши сотрудики", ограничение доступа для просмотра
-некоторых сотрудников.
-- Выделение из общей массы товаров новинок и хитов продаж.
-- Добавление расширенных опций по фильтру и сортировке товаров.
-- Модуль вакансий со списком актуальных вакансий и функцией отправки резюме.
+- Adding main brands and principles of company, setup of display of the latest site news and updates. 
+- Transformation of text parts into collapsible blocks for compact display, organization of galleries from a set of 
+images.
+- Opportunity to see subordinates of departments' heads in "Our employees" section, restriction of access for viewing 
+certain employees.
+- Separation of novelties and best sellers from a common set of products.
+- Adding extended options for filter and sorting of products.
+- Vacancies module with list of actual jobs and sending resume feature.
 
-### Интеграция с 1C
+### Integration with 1C
 
-Совместно со спелиастом компании, отвечающей за поддержку 1C, произведена интеграция каталога товаров с 1C:
+In cooperation with company responsible for 1C support the integration of products catalogue with 1C was made:
 
-- Синхронизация товарных позиций, цен, остатков на складах.
-- Для сайта была введена новая иерархия товарных групп. Структура категорий в 1С осталась нетронутой по просьбе 
-руководства.
-- Предусмотрена возможность блокировки выгрузки на сайт определенных категорий и товаров.
+- Synchronization of trade items, prices and remains in the warehouses.
+- New hierarchy of product groups was introduced for the site. The structure of categories in 1C remained intact upon
+request from management.
+- The feature to block loading of certain categories and products to the site was provided.
 
-### Копирайтинг, рерайтинг
+### Copywriting, rewriting
 
-На основе собранных данных и интервью руководства компании было написано некоторое количество статей - о деятельности 
-компании, истории ее возникновения и развития. Помимо этого, я был ответственен за написание и публикацию новостей о 
-важных событиях и мероприятиях.
+Based on collected data and interview of company's management a certain amount of articles - about company's activities,
+history of its emergence and development were written. Besides that I was responsible for writing and publication of 
+news about important events.
 
-Для описания товарных групп и наиболее значимых товаров информация собиралась с нескольких источников, перерабатывалась 
-и дополнялась с учетом специфики и ассортимента компании. В дальнейшем для работы по рерайтингу был привлечен фрилансер. 
-Я занимался поиском исходных материалов, планированием и контролем качества его работы.
+The information used to describe product groups and the most important products was being collected from multiple 
+sources and complemented based on company's specifics and product range. A freelancer for rewriting related work was
+engaged in the future. I was searching source materials, planning and controlling the quality of done work.
 
-### Фотографирование, обработка изображений
+### Photographing, image processing
 
-Для товаров, новостей, статей и других разделов сайта выполнялся поиск и обработка изображений. Для получения 
-недостающих изображений была организована фотосъемка. Полученные фотографии также подвергались отбору и обработке. 
-Позднее для помощи с редактированием изображений был привлечен дизайнер.
+For products, news, articles and other site sections the search and processing of images were being performed. For 
+getting missing images the photo shooting was organized. Obtained images were also being subjected to selection and 
+processing. A designer for helping with image processing was engaged later.
 
-### Контент менеджмент
+### Content management
 
-Я был также ответственен за добавление и поддержку в актуальном состоянии всего контента сайта.
+I was also responsible for adding all content of the site and supporting it in actual condition.
 
-Приоритетной задачей в работе с контентом было заполнение каталога товаров: 
+Filling of the products catalogue was a priority task in working with content:
 
-- Распределение по категориям на сайте.
-- Корректировка названий.
-- Заполнение характеристик с учетом товарной группы.
+- Distribution by categories on the site.
+- Correcting names.
+- Filling characteristics based on product group.
 
-Поддерживалась постоянная коммуникация с менеджерами по продажам и продавцами для урегулирования спорных вопросов и 
-предоставления максимально достоверной информации.
+Regular communication with sales managers and sellers for resolving controversial issues and providing as accurate 
+information as possible was maintained.
 
-### Продвижение
+### Promotion
 
-Продвижение сайта выполнялось по следующим направлениям:
+Promotion of the site was being carried out in the following areas:
 
-- Поисковые системы. Был проведен анализ, и составлен список наиболее приоритетных запросов. По части из них сайт 
-удалось вывести в топ Google и Yandex.
-- Социальные сети. В качестве основной сети был выбран "Мой мир" с учетом популярности по географическим и временным 
-факторам. Пользователям давались консультации по вопросам, связанным с компанией и ее продукцией. В случае необходимости
-происходила переадресация на нужного сотрудника.
+- Search systems. Analysis was done and the list of the most priority queries was drafted. I was able to raise the site
+to the top of Google and Yandex by part of them.
+- Social networks. "Moy Mir" was chosen as a primary network based on popularity by geographical and time factors. The
+consultations related to the company and its products were being given for users. The redirect to appropriate employee
+was being happened where necessary.
 
-## Результаты
+## Results
 
-Сайт был доработан в соответствии с требованиями руководства, было заполнено около 7000 товаров. Электронная витрина 
-товаров позволила значительно выделиться на фоне конкурентов. Сайт оказался полезен как для потенциальных клиентов, так 
-и для сотрудников компании для более наглядного просмотра по сравнению с 1C.
+The site was refined in accordance with management's requirements, about 7000 products were filled. Online showcase of
+products allowed to stand out from competitors considerably. The site turned out to be useful for both potential clients
+and company's employees for more visual viewing compared to 1C. 
 
-В свою очередь, для меня это был хороший стартовый опыт как в верстке / программировании, так и других связанных сферах 
-деятельности.
+For me, in turn, that was a good starting experience in layout / programming as well as other related areas of activity. 
 
-## Этап 2 - поддержка в компании INSY
+## Phase 2 - support in "INSY" company
 
-Позже я перешел работать в компанию "INSY", и проект был передан ей на поддержку до взятия в штат нового сотрудника на 
-мое место. В процессе поддержки в основном решались вопросы, связанные с каталогом товаров. модифицировался механизм
-выгрузки из 1C. После нахождения и взятия сотрудника на мое место, поддержка не прекратилась, но ее объем значительно 
-уменьшился и сводилась она в основном к мелким доработкам и консультациям по устройству CMS и органпзации проекта.
+Later I joined the "INSY" company and project was handed to it for support until admission of new employee to the staff
+on my place. In the process of support mainly the questions related with products catalogue were being resolved and
+mechanism of loading from 1C was being modified. After finding and admission of employee on my place the support did not
+stop, but its amount reduced considerably and it mainly was restricted to small customizations and consultations about
+CMS structure and project's organization.
 
-## Дальнейшее развитиие
+## Further support
 
-Спустя некоторое время, уже без моего участия, произошла миграция сайта на CMS 1C-Bitrix с добавлением функциональности 
-интернет-магазина. Вместе с этим изменился и внешний вид сайта. Появились первые заказы и отзывы клиентов. Проект стал
-первым интернет-магазином строительных материалов в городе Петропавловске.
+A short time later, already without my participation, the site's migration to "1C-Bitrix" CMS with adding functionality 
+of online shop occured. Along with this the site's appearance was changed too. First orders and client feedback 
+appeared. The project became the first online shop of construction materials in Petropavl town.
 
-По состоянию на июль 2017 года "сайт временно не работает по техническим причинам".
+The site as at July 2017 "does not work temporarily for technical reasons".
