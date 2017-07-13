@@ -112,7 +112,7 @@ mechanism of loading from 1C was being modified. After finding and admission of 
 stop, but its amount reduced considerably and it mainly was restricted to small customizations and consultations about
 CMS structure and project's organization.
 
-## Further support
+## Further development
 
 A short time later, already without my participation, the site's migration to "1C-Bitrix" CMS with adding functionality 
 of online shop occured. Along with this the site's appearance was changed too. First orders and client feedback 
