@@ -16,152 +16,155 @@ technologies:
 screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
 ---
 
-## История
+## Background
 
-В компанию "INSY" обратился частный психолог с целью создания сервиса психологических тестов для прохождения онлайн.
-Несмотря на то, что подобные сервисы уже существовали (в том числе и рассчитанные на русскоязычную аудиторию), заказчик
-хотел проект, выделяющийся на фоне конкурентов за счет следующих факторов:
+A private psychologist reached out to "INSY" company with purpose of creating service of psychological tests for 
+passing online. Despite the fact that similar services already existed (including the ones that are targeted at 
+Russian-speaking audience), the customer wanted a project that distinguishes from competitors through the following 
+factors:
 
-- Яркий, привлекательный дизайн. Заказчик отмечал, что некоторые из подобных сервисов выглядят очень примитивно, как в 
-90е.
-- Полный отказ от рекламы на сайте. По словам заказчика, некоторые сервисы, будучи довольно качественными, отталкивали
-обилием баннеров и рекламных ссылок.
-- Максимально удобный процесс прохождения в плане интерфейса и удобства пользования. Тестируемого не должно ничего 
-отвлекать - ни дизайн, ни реклама, ни что-либо еще.
-- Наличие редких и сложных тестов, полная автоматизация подсчета результатов.
+- Colorful, attractive design. The customer noted that some of such services look very primitive like in the 90s.
+= Total rejection of advertising on the site. According to the customer, some services. despite being pretty 
+qualitative, were pushing users away with plenty of banners and advertising links.
+- Make the process of passing as convenient as possible in terms of interface and usability. Test subject must not be
+distracted by anything - neither by design nor by advertising nor by something else.
+- Full automation of results' calculation.
+- Availability of rare and complex tests.
 
-## Этап 1 - Разработка на 1C-Bitrix CMS в компании INSY
+## Phase 1 - Development in "INSY" company in "1C-Bitrix" CMS
 
-Разработка проекта первоначально выполнялась в компании "INSY". После того, как другим штатным сотрудником был выполнен 
-дизайн, проект был передан мне на верстку.
+The project development initially was being carried out in "INSY" company. The project was handed over to me for layout 
+after design was implemented by the orher staff member.
 
-### Верстка
+### Layout
 
-Из-за необычного дизайна верстка была также не самой тривиальной задачей. Нестандартные элементы и их стыковка отняли
-больше времени, чем обычно. В основе дизайна лежит дерево:
+Because of unusual design, layout was not the most trivial task too. Non-standard elements and their alignment took more
+time than usual. The tree is at the core of design:
 
-- крона является хедером сайта. Плоды в виде яблок формируют главное меню.
-- Ствол содержит список вложенных категорий тестов. Категории верхнего уровня имеют тематические картинки для 
-визуализации.
-- Футер дублирует главное меню сайта. Это удобно для быстрой навигации, когда скролл ближе к низу страницы и является 
-своего рода альтернативой популярной сейчас кнопке быстрого возврата в верх сайта.
+- Tree crown is a header of the site. The fruits in the form of apples form main menu.
+- Tree trunk contains the list of nested test categories. Upper level categories have thematic pictures for 
+visualization.
+- Footer duplicates site's main menu. This is convenient for quick navigation when scroll is closer to the bottom of the
+page and acts as alternative for now popular button of fast return to the top of the site.
 
-Конечно, такой дизайн идет вразрез с современными трендами, к тому же не является адаптивным, поэтому приходится часто
-пользоваться зумом на мобильных устройствах. Тем не менее, пожелание заказчика было выполнено, и он остался доволен. 
-Кроме этого, пользователи сайта тоже отмечали оригинальность такого оформления.
+Of course, such design goes against the modern trends, furthermore it's not responsive and forces users to use zoom on 
+mobile devices all the time. Nevertheless, the customer's requirement was met and he was pleased with the end result. In
+addition, the site users also noted the originality of such approach.
 
-### Программирование
+### Programming
 
-Для данного проекта руководством было решено использовать CMS 1C-Bitrix. И если она помогла ускорить выполнение задач, 
-связанных с контентом и иерархическими структурами, то для ключевой задачи - заполнения и прохождения разных типов 
-тестов - оказалась практически бесполезна в силу специфики предметной области. Поэтому данную функциональность пришлось 
-реализывовать с нуля. После оценки затрат и сложности доработок в backend части и соотнесения их с бюджетом и сроками 
-сдачи проекта, было принято решение использовать XML для хранения данных теста. Заказчика такой вариант устраивал.
+The management decided to use "1C-Bitrix" CMS for this project. It helped to speed up solving the tasks related with 
+content and hierarchical structures but for key task - to organize filling and passing of tests of various types - 
+proved to be virtually useless, given the specificity of subject area. That's why I had to implement this functionality
+from scratch. After assessment of costs and complexity of customizations in back-end part and correlating them with 
+project's budget and deadlines, the decision was taken to use XML for storing test's data. The customer approved this
+option.
 
-Был реализован автоматический подсчет результатов, но из-за ограничений по времени и бюджету не удалось сделать процесс 
-прохождения удобным, без перезагрузки страницы. Для получения прибыли с сайта часть тестов планировалось сделать 
-закрытыми, с оплатой для получения доступа. Как правило, это наиболее сложные тесты, отсутствующие в свободном доступе и 
-предлагающие глубокий анализ в опреденной проблеме. Данная функциональность также была добавлена, для оплаты была 
-произведена интеграция с платежными терминалами и кошельками QIWI.
+The automated calculation of the results was implemented but because of time and budget constraints, I was unable to 
+make the passing process convenient, without page reload. It was planned to make the part of the tests private, with 
+payment for getting access in order to obtain return from the site. Generally those are the most complex tests that can
+not be found on the web, offering thorough analysis in certain problem. This functionality was also added, integration
+with QIWI payment terminals and electronic wallets was carried out for online payments.
 
-Сайт был запущен, и началось заполнение контента. Реализованный алгоритм не покрывал все необходимые типы тестов, так 
-как сначала было решено реализовать поддержку только базовых и часто используемых типов. Для поддержки новых типов 
-приходилось постоянно модифицировать XML схему с сохранением обратной совместимости. Для особо сложных видов тестов это 
-или занимало много времени, или было невозможно вообще. Постоянно возрастающая сложность схемы также делала заполнение и 
-редактирование тестов для заказчика еще более неудобными.
+The site was launched and filling of content started. Unfortunately, the implemented algorithm did not cover all 
+required types of tests since it was decided to add support of only basic and frequently used types at first. For adding
+support of new types I had to constantly modify XML scheme retaining backwards compatibility. For particularly complex
+tests it either took a long time or was not possible at all. Constantly increasing complexity of the scheme was also
+making filling and editing of the tests even more uncomfortable for customer.
 
-## Этап 2 - Переход на Yii Framework и дальнейшие улучшения
+## Phase 2 - Transition to Yii Framework and further improvements
 
-Позднее заказчик связался со мной и предложил продолжить работу по проекту. На тот момент я уже работал в компании
-"Fora", но согласился взять проект в качестве подработки.
+Later the customer contacted me and proposed to continue work on the project. At that time I was already working in 
+"Fora" company but agreed to take the project as a side job.
 
-### Доработки по дизайну и верстке
+### Design and layout customizations
 
-В первую очередь, требовалось выполнить некоторые доработки по дизайну и верстке в соответствии с новыми требованиями 
-заказчика. Для этого были разово привлечены мои знакомые верстальщик и дизайнер, и работа была выполнена. Одним из 
-главных нововведений стало появление модального окна и нового интерфейса для прохождения теста. Помимо повышения 
-удобства, решилась и другая задача - предотвращение отвлечения внимания за счет более темного фона. Были добавлены и 
-некоторые другие мелочи, например, сова, машущая крылом и переключающая случайные цитаты знаменитых психологов.
+Some design and layout related customizations had to be done in the first place according to new requirements of the
+customer. The friends of mine - designer and HTML / CSS specialist were engaged for this purpose on an ad hoc basis and
+the work was done. The appearance of modal window and new interface for passing test became one of the main innovations.
+In addition to increasing convenience of use, another task - preventing distraction was solved through using darker
+background. Some other details were added = for example, the owl waving a wing and switching random quotes of the famous
+psychologists.
 
-В дальнейшем было принято решение от отказа поддержки старых браузеров (например, Internet Explorer 8), и я значительно 
-упростил верстку, избавившись от большого количества избыточных блоков и изображений. Дальнейшие работы по верстке 
-проводились самостоятельно. Для упрощения поддержки был произведен переход на Sass.
+The decision about refusal to support older browsers (Internet Explorer 8, for example) was taken in the future and I
+considerably simplified the layout by getting rid of a large amount of excess blocks and images. Further layout related
+work were carried out on my own. A switch to SASS was done to simplify support of style sheets.
 
-### Программирование
+### Programming
 
-Оценив сложность дальнейшего развития проекта на CMS 1C-Bitrix, было принято решение о полном переписывании проекта на 
-Yii Framework, который на тот момент я осваивал в "Fora". Структура тестов была переделана с использованием моделей. 
-Для подсчета результатов было решено использовать выражения, содержащие ссылки на ключевые объекты их значения, а также 
-базовые арифметические и логические операции, которые впоследствии расширялись многими другими, например, вхождением 
-одного множества в другое и т.д. Использование `eval` я сразу исключил, а подходящей библиотеки для решения данной 
-задачи на тот момент найдено не было, поэтому я написал свой компонент, основанный на регулярных выражениях.
+Having assessed the complexity of further development of the project in "1C-Bitrix" CMS, I decided to rewrite it fully
+in Yii Framework which I was studying at that time while working at "Fora" company. Test structure was redesigned using 
+MVC framework models. It was decided to use expressions containing links to key objects, their values and also basic 
+arithmetic and logic operations for calculation of the results. This list was subsequently supplemented by many other 
+operations - for example, checking if one set is a subset of another set, etc. I excluded use of `eval` immediately for
+security reasons. I wrote a custom component based on regular expressions because a suitable library for solving this 
+task could not be found at that time.
 
-Процесс прохождения тестов был переписан с использованием JavaScript и jQuery, чтобы исключить лишние перезагрузки 
-страницы. Была добавлена возможность использовать только клавиатуру в качестве навигации и ответов на вопросы.
+The process of passing test was rewritten using JavaScript and jQuery to eliminate extra page reloads. The feature to
+use only keyboard for navigation and answering the questions was added.
 
-## Этап 3 - Переход на Yii 2 Framework и дальнейшие улучшения
+## Phase 3 - Transition to Yii 2 Framework and further improvements
 
-В какой-то момент в компании "Fora" мы стали использовать вторую версию Yii, так как первая сильно устаревала и была 
-более сложной в поддержке. Вместе с этим, я принял решение также перевести этот проект на более новую версию. Как 
-оказалось - не зря. Кодовая база была еще не настолько велика, и процесс миграции прошел довольно быстро. Работать с 
-проектом стало проще.
+At some point in "Fora" company we started to use second version of Yii since the first one inevitably became obsolete 
+and was more difficult to support. Along with this I decided to upgrade "Psychological tests online" project to newer
+version too. As it turned out - it was done for good reason. Work with project became easier and more productive. It 
+was also a promising step in terms of future support. The code base was not so huge yet and migration process was 
+completed pretty quickly.
 
-### Интеграция сторонней библиотеки для выражений
+### Integration of third-party library for expressions
 
-На данном этапе была найдена сторонняя библиотека для работы с выражениями для подсчета результов. Она оказалась более 
-гибкой и расширяемой, поэтому я интегрировал ее и убрал свои наработки. Алгоритм подсчета, основанный на выражениях, 
-подошел для всех видов тестов.
- . 
-### Организация удобного заполнения тестов
+At this stage, a third-party library compiling and evaluating expressions for calculation of the results was found. It
+turned out to be more flexible and extensible, that's why I integrated it and removed my own groundwork. The calculation
+algorithm based on expressions was suitable for all types of tests.
 
-Следующим немаловажным моментом было создание удобного инструмента для заполнения данных. Как правило, тест содержал 
-большое количество связанных иерархических данных. Использование веб интерфейса занимало много времени и не 
-обеспечивало нужного уровня удобства. Заказчик высказал пожелание об использовании Excel. Проблема была решена 
-написанием компонента [yii2-excel][yii2-excel], исходный код которого доступен на Github. Список возможностей импорта 
-можно посмотреть в документации к [Basic import][yii2-excel Basic import] и [Advanced import][yii2-excel Advanced 
-import].
+### Organizing convenient filling of tests
 
-Использование Excel было удобным для первичного импорта большого объема связанных данных. В дополнение к этому, веб
-интерфейс редактирования теста был значительно переработан - выделена иерархия объектов, улучшена навигация.
+The next important step was creating convenient tools for filling data. Usually, a test contained a large amount of 
+hierarchical and related objects. Using web interface was taking much time and was not providing the right level of ease
+of use. The customer also expressed the wish about using Excel. The problem was solved by writing 
+[yii2-excel][yii2-excel] component. Its source code is available on Github, the list of import features can be viewed in
+documentation to [Basic import][yii2-excel Basic import] and [Advanced import][yii2-excel Advanced import] sections.
 
-Позднее к заполнению тестов были привлечены контент-менеджеры. Права доступа были соответствующим образом 
-отрегулированы.
+Excel tables were used for initial import but web interface could also be used as an alternative option. For convenient 
+creation and further editing of test's constituent elements it was considerably redesigned - the hierarchy of objects 
+was highlighted, grouping of related data was introduced, navigation was improved.
 
-### Прочие доработки
+Content managers were additionally recruited to fill tests later. Access permissions were adjusted accordingly.
 
-Был произведен ряд других доработок:
+### Other customizations
 
-- Добавлена возможность использования кодов доступа для бесплатного прохождения закрытых тестов на ограниченный период
-времени.
-- В общий результат теста, помимо выводов автора теста, теперь могут быть включены комментарии психолога, информация о
-связанных тестах, проходящих тренингах, рекомендации пройти консультацию.
-- Добавлена функция сохранения и повторного просмотра результатов пройденных тестов.
+A number of other customizations were made:
 
-Страница списка тестов была также переработана:
+- The feature of using access codes for free passing of private tests for a limited period of time was added.
+- In addition to conclusions of the test's author, the comments of psychologist, information about related tests and
+ongoing trainings, recommendations to sign up for consultation can now be included in the final output at the 
+appropriate place.
+- The functionality of saving and repeated viewing of passed tests' results was added.
 
-- Добавлены фильтры, включающие редактируемый набор свойств.
-- Для формирования сетки блоков с разной величиной контента и оптимального использования имеющегося пространства 
-подключена библиотека Masonry.
+The test list page was also redesigned:
 
-Была улучшена система сборки JS и CSS зависимостей проекта с использованием Grunt, настроено развертывание с 
-использованием Deployer. 
+- Filters including editable set of properties were added.
+- Masonry library was plugged in to form a grid of blocks with different content size and optimal use of existing space.
 
-## Дальнейшее развитие
+The build system of project's JS and CSS dependencies was improved using Grunt, deploy on the production server was set
+up using Deployer.
 
-Проект был ориентирован на широкую аудиторию и имел большой потенциал. Из-за того, что занимался им я один и только в
-свободное от основной работы время, разработка шла довольно медленно. Особенно много времени ушло на разработку и 
-реализацию структуры тестов и компонента подсчета результатов, а также адаптацию их под все типы тестов, так как новые
-требования выяснялись по ходу работы. Что касается заказчика, для него это был экспериментальный проект, которым он 
-также занимался помимо основной работы. Из-за отсутствия дополнительного финансирования и инвестирования привлечение
-большего количества людей было невозможным.
+## Further development
 
-В определенный момент работы над проектом выяснилось, что стратегия по извлечению прибыли оказалась провальной. По 
-инициативе заказчика работа над проектом была приостановлена. Дальнейшее заполнение контента также не производится. 
-После этого финансовая стратегия была пересмотрена, и все силы были брошены на создание нового проекта на основе
-имеющейся базы - [Tests-Psychology Corp][Tests-Psychology Corp].
+The project was focused on a wide audience and had great potential. The development was quite slow because I was the
+only one engaged in it and did not have much spare time. Development and implementation of test structure, component 
+calculating the results along with their adaptation to all types of tests (new requirements were being found out as work 
+progressed) were particularly time-consuming. As for the customer, it was an experimental project, which he was also 
+doing in addition to day job. The involvement of more people was not possible due to the lack of additional financing 
+and investment.
 
-Для меня это был самый масштабный проект, которым я занимался параллельно с основной работой. Несмотря на то, что сейчас 
-он заморожен, я получил хороший опыт решения сложных практических задач.
+At some point it turned out that profit making strategy proved to be a failure. Work on project was suspended at the 
+initiative of the customer. Further filling of content is also not made. After that, financial strategy was reconsidered
+and all efforts were aimed at creating new project - [Tests-Psychology Corp][Tests-Psychology Corp], based on existing 
+core.
+
+For me it was the most extensive project that I worked on in parallel with main job. Despite the fact that it's on hold
+now, I got a good experience of solving complex practical tasks.
 
 [yii2-excel]: https://github.com/arogachev/yii2-excel
 [yii2-excel Basic import]: https://github.com/arogachev/yii2-excel/blob/master/docs/import-basic.md
