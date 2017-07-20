@@ -16,12 +16,6 @@
 - name: Web servers
   keywords: [Nginx, Apache, Unicorn, Gunicorn]
 
-- name: Deploy
-  keywords: [Deployer, Capistrano]
-
-- name: Testing
-  keywords: [PHPUnit, Codeception]
-
 - name: Version control systems
   keywords: [Git, Hg (Mercurial)]
 
