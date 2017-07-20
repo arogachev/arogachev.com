@@ -104,7 +104,7 @@ and company's employees for more visual viewing compared to 1C.
 
 For me, in turn, that was a good starting experience in layout / programming as well as other related areas of activity. 
 
-## Phase 2 - support in "INSY" company
+## Phase 2 - Support in "INSY" company
 
 Later I joined the "INSY" company and project was handed to it for support until admission of new employee to the staff
 on my place. In the process of support mainly the questions related with products catalogue were being resolved and
