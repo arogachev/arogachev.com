@@ -27,12 +27,6 @@ RSpec.describe StringHelper do
     end
   end
 
-  describe '.humanize' do
-    it 'returns human readable form of a string' do
-      expect(StringHelper.humanize('products_category_page')).to eq('Products category page')
-    end
-  end
-
   describe '.string_between_markers' do
     context 'with 2 different markers, no occurences' do
       it 'returns nothing' do

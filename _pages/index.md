@@ -4,6 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 title: Alexey Rogachev's personal website
+permalink: /
 content_class: home
 ---
 

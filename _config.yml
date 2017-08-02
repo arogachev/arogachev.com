@@ -22,8 +22,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: 'http://arogachev.com' # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /blog/:year/:month/:day/:hour:minute-:title.html
-twitter_username: arogachev90
-github_username: arogachev
+
 defaults:
   - scope:
       path: '_posts'
@@ -31,11 +30,18 @@ defaults:
       layout: 'post'
       comments: true
 
+  - scope:
+      path: '_pages/portfolio/projects'
+    values:
+      layout: 'portfolio_project'
+
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
   - jemoji
+include:
+  - _pages
 exclude:
   # Folders
   - config

@@ -7,10 +7,6 @@ module Components
         "#{count} #{noun}"
       end
 
-      def self.humanize(str)
-        str.gsub('_', ' ').capitalize
-      end
-
       def self.string_between_markers(str, marker_start, marker_end=nil)
         marker_start = Regexp.escape(marker_start) if marker_start.is_a?(String)
         if marker_end.nil?
