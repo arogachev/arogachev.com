@@ -38,7 +38,7 @@
       height: 200px;
       border-radius: 6px;
 
-      @media (max-width: $screen-xs-max) {
+      @include media-breakpoint-only(xs) {
         margin-bottom: 15px;
       }
     }
@@ -67,7 +67,7 @@
   }
 
   .latest-project {
-    @media (max-width: $screen-xs-max) {
+    @include media-breakpoint-only(xs) {
       margin-bottom: 20px;
     }
 
@@ -80,7 +80,7 @@
     }
 
     .screenshot {
-      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @include media-breakpoint-only(sm) {
         width: 50%;
         height: 50%;
         margin: 0 auto;
@@ -92,7 +92,6 @@
     }
 
     .title {
-      font-family: $headings-font;
       font-size: 18px;
       margin: 15px 0;
     }
@@ -116,7 +115,6 @@
       }
 
       .title {
-        font-family: $headings-font;
         font-size: 18px;
         overflow: hidden;
         white-space: nowrap;

@@ -1,5 +1,18 @@
+// Colors
+
+$emphasis-color: coral;
+$separator-color: lightgray;
+
+$footer-bg-color: #555;
+$footer-text-color: cornsilk;
+
+// Dimensions
+
+$footer-height: 60px;
+$footer-xs-height: 100px;
+$footer-profiles-height: $footer-xs-height - $footer-height;
+
 // Fonts
 
-$body-font: 'PT Sans', sans-serif;
-$headings-font: 'Philosopher', sans-serif;
+$main-font: 'Roboto', sans-serif;
 $code-font: 'PT Mono', monospace;

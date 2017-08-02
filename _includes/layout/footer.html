@@ -1,0 +1,15 @@
+<footer class="footer">
+  <div class="container">
+    <p class="copyright">&copy; Alexey Rogachev 2017</p>
+    <ul class="profiles">
+      {% for profile_data in site.data.resume.profiles %}
+        {% assign profile = profile_data[1] %}
+        {% capture link_title %}{{ profile.network}}, {{ profile.username }}{% endcapture %}
+
+        <li>
+          <a class="fa fa-{{ profile.icon }}" href="{{ profile.url }}" title="{{ link_title }}"></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</footer>

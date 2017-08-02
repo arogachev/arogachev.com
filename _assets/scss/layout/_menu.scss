@@ -1,0 +1,33 @@
+.main-menu {
+  border-bottom: 1px solid $separator-color;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1rem;
+  }
+
+  @include media-breakpoint-only(xs) {
+    min-height: 3.45rem;
+  }
+
+  .navbar-brand {
+    @include media-breakpoint-only(xs) {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  .navbar-toggler {
+    cursor: pointer;
+
+    @include media-breakpoint-only(xs) {
+      right: 0;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      text-transform: uppercase;
+    }
+  }
+}

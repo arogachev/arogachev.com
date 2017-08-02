@@ -1,9 +1,16 @@
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "bs_callouts";
-@import "syntax";
+@import "../../bower_components/bootstrap/scss/variables";
+@import "../../bower_components/bootstrap/scss/mixins";
+
+@import "components/callouts";
+@import "components/highlight";
 
 @import "variables";
-@import "common";
+
+@import "style";
+
+@import "layout/menu";
+@import "layout/visual_heading";
+@import "layout/footer";
 
 @import "pages/home";
 @import "pages/blog";

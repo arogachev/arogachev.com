@@ -2,6 +2,8 @@
 layout: default
 title: Blog
 permalink: /blog/
+heading_icon: pencil
+content_class: blog
 ---
 
-{% include blog/posts.html posts=site.posts %}
+{% include blog/posts.html %}

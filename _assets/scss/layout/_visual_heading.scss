@@ -1,0 +1,17 @@
+.visual-heading {
+  position: relative;
+  border-bottom: 1px solid $separator-color;
+  margin-bottom: 1.5rem;
+
+  .icon {
+    font-size: 1rem;
+    top: -0.4rem;
+    margin-right: 0.25rem;
+    color: $emphasis-color;
+  }
+
+  .heading {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}
