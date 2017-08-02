@@ -1,7 +1,8 @@
 ---
 title: Kenturion MMA
 site: http://k1mma.kz/
-year: 2013
+start_year: 2013
+end_year: 2013
 description: Multibrand online store offering clothes and equipment for MMA. Has 2 offices in Petropavl and Astana.
 technologies:
   - PHP

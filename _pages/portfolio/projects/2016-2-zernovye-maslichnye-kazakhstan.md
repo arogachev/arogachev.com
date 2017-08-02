@@ -1,7 +1,8 @@
 ---
 title: Zernovye & Maslichnye. Kazakhstan
 site: https://margin.kz/
-year: 2016 - Present
+start_year: 2016
+end_year:
 description: Informational and analytical resource about grain and oil-bearing crops in Kazakhstan.
 technologies:
   - Python

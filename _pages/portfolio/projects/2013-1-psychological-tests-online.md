@@ -1,7 +1,8 @@
 ---
 title: Psychological tests online
 site: http://tests-psychology.com/
-year: 2013 - 2016
+start_year: 2013
+end_year: 2016
 description: >
   Service providing a set of different psychological tests for passing online with automatic calculation of results.
 technologies:

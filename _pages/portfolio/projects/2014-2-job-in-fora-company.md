@@ -1,7 +1,8 @@
 ---
 title: Job in Fora company
 site: http://job.fora.kz/
-year: 2014 - 2016
+start_year: 2014
+end_year: 2016
 description: Separate service for jobs in Fora company.
 technologies:
   - PHP

@@ -1,7 +1,8 @@
 --- 
 title: Tatyana Nazarenko
 site: http://tnazarenko.com/
-year: 2015
+start_year: 2015
+end_year: 2015
 description: Personal site with portfolio.
 technologies:
   - Ruby

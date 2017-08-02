@@ -1,7 +1,8 @@
 ---
 title: Bars Stroy
 site: https://bars-stroy.kz/
-year: 2012 - 2013
+start_year: 2012
+end_year: 2013
 description: Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan.
 technologies:
   - PHP
