@@ -8,16 +8,20 @@ layout: default
 
 {% assign project = page.project %}
 
+<h2>Description</h2>
+
+<div>{{ page.content }}</div>
+
 <h2>Screenshots</h2>
 
 <div class="row">
   <div class="col-lg-3">
     <ul id="screenshot-menu" class="nav nav-pills nav-stacked">
-      {% for screenshot in project.screenshots %}
+      {% for screenshot in page.screenshots %}
         <li class="screenshot-menu-item">
-          <a class="screenshot-trigger"
-             href="/assets/images/portfolio/projects/{{ project.name }}/{{ screenshot }}.png"
-             data-title="{{ screenshot | humanize }}">{{ screenshot | humanize }}</a>
+          <a class="screenshot-trigger" href="{{ screenshot.url }}" data-title="{{ screenshot.title }}">
+            {{ screenshot.title }}
+          </a>
         </li>
       {% endfor %}
     </ul>

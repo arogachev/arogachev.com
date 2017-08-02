@@ -4,7 +4,7 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-{% assign projects = site.data.portfolio.projects | group_by_count: 4 %}
+{% assign projects = site.pages | projects | group_by_count: 4 %}
 
 {% for group in projects %}
   <div class="row">
