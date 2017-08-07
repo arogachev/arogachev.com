@@ -1,0 +1,9 @@
+{% assign projects = site.pages | projects %}
+
+{% for project in projects %}
+  <div class="project-wrap-row row">
+    <div class="project-wrap-col col">
+      {% include portfolio/project.html %}
+    </div>
+  </div>
+{% endfor %}

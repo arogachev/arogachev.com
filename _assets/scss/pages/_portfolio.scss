@@ -1,3 +1,64 @@
+.portfolio {
+  .project-wrap-row {
+    &:not(:last-child) {
+      .project {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $separator-color;
+      }
+    }
+  }
+
+  .project-wrap-col {
+    @media (min-width: 300px) and (max-width: 349px) {
+      @include make-col(10, 12);
+      @include make-col-offset(1, 12);
+    }
+
+    @media (min-width: 350px) and (max-width: 449px) {
+      @include make-col(8, 12);
+      @include make-col-offset(2, 12);
+    }
+  }
+
+  .project {
+    margin-bottom: 1.5rem;
+
+    .img-col {
+      @media (min-width: 450px) and (max-width: breakpoint-max(xs)) {
+        @include make-col(4, 12);
+      }
+    }
+
+    .info-col {
+      @media (min-width: 450px) and (max-width: breakpoint-max(xs)) {
+        @include make-col(8, 12);
+      }
+    }
+
+    .main-image {
+      border: 1px solid $card-border-color;
+      border-radius: 4px;
+    }
+
+    .title {
+      font-size: 1.1rem;
+
+      @media (max-width: 449px) {
+        margin-top: 1rem;
+      }
+    }
+
+    .period {
+      font-size: 0.9rem;
+      color: $text-muted;
+    }
+
+    .description {
+      font-size: 0.85rem;
+    }
+  }
+}
+
 #screenshot-menu {
   margin-bottom: 20px;
 }

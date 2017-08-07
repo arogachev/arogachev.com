@@ -10,6 +10,13 @@ module Portfolio
       slug = self.class.slugify(@page.name)
       @page.data['permalink'] = "/portfolio/projects/#{slug}/"
 
+      if @page.data['end_year']
+        @page.data['period'] = @page.data['start_year']
+      else
+        end_year = @page.data['end_year'] || 'Present'
+        @page.data['period'] = "#{@page.data['start_year']} - #{end_year}"
+      end
+
       @page.data['image'] = "#{IMAGES_DIR}/#{slug}/main.jpg"
       @page.data['screenshots'].map! do |screenshot|
         {

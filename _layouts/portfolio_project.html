@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: full
 ---
 
 {% contentfor extrahead %}
@@ -10,7 +10,7 @@ layout: default
 
 <h2>Description</h2>
 
-<div>{{ page.content }}</div>
+<div>{{ page.content | markdownify }}</div>
 
 <h2>Screenshots</h2>
 
