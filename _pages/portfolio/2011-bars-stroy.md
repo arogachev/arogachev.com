@@ -12,6 +12,9 @@ technologies:
   - JavaScript
   - jQuery
 screenshots: [home, company_history, our_employees, employee, products_catalog, products_category, products, product]
+colors:
+  background: 185c3a
+  font: fefefe
 ---
 
 ## Background

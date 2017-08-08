@@ -12,6 +12,9 @@ technologies:
   - JavaScript
   - jQuery
 screenshots: [home, menu, about_company, news, products, product, cart, order, contacts]
+colors:
+  background: 343846
+  font: fff
 ---
 
 ## Background

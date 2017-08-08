@@ -13,6 +13,9 @@ technologies:
   - Bootstrap
   - Sass
 screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
+colors:
+  background: 157bb1
+  font: fff
 ---
 
 ## Background

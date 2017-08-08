@@ -13,6 +13,9 @@ technologies:
   - Bootstrap
   - Sass
 screenshots: [home, news, agrarian_map, trading_platform, adding_enterprise]
+colors:
+  background: ee7e18
+  font: fff
 ---
 
 ## Background
@@ -170,7 +173,7 @@ Some JS plugins were developed:
 
 - The form with client validation and submitting via AJAX feature.
 - The dependent drop-down lists plugin with support of simultaneous updating of multiple dependent drop-down lists.
-= Replaced block with use of pjax.
+- Replaced block with use of pjax.
 
 ## Further development
 

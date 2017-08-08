@@ -13,6 +13,9 @@ technologies:
   - Bootstrap
   - Sass
 screenshots: [home, passing, results]
+colors:
+  background: 222
+  font: fff
 ---
 
 ## Background

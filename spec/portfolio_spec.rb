@@ -11,7 +11,7 @@ RSpec.describe ProjectDecorator do
 
       ProjectDecorator.new(page).decorate
       expect(page.data).to eq({
-        'permalink' => '/portfolio/projects/zernovye-maslichnye-kazakhstan/',
+        'permalink' => '/portfolio/zernovye-maslichnye-kazakhstan/',
         'start_year' => 2016,
         'end_year' => nil,
         'period' => '2016 - Present',

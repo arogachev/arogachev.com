@@ -15,6 +15,9 @@ technologies:
   - Bootstrap
   - Sass
 screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
+colors:
+  background: 88cc19
+  font: fff
 ---
 
 ## Background

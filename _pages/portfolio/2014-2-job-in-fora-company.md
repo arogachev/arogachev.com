@@ -13,6 +13,9 @@ technologies:
   - Bootstrap
   - Sass
 screenshots: [home, vacancies, vacancy, career, resume_constructor]
+colors:
+  background: cc2128
+  font: f5f6f7
 ---
 
 ## Background
@@ -28,7 +31,7 @@ The project was developed in Yii 2 PHP framework with use of MySQL RDBMS.
 
 ## New features and benefits
 
-## For candidates
+### For candidates
 
 From appeared innovations in public part these are worth mentioning:
 

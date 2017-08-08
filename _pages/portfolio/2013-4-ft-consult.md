@@ -14,6 +14,9 @@ technologies:
   - JavaScript
   - jQuery
 screenshots: [home, menu, service, product, product_details, solutions, clients, contacts, presentation_request]
+colors:
+  background: 00a0e3
+  font: fff
 ---
 
 ## Background
