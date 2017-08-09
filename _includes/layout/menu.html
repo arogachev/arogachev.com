@@ -1,3 +1,9 @@
+{% if layout.menu_item %}
+  {% assign active_item = layout.menu_item %}
+{% elsif page.menu_item %}
+  {% assign active_item = page.menu_item %}
+{% endif %}
+
 <nav class="main-menu navbar navbar-toggleable-sm navbar-light bg-faded">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -10,18 +16,14 @@
 
     <div class="collapse navbar-collapse" id="main-menu-content">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Blog <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about/">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/resume/">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/portfolio/">Portfolio</a>
-        </li>
+        {% for item in site.data.menu %}
+          <li class="nav-item {% if item.name == active_item %}active{% endif %}">
+            <a class="nav-link" href="{{ item.link }}">
+              {{ item.name | capitalize }}
+              {% if item.name == active_item %} <span class="sr-only">(current)</span>{% endif %}
+            </a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
