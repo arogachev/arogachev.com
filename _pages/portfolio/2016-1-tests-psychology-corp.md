@@ -93,4 +93,4 @@ languages and other features.
 
 Despite quite good development prospects, later financing of the project was stopped and work on it was discontinued.
 
-[Psychological tests online]: /portfolio/projects/psychological-tests-online/
+[Psychological tests online]: /portfolio/psychological-tests-online/

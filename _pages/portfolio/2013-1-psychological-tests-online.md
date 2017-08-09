@@ -173,4 +173,4 @@ now, I got a good experience of solving complex practical tasks.
 [yii2-excel]: https://github.com/arogachev/yii2-excel
 [yii2-excel Basic import]: https://github.com/arogachev/yii2-excel/blob/master/docs/import-basic.md
 [yii2-excel Advanced import]: https://github.com/arogachev/yii2-excel/blob/master/docs/import-advanced.md
-[Tests-Psychology Corp]: /portfolio/projects/tests-psychology-corp/
+[Tests-Psychology Corp]: /portfolio/tests-psychology-corp/
