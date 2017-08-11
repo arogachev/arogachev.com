@@ -1,15 +1,14 @@
 ---
 title: dostawka.kz
-site: http://dostawka.kz/
 start_year: 2013
 end_year: 2013
 description: Food's order and delivery service based in Petropavl, Kazakhstan.
-technologies:
-  - PHP
-  - 1C-Bitrix
-  - MySQL
-  - JavaScript
-  - jQuery
+technologies: [PHP, 1C-Bitrix, MySQL, JavaScript, jQuery]
+
+site: http://dostawka.kz/
+status: on hold
+company: INSY
+
 screenshots: [home, products, product, cart, order, contacts]
 colors:
   background: f9dd11
@@ -44,7 +43,7 @@ of the portion.
 
 "dostawka.kz" became one of the first services to order and deliver food using internet in Petropavl.
 
-The site still works, it was being promoted on local radio for some time. No new functionality was added, but some new bugs 
-appeared, which were not there at the development stage. This indicates that either support is poor or it is not offered 
-at all. Also link to VKontakte group points to other restaurant, this gives an impression about reorganization or 
-suspension of service' work.
+The site still works, it was being promoted on local radio for some time. No new functionality was added, but some new 
+bugs appeared, which were not there at the development stage. This indicates that either support is poor or it is not 
+offered at all. Also link to VKontakte group points to other restaurant, this gives an impression about reorganization 
+or suspension of service' work.

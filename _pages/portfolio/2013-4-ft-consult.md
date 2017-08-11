@@ -1,18 +1,16 @@
 ---
 title: FT-Consult
-site: http://fintechn.ru/
 start_year: 2013
 end_year: 2013
 description: >
   "FT-Consult" is a russian company that specializes on supply, introduction and maintenance of information management 
   systems. Has 2 offices in Novosibirsk and Novokuznetsk.
-technologies:
-  - PHP
-  - UMI.CMS
-  - XSLT
-  - MySQL
-  - JavaScript
-  - jQuery
+technologies: [PHP, UMI.CMS, XSLT, MySQL, JavaScript, jQuery]
+  
+site: http://fintechn.ru/
+status: working
+company: INSY
+
 screenshots: [home, menu, service, product, product_details, solutions, clients, contacts, presentation_request]
 colors:
   background: 00a0e3

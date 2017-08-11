@@ -1,17 +1,16 @@
 --- 
 title: Tatyana Nazarenko
-site: http://tnazarenko.com/
 start_year: 2015
 end_year: 2015
 description: Personal site with portfolio.
-technologies:
-  - Ruby
-  - Ruby on Rails
-  - MySQL
-  - JavaScript
-  - jQuery
-  - Bootstrap
-  - Sass
+technologies: [Ruby, Ruby on Rails, MySQL, JavaScript, jQuery, Bootstrap, Sass]
+
+site:
+  link: http://tnazarenko.com/
+  active: false
+status: closed
+company: Individual
+
 screenshots: [home, menu, contact_form, photos, photos_filter, photos_gallery]
 colors:
   background: 157bb1

@@ -1,17 +1,14 @@
 ---
 title: Job in Fora company
-site: http://job.fora.kz/
 start_year: 2014
 end_year: 2016
 description: Separate service for jobs in Fora company.
-technologies:
-  - PHP
-  - Yii
-  - MySQL
-  - JavaScript
-  - jQuery
-  - Bootstrap
-  - Sass
+technologies: [PHP, Yii, MySQL, JavaScript, jQuery, Bootstrap, Sass]
+  
+site: http://job.fora.kz/
+status: working
+company: Fora
+
 screenshots: [home, vacancies, vacancy, career, resume_constructor]
 colors:
   background: cc2128

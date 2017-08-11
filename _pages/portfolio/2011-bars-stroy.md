@@ -1,16 +1,21 @@
 ---
 title: Bars Stroy
-site: https://bars-stroy.kz/
 start_year: 2011
 end_year: 2013
 description: Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan.
-technologies:
-  - PHP
-  - UMI.CMS
-  - XSLT
-  - MySQL
-  - JavaScript
-  - jQuery
+technologies: [PHP, UMI.CMS, XSLT, MySQL, JavaScript, jQuery]
+  
+site: https://bars-stroy.kz/
+status: on hold
+companies:
+  - name: Bars Stroy
+    start_year: 2011
+    end_year: 2012
+
+  - name: INSY
+    start_year: 2012
+    end_year: 2013
+
 screenshots: [home, company_history, our_employees, employee, products_catalog, products_category, products, product]
 colors:
   background: 185c3a

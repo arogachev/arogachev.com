@@ -1,19 +1,22 @@
 ---
 title: Psychological tests online
-site: http://tests-psychology.com/
 start_year: 2013
 end_year: 2016
 description: >
   Service providing a set of different psychological tests for passing online with automatic calculation of results.
-technologies:
-  - PHP
-  - 1C-Bitrix
-  - Yii
-  - MySQL
-  - JavaScript
-  - jQuery
-  - Bootstrap
-  - Sass
+technologies: [PHP, 1C-Bitrix, Yii, MySQL, JavaScript, jQuery, Bootstrap, Sass]
+  
+site: http://tests-psychology.com/
+status: on hold
+companies:
+  - name: INSY
+    start_year: 2013
+    end_year:
+
+  - name: Individual
+    start_year: 2013
+    end_year: 2016
+
 screenshots: [home, menu, sign_up, tests, test, passing, saved_passings]
 colors:
   background: 88cc19
@@ -28,7 +31,7 @@ Russian-speaking audience), the customer wanted a project that distinguishes fro
 factors:
 
 - Colorful, attractive design. The customer noted that some of such services look very primitive like in the 90s.
-= Total rejection of advertising on the site. According to the customer, some services. despite being pretty 
+- Total rejection of advertising on the site. According to the customer, some services. despite being pretty 
 qualitative, were pushing users away with plenty of banners and advertising links.
 - Make the process of passing as convenient as possible in terms of interface and usability. Test subject must not be
 distracted by anything - neither by design nor by advertising nor by something else.
