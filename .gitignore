@@ -23,4 +23,4 @@ _site
 /_data/resume/secrets.yml
 
 # Main images in portfolio projects
-/assets/images/portfolio/projects/*/main.jpg
+/assets/images/portfolio/*/main.jpg

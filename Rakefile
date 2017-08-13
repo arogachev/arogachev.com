@@ -77,7 +77,7 @@ namespace :resume do
 end
 
 namespace :portfolio do
-  PORTFOLIO_HOME_PAGE_IMAGES = Rake::FileList.new("#{images_dir}/portfolio/projects/**/home.png")
+  PORTFOLIO_HOME_PAGE_IMAGES = Rake::FileList.new("#{images_dir}/portfolio/**/home.png")
 
   desc 'Generate main images for projects'
   task generate_main_images: PORTFOLIO_HOME_PAGE_IMAGES.pathmap('%d/main.jpg')

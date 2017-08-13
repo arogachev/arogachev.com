@@ -17,7 +17,7 @@ RSpec.describe ProjectDecorator do
       project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
       ProjectDecorator.new(project).add_image
 
-      image = '/assets/images/portfolio/projects/zernovye-maslichnye-kazakhstan/main.jpg'
+      image = '/assets/images/portfolio/zernovye-maslichnye-kazakhstan/main.jpg'
       expect(project.data['image']).to eq(image)
     end
   end
@@ -205,10 +205,10 @@ RSpec.describe ProjectDecorator do
       ProjectDecorator.new(project).decorate_screenshots
 
       expect(project.data['screenshots']).to eq([
-        {'title' => 'Home', 'url' => '/assets/images/portfolio/projects/zernovye-maslichnye-kazakhstan/home.png'},
+        {'title' => 'Home', 'url' => '/assets/images/portfolio/zernovye-maslichnye-kazakhstan/home.png'},
         {
           'title' => 'Agrarian map',
-          'url' => '/assets/images/portfolio/projects/zernovye-maslichnye-kazakhstan/agrarian_map.png',
+          'url' => '/assets/images/portfolio/zernovye-maslichnye-kazakhstan/agrarian_map.png',
         },
       ])
     end

@@ -1,6 +1,6 @@
 module Portfolio
   class ProjectDecorator
-    IMAGES_DIR = '/assets/images/portfolio/projects'
+    IMAGES_DIR = '/assets/images/portfolio'
     COMPANY_INDIVIDUAL = 'Individual'
 
     def initialize(page)
