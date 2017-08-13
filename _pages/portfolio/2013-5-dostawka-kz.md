@@ -1,7 +1,6 @@
 ---
 title: dostawka.kz
-start_year: 2013
-end_year: 2013
+year: 2013
 description: Food's order and delivery service based in Petropavl, Kazakhstan.
 technologies: [PHP, 1C-Bitrix, MySQL, JavaScript, jQuery]
 

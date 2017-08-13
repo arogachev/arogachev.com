@@ -1,7 +1,6 @@
 --- 
 title: Tatyana Nazarenko
-start_year: 2015
-end_year: 2015
+year: 2015
 description: Personal site with portfolio.
 technologies: [Ruby, Ruby on Rails, MySQL, JavaScript, jQuery, Bootstrap, Sass]
 

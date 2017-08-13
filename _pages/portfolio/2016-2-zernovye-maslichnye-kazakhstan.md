@@ -162,7 +162,7 @@ From the other innovations I would like to point out these:
 
 - Besides Disqus, other third-party services - for notifications and also for feedback and ideas of the users were 
 involved.
-= Introduction of notifications (static, pop-up, email, web push) for alerts for informing about the results of actions
+- Introduction of notifications (static, pop-up, email, web push) for alerts for informing about the results of actions
 / object statuses.
 - CSS and JS dependencies were optimized using Django Compressor, including administrative part.
 

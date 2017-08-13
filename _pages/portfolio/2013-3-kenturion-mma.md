@@ -1,7 +1,6 @@
 ---
 title: Kenturion MMA
-start_year: 2013
-end_year: 2013
+year: 2013
 description: Multibrand online store offering clothes and equipment for MMA. Has 2 offices in Petropavl and Astana.
 technologies: [PHP, UMI.CMS, XSLT, MySQL, JavaScript, jQuery]
 screenshots: [home, menu, about_company, news, products, product, cart, order, contacts]

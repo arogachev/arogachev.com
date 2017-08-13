@@ -10,8 +10,7 @@ site: http://tests-psychology.com/
 status: on hold
 companies:
   - name: INSY
-    start_year: 2013
-    end_year:
+    year: 2013
 
   - name: Individual
     start_year: 2013
@@ -90,7 +89,7 @@ Some design and layout related customizations had to be done in the first place 
 customer. The friends of mine - designer and HTML / CSS specialist were engaged for this purpose on an ad hoc basis and
 the work was done. The appearance of modal window and new interface for passing test became one of the main innovations.
 In addition to increasing convenience of use, another task - preventing distraction was solved through using darker
-background. Some other details were added = for example, the owl waving a wing and switching random quotes of the famous
+background. Some other details were added - for example, the owl waving a wing and switching random quotes of the famous
 psychologists.
 
 The decision about refusal to support older browsers (Internet Explorer 8, for example) was taken in the future and I
