@@ -215,7 +215,7 @@ RSpec.describe ProjectDecorator do
   end
 
   describe '#add_headings' do
-    it 'should add headings tree parsed from Markdown content' do
+    it 'adds headings tree parsed from Markdown content' do
       allow(MarkdownHelper).to receive(:headings_tree).and_return(['Background', 'Development', 'Further development'])
       project = Project.new
       ProjectDecorator.new(project).add_headings
