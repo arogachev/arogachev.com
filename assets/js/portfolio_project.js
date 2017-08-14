@@ -1,10 +1,12 @@
 $(function () {
-    var SCREENSHOT_MENU_ITEM_SELECTOR = '.screenshot-menu-item';
-    var $screenshotMenuItems = $(SCREENSHOT_MENU_ITEM_SELECTOR);
-    var $screenshotTriggers = $('.screenshot-trigger');
-    var $screenshotBlock = $('#screenshot');
+    var SCROLL_TOP_OFFSET = 16;
+
+    var $scrollableBlock = $('html, body');
+    var $screenshotsRow = $('.screenshots');
+    var $screenshotTriggers = $screenshotsRow.find('.nav-link');
+    var $screenshotBlock = $screenshotsRow.find('.screenshot');
     var $screenshotLoading = $screenshotBlock.find('.loading');
-    var $screenshotLink = $screenshotBlock.find('.screenshot-link');
+    var $screenshotLink = $screenshotBlock.find('.link');
     var $screenshot;
 
     $screenshotTriggers.click(function () {
@@ -12,18 +14,19 @@ $(function () {
         var link = $this.attr('href');
         var title = $this.data('title');
 
-        $screenshotMenuItems.removeClass('active');
-        $this.closest(SCREENSHOT_MENU_ITEM_SELECTOR).addClass('active');
+        $screenshotTriggers.removeClass('active');
+        $this.addClass('active');
 
         $screenshotLoading.show();
         $screenshotLink.hide();
 
         if (!$screenshot) {
-            $screenshot = $('<img>', {'class': 'img-responsive', alt: title, title: title});
+            $screenshot = $('<img>', {'class': 'img-fluid', alt: title, title: title});
 
             $screenshot.on('load', function () {
                 $screenshotLoading.hide();
                 $screenshotLink.show();
+                $scrollableBlock.scrollTop($screenshotsRow.offset().top - SCROLL_TOP_OFFSET);
             });
 
             $screenshot.attr('src', link);

@@ -1,0 +1,29 @@
+<div class="divided-content">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#portfolio-project-content" role="tab"
+         aria-controls="portfolio-project-content">
+        <i class="fa fa-folder" aria-hidden="true"></i>
+        <i class="fa fa-folder-open" aria-hidden="true"></i>
+        <span class="name">Details</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#portfolio-project-screenshots" role="tab"
+         aria-controls="portfolio-project-screenshots">
+        <i class="fa fa-folder" aria-hidden="true"></i>
+        <i class="fa fa-folder-open" aria-hidden="true"></i>
+        <span class="name">Screenshots</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="portfolio-project-content" role="tabpanel">
+      {% include portfolio/project/tabs/details.html %}
+    </div>
+    <div class="tab-pane" id="portfolio-project-screenshots" role="tabpanel">
+      {% include portfolio/project/tabs/screenshots.html %}
+    </div>
+  </div>
+</div>

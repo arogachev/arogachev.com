@@ -1,0 +1,27 @@
+<div class="screenshots row">
+  <div class="col-lg-3 col-md-4">
+    <ul class="nav flex-column">
+      {% for screenshot in page.screenshots %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ screenshot.url }}" data-title="{{ screenshot.title }}">
+            <span class="fa-stack fa-1x">
+              <i class="fa fa-circle fa-stack-2x" style="color: #{{ page.colors.background }};"></i>
+              <i class="fa fa-circle-o fa-stack-2x" style="color: #{{ page.colors.background }};"></i>
+              <i class="fa fa-stack-1x fa-inverse" style="color: #{{ page.colors.font }};">{{ forloop.index }}</i>
+            </span>
+            <span class="title">{{ screenshot.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-lg-9 col-md-8">
+    <div class="screenshot">
+      <div class="loading">
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <a class="link"></a>
+    </div>
+  </div>
+</div>

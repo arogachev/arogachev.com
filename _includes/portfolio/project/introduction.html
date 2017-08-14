@@ -1,0 +1,50 @@
+<div class="introduction">
+  <img class="main-image" src="{{ page.image }}" alt="{{ page.title }}" title="{{ page.title }}">
+
+  <div class="jumbotron jumbotron-fluid"
+       style="background: #{{ page.colors.background }}; color: #{{ page.colors.font }};">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="nearby-project prev-project">
+            {% if page.prev %}
+              <a href="{{ page.prev.permalink }}">
+                <i class="fa fa-chevron-left" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
+              </a>
+            {% else %}
+              <i class="fa fa-chevron-left disabled" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="intro-data">
+            <h1 class="title">{{ page.title }}</h1>
+            <p class="period">{{ page.period }}</p>
+            <p class="description">{{ page.description }}</p>
+
+            <hr style="border-top-color: #{{ page.colors.font }};">
+
+            <div class="technologies">
+              {% for technology in page.technologies %}
+                {% if technology.has_logo %}
+                  <i class="devicon-{{ technology.slug }}-plain" title="{{ technology.name }}"></i>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="nearby-project next-project">
+            {% if page.next %}
+              <a href="{{ page.next.permalink }}">
+                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
+              </a>
+            {% else %}
+                <i class="fa fa-chevron-right disabled" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

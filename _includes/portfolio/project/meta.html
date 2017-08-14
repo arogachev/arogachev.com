@@ -1,0 +1,73 @@
+{% assign technologies_names = page.technologies | map: 'name' %}
+
+<div class="meta row">
+  <div class="col-md-6 offset-md-3">
+    <div class="link row">
+      <div class="property-name col-md-3">Link:</div>
+      <div class="col-md-9">
+        <a href="{{ page.site.link }}">{{ page.site.link }}</a>
+
+        {% if page.site.active %}
+          <i class="fa fa-check active" aria-hidden="true" title="Accessible" aria-label="Accessible"></i>
+        {% else %}
+          <i class="fa fa-times inactive" aria-hidden="true" title="Inaccessible" aria-label="Inaccessible"></i>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="status row">
+      <div class="property-name col-md-3">Status:</div>
+      <div class="col-md-9">
+        <span>{{ page.status | capitalize }}</span>
+        <i class="fa fa-circle {{ page.status | slugify }}" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    {% if page.company %}
+      <div class="company row">
+        <div class="property-name col-md-3">Company:</div>
+        <div class="col-md-9">
+          {% if page.company.link %}
+            <a href="{{ page.company.link }}">{{ page.company.name }}</a>
+          {% else %}
+            {{ page.company.name }}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.companies %}
+      <div class="companies row">
+        <div class="property-name col-md-3">
+          <div class="centered">Companies:</div>
+        </div>
+        <div class="col-md-9">
+          {% for company in page.companies %}
+            <div class="company">
+              <p class="period">{{ company.period }}</p>
+              <p class="name">
+                {% if company.link %}
+                  <a href="{{ company.link }}">{{ company.name }}</a>
+                {% else %}
+                  {{ company.name }}
+                {% endif %}
+              </p>
+            </div>
+
+            {% unless forloop.last %}
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="technnologies row">
+      <div class="property-name col-md-3">
+        <div class="centered">Technologies:</div>
+      </div>
+      <div class="col-md-9">{{ technologies_names | join: ', ' }}</div>
+    </div>
+  </div>
+</div>
+

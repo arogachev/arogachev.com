@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: full
 title: Resume
 permalink: /resume/
 content_class: resume anchored
