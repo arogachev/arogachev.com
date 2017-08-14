@@ -71,7 +71,15 @@ RSpec.describe StringHelper do
   end
 end
 
-RSpec.describe StringHelper do
+RSpec.describe Inflector do
+  describe '.slugify' do
+    it 'creates slug from string' do
+      expect(Inflector.slugify('Ruby on Rails')).to eq('ruby-on-rails')
+    end
+  end
+end
+
+RSpec.describe DateHelper do
   describe '.work_duration' do
     context 'with months' do
       context 'with last month less than a half' do
