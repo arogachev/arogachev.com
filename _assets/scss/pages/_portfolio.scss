@@ -255,51 +255,39 @@
 
     .nav-tabs {
       justify-content: center;
-      border-bottom: 1px solid $separator-color;
+      border-bottom: 2px solid $separator-color;
+      margin-bottom: 1.5rem;
 
       .nav-item {
-        margin-bottom: 0;
-
-        .fa {
-          font-size: 3rem;
-          color: $folder-color;
-        }
+        margin-bottom: -1.5px;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
       }
 
       .nav-link {
         border: none;
-        padding: 1rem;
         outline: none;
         color: $nav-tabs-active-link-hover-color;
         font-weight: 500;
-
-        .fa {
-          vertical-align: middle;
-        }
-
-        .fa-folder-open {
-          display: none;
-        }
+        padding: 1rem 0.5rem;
 
         .name {
           vertical-align: middle;
-          margin-left: 0.5rem;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+        }
+
+        .count {
+          vertical-align: middle;
+          font-weight: 400;
+          font-size: 0.75rem;
+          margin-left: 0.2rem;
         }
 
         &.active {
-          .fa-folder {
-            display: none;
-          }
-
-          .fa-folder-open {
-            display: inline-block;
-          }
+          border-bottom: 2px solid $emphasis-color;
         }
       }
-    }
-
-    .tab-content {
-      margin-top: 1.5rem;
     }
   }
 
