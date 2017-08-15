@@ -2,7 +2,7 @@ require 'helper'
 include Portfolio
 
 class Project
-  def initialize(data={}, name=nil)
+  def initialize(data={}, name: nil)
     @data = data
     @name = name
     @content = 'content'
@@ -14,7 +14,7 @@ end
 RSpec.describe ProjectDecorator do
   describe '#add_image' do
     it 'adds link to main image' do
-      project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+      project = Project.new(name: '2016-2-zernovye-maslichnye-kazakhstan.md')
       ProjectDecorator.new(project).add_image
 
       image = '/assets/images/portfolio/zernovye-maslichnye-kazakhstan/main.jpg'
@@ -25,7 +25,7 @@ RSpec.describe ProjectDecorator do
   describe '#add_permalink' do
     context 'with not numbered project' do
       it 'removes year and file extension' do
-        project = Project.new({}, '2011-bars-stroy.md')
+        project = Project.new(name: '2011-bars-stroy.md')
         ProjectDecorator.new(project).add_permalink
 
         expect(project.data['permalink']).to eq('/portfolio/bars-stroy/')
@@ -34,7 +34,7 @@ RSpec.describe ProjectDecorator do
 
     context 'with numbered project' do
       it 'removes year, number and file extension' do
-        project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+        project = Project.new(name: '2016-2-zernovye-maslichnye-kazakhstan.md')
         ProjectDecorator.new(project).add_permalink
 
         expect(project.data['permalink']).to eq('/portfolio/zernovye-maslichnye-kazakhstan/')
@@ -201,7 +201,8 @@ RSpec.describe ProjectDecorator do
 
   describe '#decorate_screenshots' do
     it 'adds new data' do
-      project = Project.new({'screenshots' => ['home', 'agrarian_map']}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+      data = {'screenshots' => ['home', 'agrarian_map']}
+      project = Project.new(data, name: '2016-2-zernovye-maslichnye-kazakhstan.md')
       ProjectDecorator.new(project).decorate_screenshots
 
       expect(project.data['screenshots']).to eq([
@@ -238,8 +239,8 @@ RSpec.describe ProjectDecorator do
     context 'with pages and list index' do
       context 'with first page' do
         it 'adds next page only' do
-          project = Project.new({}, '2011-bars-stroy.md')
-          next_project = Project.new({}, '2012-chip.md')
+          project = Project.new(name: '2011-bars-stroy.md')
+          next_project = Project.new(name: '2012-chip.md')
           projects = [project, next_project]
           ProjectDecorator.new(project, pages: projects, list_index: 0).add_nearby_pages
 
@@ -250,9 +251,9 @@ RSpec.describe ProjectDecorator do
 
       context 'with page in the middle' do
         it 'adds both previous and next pages' do
-          prev_project = Project.new({}, '2011-bars-stroy.md')
-          project = Project.new({}, '2012-chip.md')
-          next_project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+          prev_project = Project.new(name: '2011-bars-stroy.md')
+          project = Project.new(name: '2012-chip.md')
+          next_project = Project.new(name: '2016-2-zernovye-maslichnye-kazakhstan.md')
           projects = [prev_project, project, next_project]
           ProjectDecorator.new(project, pages: projects, list_index: 1).add_nearby_pages
 
@@ -263,8 +264,8 @@ RSpec.describe ProjectDecorator do
 
       context 'with last page' do
         it 'adds previous page only' do
-          prev_project = Project.new({}, '2011-bars-stroy.md')
-          project = Project.new({}, '2012-chip.md')
+          prev_project = Project.new(name: '2011-bars-stroy.md')
+          project = Project.new(name: '2012-chip.md')
           projects = [prev_project, project]
           ProjectDecorator.new(project, pages: projects, list_index: 1).add_nearby_pages
 
@@ -277,8 +278,8 @@ RSpec.describe ProjectDecorator do
     context 'with pages and no list index' do
       context 'with first page' do
         it 'adds next page only' do
-          project = Project.new({}, '2011-bars-stroy.md')
-          next_project = Project.new({}, '2012-chip.md')
+          project = Project.new(name: '2011-bars-stroy.md')
+          next_project = Project.new(name: '2012-chip.md')
           projects = [project, next_project]
           ProjectDecorator.new(project, pages: projects).add_nearby_pages
 
@@ -289,9 +290,9 @@ RSpec.describe ProjectDecorator do
 
       context 'with page in the middle' do
         it 'adds both previous and next pages' do
-          prev_project = Project.new({}, '2011-bars-stroy.md')
-          project = Project.new({}, '2012-chip.md')
-          next_project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+          prev_project = Project.new(name: '2011-bars-stroy.md')
+          project = Project.new(name: '2012-chip.md')
+          next_project = Project.new(name: '2016-2-zernovye-maslichnye-kazakhstan.md')
           projects = [prev_project, project, next_project]
           ProjectDecorator.new(project, pages: projects).add_nearby_pages
 
@@ -302,8 +303,8 @@ RSpec.describe ProjectDecorator do
 
       context 'with last page' do
         it 'adds previous page only' do
-          prev_project = Project.new({}, '2011-bars-stroy.md')
-          project = Project.new({}, '2012-chip.md')
+          prev_project = Project.new(name: '2011-bars-stroy.md')
+          project = Project.new(name: '2012-chip.md')
           projects = [prev_project, project]
           ProjectDecorator.new(project, pages: projects).add_nearby_pages
 
@@ -336,8 +337,8 @@ RSpec.describe ProjectDecorator do
 
   describe '.decorate_collection' do
     it "decorates portfolio projects' pages with new data" do
-      project = Project.new({}, '2011-bars-stroy.md')
-      next_project = Project.new({}, '2012-chip.md')
+      project = Project.new(name: '2011-bars-stroy.md')
+      next_project = Project.new(name: '2012-chip.md')
       projects = [project, next_project]
       new_stub = Proc.new do
         decorator_double = instance_double(ProjectDecorator)
