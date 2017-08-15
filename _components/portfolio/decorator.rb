@@ -3,9 +3,11 @@ module Portfolio
     IMAGES_DIR = '/assets/images/portfolio'
     COMPANY_INDIVIDUAL = 'Individual'
 
-    def initialize(page)
+    def initialize(page, pages: nil, list_index: nil)
       @page = page
       @data = page.data
+      @pages = pages
+      @list_index = list_index
       @slug = nil
     end
 
@@ -22,7 +24,13 @@ module Portfolio
       decorate_screenshots
       add_headings
 
-      @page
+      add_nearby_pages
+    end
+
+    def self.decorate_collection(pages)
+      pages.each_with_index do |page, index|
+        new(page, pages: pages, list_index: index).decorate
+      end
     end
 
     def add_image
@@ -98,6 +106,21 @@ module Portfolio
       @data['headings'] = MarkdownHelper::headings_tree(@page.content)
     end
 
+    def add_nearby_pages
+      if @pages.nil?
+        return
+      end
+
+      if list_index > 0
+        @page.data['previous'] = @pages[list_index - 1]
+      end
+
+      next_page = @pages[list_index + 1]
+      if next_page
+        @page.data['next'] = next_page
+      end
+    end
+
     private
 
     def slug
@@ -116,6 +139,14 @@ module Portfolio
 
       slug = Inflector.slugify(data['name'])
       data['link'] = "/resume/##{slug}"
+    end
+
+    def list_index
+      if @list_index
+        @list_index
+      end
+
+      @list_index = @pages.index {|page| page.name == @page.name}
     end
   end
 end

@@ -224,6 +224,96 @@ RSpec.describe ProjectDecorator do
     end
   end
 
+  describe '#add_nearby_pages' do
+    context 'with no pages' do
+      it 'does nothing' do
+        project = Project.new
+        ProjectDecorator.new(project).add_nearby_pages
+
+        expect(project.data['previous']).to be_nil
+        expect(project.data['next']).to be_nil
+      end
+    end
+
+    context 'with pages and list index' do
+      context 'with first page' do
+        it 'adds next page only' do
+          project = Project.new({}, '2011-bars-stroy.md')
+          next_project = Project.new({}, '2012-chip.md')
+          projects = [project, next_project]
+          ProjectDecorator.new(project, pages: projects, list_index: 0).add_nearby_pages
+
+          expect(project.data['next']).to eq(next_project)
+          expect(project.data['previous']).to be_nil
+        end
+      end
+
+      context 'with page in the middle' do
+        it 'adds both previous and next pages' do
+          prev_project = Project.new({}, '2011-bars-stroy.md')
+          project = Project.new({}, '2012-chip.md')
+          next_project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+          projects = [prev_project, project, next_project]
+          ProjectDecorator.new(project, pages: projects, list_index: 1).add_nearby_pages
+
+          expect(project.data['previous']).to eq(prev_project)
+          expect(project.data['next']).to eq(next_project)
+        end
+      end
+
+      context 'with last page' do
+        it 'adds previous page only' do
+          prev_project = Project.new({}, '2011-bars-stroy.md')
+          project = Project.new({}, '2012-chip.md')
+          projects = [prev_project, project]
+          ProjectDecorator.new(project, pages: projects, list_index: 1).add_nearby_pages
+
+          expect(project.data['previous']).to eq(prev_project)
+          expect(project.data['next']).to be_nil
+        end
+      end
+    end
+
+    context 'with pages and no list index' do
+      context 'with first page' do
+        it 'adds next page only' do
+          project = Project.new({}, '2011-bars-stroy.md')
+          next_project = Project.new({}, '2012-chip.md')
+          projects = [project, next_project]
+          ProjectDecorator.new(project, pages: projects).add_nearby_pages
+
+          expect(project.data['next']).to eq(next_project)
+          expect(project.data['previous']).to be_nil
+        end
+      end
+
+      context 'with page in the middle' do
+        it 'adds both previous and next pages' do
+          prev_project = Project.new({}, '2011-bars-stroy.md')
+          project = Project.new({}, '2012-chip.md')
+          next_project = Project.new({}, '2016-2-zernovye-maslichnye-kazakhstan.md')
+          projects = [prev_project, project, next_project]
+          ProjectDecorator.new(project, pages: projects).add_nearby_pages
+
+          expect(project.data['previous']).to eq(prev_project)
+          expect(project.data['next']).to eq(next_project)
+        end
+      end
+
+      context 'with last page' do
+        it 'adds previous page only' do
+          prev_project = Project.new({}, '2011-bars-stroy.md')
+          project = Project.new({}, '2012-chip.md')
+          projects = [prev_project, project]
+          ProjectDecorator.new(project, pages: projects).add_nearby_pages
+
+          expect(project.data['previous']).to eq(prev_project)
+          expect(project.data['next']).to be_nil
+        end
+      end
+    end
+  end
+
   describe '#decorate' do
     it 'decorates portfolio project page with new data' do
       project = Project.new
@@ -238,8 +328,27 @@ RSpec.describe ProjectDecorator do
       expect(decorator).to receive(:decorate_companies)
       expect(decorator).to receive(:decorate_screenshots)
       expect(decorator).to receive(:add_headings)
+      expect(decorator).to receive(:add_nearby_pages)
 
-      expect(decorator.decorate).to eq(project)
+      decorator.decorate
+    end
+  end
+
+  describe '.decorate_collection' do
+    it "decorates portfolio projects' pages with new data" do
+      project = Project.new({}, '2011-bars-stroy.md')
+      next_project = Project.new({}, '2012-chip.md')
+      projects = [project, next_project]
+      new_stub = Proc.new do
+        decorator_double = instance_double(ProjectDecorator)
+        expect(decorator_double).to receive(:decorate)
+        decorator_double
+      end
+
+      expect(ProjectDecorator).to receive(:new).with(project, pages: projects, list_index: 0) { new_stub.call }
+      expect(ProjectDecorator).to receive(:new).with(next_project, pages: projects, list_index: 1) { new_stub.call }
+
+      ProjectDecorator.decorate_collection(projects)
     end
   end
 end
