@@ -61,18 +61,27 @@
 
 .portfolio-project {
   .introduction {
-    .jumbotron {
-      padding: 0 2rem;
+    padding: 0 2rem;
+
+    @include portfolio-project-main-image(300px);
+
+    @include media-breakpoint-between(sm, md) {
+      @include portfolio-project-main-image(275px);
+    }
+
+    @include media-portfolio-project-xs-2 {
+      @include portfolio-project-main-image(225px);
+    }
+
+    @include media-portfolio-project-xs-1 {
+      @include portfolio-project-main-image(175px);
+    }
+
+    .intro-data {
+      text-align: center;
     }
 
     .main-image {
-      width: 300px;
-      height: 300px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: -150px;
-      position: relative;
       border-radius: 4px;
       box-shadow: 0 0 5px $separator-color;
     }
@@ -83,15 +92,13 @@
       align-items: center;
 
       .fa {
-        font-size: 3rem;
-
         &:hover {
           opacity: 0.5;
         }
 
         &.disabled {
-          cursor: $cursor-disabled;
           opacity: 0.5;
+          cursor: $cursor-disabled;
         }
       }
     }
@@ -100,14 +107,52 @@
       justify-content: flex-end;
     }
 
-    .title {
-      font-size: 3.5rem;
-      margin-top: 10.7rem;
-      margin-bottom: 1.2rem;
+    .nearby-project-col {
+      padding-left: 0;
+      padding-right: 0;
     }
 
-    .intro-data {
-      text-align: center;
+    .nearby-project-top {
+      .fa {
+        font-size: 2.5rem;
+
+        @include media-portfolio-project-xs-2 {
+          font-size: 2rem;
+        }
+
+        @include media-portfolio-project-xs-1 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .nearby-project-center {
+      .fa {
+        font-size: 3rem;
+
+        @include media-breakpoint-only(md) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .title {
+      font-size: 3.5rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      @include media-breakpoint-between(sm, md) {
+        font-size: 3rem;
+      }
+
+      @include media-portfolio-project-xs-2 {
+        font-size: 2.5rem;
+      }
+
+      @include media-portfolio-project-xs-1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+      }
     }
 
     .period {
@@ -133,25 +178,67 @@
       &:after {
         margin-left: 1rem;
       }
+
+      @include media-breakpoint-between(sm, md) {
+        font-size: 1.75rem;
+      }
+
+      @include media-portfolio-project-xs-2 {
+        font-size: 1.5rem;
+      }
+
+      @include media-portfolio-project-xs-1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
     }
 
     .description {
       font-size: 1.25rem;
       margin-bottom: 1.6rem;
+
+      @include media-portfolio-project-xs-1 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+      }
     }
 
     hr {
       border-top-width: 3px;
       opacity: 0.7;
       margin-bottom: 2rem;
+
+      @include media-portfolio-project-xs-1 {
+        margin-bottom: 1.2rem;
+      }
     }
 
     .technologies {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+
+      @include media-portfolio-project-xs-1 {
+        margin-bottom: 0.5rem;
+      }
 
       i {
+        display: inline-block;
         font-size: 3rem;
-        margin: 0 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-down(md) {
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+
+        @include media-breakpoint-between(sm, md) {
+          font-size: 2.5rem;
+        }
+
+        @include media-breakpoint-only(xs) {
+          font-size: 2rem;
+        }
       }
     }
   }

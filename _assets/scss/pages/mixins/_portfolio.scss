@@ -1,0 +1,21 @@
+@mixin portfolio-project-main-image($size) {
+  margin-top: $size / 2 + $font-size * 2;
+
+  .main-image {
+    width: $size;
+    height: $size;
+    margin-top: -$size / 2;
+  }
+}
+
+@mixin media-portfolio-project-xs-1 {
+  @media (max-width: $portfolio-project-xs-1-max) {
+    @content;
+  }
+}
+
+@mixin media-portfolio-project-xs-2 {
+  @media (min-width: $portfolio-project-xs-2-min) and (max-width: breakpoint-max(xs)) {
+    @content;
+  }
+}

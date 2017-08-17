@@ -1,49 +1,40 @@
-<div class="introduction">
-  <img class="main-image" src="{{ page.image }}" alt="{{ page.title }}" title="{{ page.title }}">
-
-  <div class="jumbotron jumbotron-fluid"
-       style="background: #{{ page.colors.background }}; color: #{{ page.colors.font }};">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <div class="nearby-project prev-project">
-            {% if page.previous %}
-              <a href="{{ page.previous.permalink }}">
-                <i class="fa fa-chevron-left" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
-              </a>
-            {% else %}
-              <i class="fa fa-chevron-left disabled" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
-            {% endif %}
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="intro-data">
-            <h1 class="title">{{ page.title }}</h1>
-            <p class="period">{{ page.period }}</p>
-            <p class="description">{{ page.description }}</p>
-
-            <hr style="border-top-color: #{{ page.colors.font }};">
-
-            <div class="technologies">
-              {% for technology in page.technologies %}
-                {% if technology.has_logo %}
-                  <i class="devicon-{{ technology.slug }}-plain" title="{{ technology.name }}"></i>
-                {% endif %}
-              {% endfor %}
+<div class="introduction jumbotron jumbotron-fluid"
+     style="background: #{{ page.colors.background }}; color: #{{ page.colors.font }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 hidden-sm-down">
+        {% include portfolio/project/introduction/prev_project.html position='center' %}
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <div class="intro-data">
+          <div class="row">
+            <div class="nearby-project-col col hidden-md-up">
+              {% include portfolio/project/introduction/prev_project.html position='top' %}
+            </div>
+            <div class="col">
+              <img class="main-image" src="{{ page.image }}" alt="{{ page.title }}" title="{{ page.title }}">
+            </div>
+            <div class="nearby-project-col col hidden-md-up">
+              {% include portfolio/project/introduction/next_project.html position='top' %}
             </div>
           </div>
-        </div>
-        <div class="col-md-2">
-          <div class="nearby-project next-project">
-            {% if page.next %}
-              <a href="{{ page.next.permalink }}">
-                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
-              </a>
-            {% else %}
-                <i class="fa fa-chevron-right disabled" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
-            {% endif %}
+
+          <h1 class="title">{{ page.title }}</h1>
+          <p class="period">{{ page.period }}</p>
+          <p class="description">{{ page.description }}</p>
+          <hr style="border-top-color: #{{ page.colors.font }};">
+
+          <div class="technologies">
+            {% for technology in page.technologies %}
+              {% if technology.has_logo %}
+                <i class="devicon-{{ technology.slug }}-plain" title="{{ technology.name }}"></i>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
+      </div>
+      <div class="col-md-2 hidden-sm-down">
+        {% include portfolio/project/introduction/next_project.html position='center' %}
       </div>
     </div>
   </div>
