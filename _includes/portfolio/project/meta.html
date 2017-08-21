@@ -1,73 +1,86 @@
 {% assign technologies_names = page.technologies | map: 'name' %}
 
-<div class="meta row">
-  <div class="col-md-6 offset-md-3">
-    <div class="link row">
-      <div class="property-name col-md-3">Link:</div>
-      <div class="col-md-9">
-        <a href="{{ page.site.link }}">{{ page.site.link }}</a>
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12">
+    <table class="meta table">
+      <tbody>
+        <tr class="link named-icon">
+          <th scope="row">Link:</th>
+          <td>
+            <a href="{{ page.site.link }}">{{ page.site.link }}</a>
 
-        {% if page.site.active %}
-          <i class="fa fa-check active" aria-hidden="true" title="Accessible" aria-label="Accessible"></i>
-        {% else %}
-          <i class="fa fa-times inactive" aria-hidden="true" title="Inaccessible" aria-label="Inaccessible"></i>
+            {% if page.site.active %}
+              <i class="hidden-xs-down active fa fa-check" aria-hidden="true" title="Accessible"
+                 aria-label="Accessible"></i>
+            {% else %}
+              <i class="hidden-xs-down inactive fa fa-times" aria-hidden="true" title="Inaccessible"
+                 aria-label="Inaccessible"></i>
+            {% endif %}
+          </td>
+        </tr>
+
+        <tr class="accessible named-icon hidden-sm-up">
+          <th scope="row">Accessible:</th>
+          <td>
+            {% if page.site.active %}
+              <span class="name">Yes</span>
+              <i class="active fa fa-check" aria-hidden="true"></i>
+            {% else %}
+              <span class="name">No</span>
+              <i class="inactive fa fa-times" aria-hidden="true"></i>
+            {% endif %}
+          </td>
+        </tr>
+
+        <tr class="status named-icon">
+          <th scope="row">Status:</th>
+          <td>
+            <span class="name">{{ page.status | capitalize }}</span>
+            <i class="{{ page.status | slugify }} fa fa-circle" aria-hidden="true"></i>
+          </td>
+        </tr>
+
+        {% if page.company %}
+          <tr class="company">
+            <th scope="row">Company:</th>
+            <td>
+              {% if page.company.link %}
+                <a href="{{ page.company.link }}">{{ page.company.name }}</a>
+              {% else %}
+                {{ page.company.name }}
+              {% endif %}
+            </td>
+          </tr>
         {% endif %}
-      </div>
-    </div>
 
-    <div class="status row">
-      <div class="property-name col-md-3">Status:</div>
-      <div class="col-md-9">
-        <span>{{ page.status | capitalize }}</span>
-        <i class="fa fa-circle {{ page.status | slugify }}" aria-hidden="true"></i>
-      </div>
-    </div>
+        {% if page.companies %}
+          <tr class="companies">
+            <th scope="row">Companies:</th>
+            <td>
+              <ul class="chronology">
+                {% for company in page.companies %}
+                  <li class="chronology-item">
+                    {% if company.link %}
+                      <a href="{{ company.link }}" title="{{ company.name }}">{{ company.name }}</a>
+                    {% else %}
+                      <span class="name">{{ company.name }}</span>
+                    {% endif %}
+                    <p class="period">({{ company.period }})</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
 
-    {% if page.company %}
-      <div class="company row">
-        <div class="property-name col-md-3">Company:</div>
-        <div class="col-md-9">
-          {% if page.company.link %}
-            <a href="{{ page.company.link }}">{{ page.company.name }}</a>
-          {% else %}
-            {{ page.company.name }}
-          {% endif %}
-        </div>
-      </div>
-    {% endif %}
-
-    {% if page.companies %}
-      <div class="companies row">
-        <div class="property-name col-md-3">
-          <div class="centered">Companies:</div>
-        </div>
-        <div class="col-md-9">
-          {% for company in page.companies %}
-            <div class="company">
-              <p class="period">{{ company.period }}</p>
-              <p class="name">
-                {% if company.link %}
-                  <a href="{{ company.link }}">{{ company.name }}</a>
-                {% else %}
-                  {{ company.name }}
-                {% endif %}
-              </p>
-            </div>
-
-            {% unless forloop.last %}
-              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            {% endunless %}
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
-
-    <div class="technnologies row">
-      <div class="property-name col-md-3">
-        <div class="centered">Technologies:</div>
-      </div>
-      <div class="col-md-9">{{ technologies_names | join: ', ' }}</div>
-    </div>
+        <tr class="technologies">
+          <th scope="row">
+            <span class="hidden-xs-down">Technologies:</span>
+            <span class="hidden-sm-up">Tech:</span>
+          </th>
+          <td>{{ technologies_names | join: ', ' }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-

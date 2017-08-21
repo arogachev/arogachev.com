@@ -19,3 +19,9 @@
     @content;
   }
 }
+
+@mixin media-portfolio-project-xs-2-up {
+  @media (min-width: $portfolio-project-xs-2-min) {
+    @content;
+  }
+}
