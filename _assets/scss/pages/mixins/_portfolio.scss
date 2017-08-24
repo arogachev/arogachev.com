@@ -1,3 +1,33 @@
+@mixin media-portfolio-index-xs-1 {
+  @media (max-width: $portfolio-index-xs-1-max) {
+    @content;
+  }
+}
+
+@mixin media-portfolio-index-xs-2 {
+  @media (min-width: $portfolio-index-xs-2-min) and (max-width: $portfolio-index-xs-2-max) {
+    @content;
+  }
+}
+
+@mixin media-portfolio-index-xs-2-down {
+  @media (max-width: $portfolio-index-xs-2-max) {
+    @content;
+  }
+}
+
+@mixin media-portfolio-index-xs-3 {
+  @media (min-width: $portfolio-index-xs-3-min) and (max-width: breakpoint-max(xs)) {
+    @content;
+  }
+}
+
+@mixin media-portfolio-index-xs-3-up {
+  @media (min-width: $portfolio-index-xs-3-min) {
+    @content;
+  }
+}
+
 @mixin portfolio-project-main-image($size) {
   margin-top: $size / 2 + $font-size * 2;
 

@@ -6,4 +6,6 @@
       {% include portfolio/project.html %}
     </div>
   </div>
+
+  {% unless forloop.last %}<hr class="separator">{% endunless %}
 {% endfor %}

@@ -17,9 +17,13 @@ $footer-xs-height: 100px;
 $footer-profiles-height: $footer-xs-height - $footer-height;
 $footer-bottom-offset: 20px;
 
+$portfolio-index-xs-1-max: 380px;
+$portfolio-index-xs-2-min: $portfolio-index-xs-1-max + 1px;
+$portfolio-index-xs-2-max: 460px;
+$portfolio-index-xs-3-min: $portfolio-index-xs-2-max + 1px;
+
 $portfolio-project-xs-1-max: 420px;
 $portfolio-project-xs-2-min: $portfolio-project-xs-1-max + 1px;
-
 
 // Fonts
 
