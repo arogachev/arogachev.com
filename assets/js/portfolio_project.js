@@ -129,30 +129,6 @@
             return true;
         },
 
-        loadPrevScreenshot: function () {
-            var index;
-
-            if (this.screenshots[this.currentScreenshot.index - 1] === undefined) {
-                index = this.screenshots.length - 1;
-            } else {
-                index = this.currentScreenshot.index - 1;
-            }
-
-            this.changeCurrentScreenshot(index);
-        },
-
-        loadNextScreenshot: function () {
-            var index;
-
-            if (this.screenshots[this.currentScreenshot.index + 1] === undefined) {
-                index = 0;
-            } else {
-                index = this.currentScreenshot.index + 1;
-            }
-
-            this.changeCurrentScreenshot(index);
-        },
-
         getScreenshot: function (index) {
             return this.screenshots[index];
         },
@@ -186,10 +162,6 @@
         var $detailsCollapseMenu = $('#details-collapse-menu');
         var $detailsCollapseMenuTrigger = $('.details-collapse-menu-trigger');
 
-        var $nearbyScreenshotsTriggers = $('.nearby-screenshot');
-        var $prevScreenshotTrigger = $nearbyScreenshotsTriggers.filter('.prev-screenshot');
-        var $nextScreenshotTrigger = $nearbyScreenshotsTriggers.filter('.next-screenshot');
-
         initTab();
 
         $(window).on('hashchange', function() {
@@ -206,20 +178,10 @@
 
         screenshotsCollection.$collapseMenu.on('show.bs.collapse', function () {
             screenshotsCollection.$collapseMenuTrigger.addClass('active');
-            $nearbyScreenshotsTriggers.hide();
         });
 
         screenshotsCollection.$collapseMenu.on('hide.bs.collapse', function () {
             screenshotsCollection.$collapseMenuTrigger.removeClass('active');
-            $nearbyScreenshotsTriggers.show();
-        });
-
-        $prevScreenshotTrigger.click(function () {
-            screenshotsCollection.loadPrevScreenshot();
-        });
-
-        $nextScreenshotTrigger.click(function () {
-            screenshotsCollection.loadNextScreenshot();
         });
 
         function initTab() {
