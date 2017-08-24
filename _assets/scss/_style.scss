@@ -5,15 +5,11 @@ html {
 
 body {
   font-family: $main-font;
-  margin-bottom: $footer-height + 20px;
+  margin-bottom: $footer-height + $footer-bottom-offset;
   min-width: $body-min-width;
 
-  @include media-breakpoint-only(sm) {
-    margin-bottom: $footer-height;
-  }
-
   @include media-breakpoint-only(xs) {
-    margin-bottom: $footer-xs-height;
+    margin-bottom: $footer-xs-height + $footer-bottom-offset;
   }
 }
 
