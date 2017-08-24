@@ -5,6 +5,7 @@ menu_item: portfolio
 
 {% contentfor extrahead %}
   <script src="/assets/js/portfolio_project.js"></script>
+  <script>window.screenshots = JSON.parse('{{ page.screenshots | jsonify }}');</script>
 {% endcontentfor %}
 
 <div class="portfolio-project">
@@ -12,6 +13,6 @@ menu_item: portfolio
 
   <div class="container">
     {% include portfolio/project/meta.html %}
-    {% include portfolio/project/divided_content.html %}
+    {% include portfolio/project/tabs.html %}
   </div>
 </div>

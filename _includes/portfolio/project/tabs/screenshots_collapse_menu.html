@@ -1,0 +1,33 @@
+<div class="row hidden-lg-up">
+  <div class="nearby-screenshot-col col-sm-3">
+    <div class="nearby-screenshot-container prev-screenshot-container">
+      <button type="button" class="nearby-screenshot prev-screenshot" aria-label="Previous screenshot">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div class="screenshots-collapse-menu-col col-sm-6">
+    <div class="screenshots-collapse-menu-trigger collapse-menu-trigger">
+      <a class="trigger" href="#screenshots-collapse-menu" data-toggle="collapse" aria-expanded="false"
+         aria-controls="screenshots-collapse-menu">
+          <span class="fa-stack fa-1x">
+            <i class="fa fa-circle fa-stack-2x" style="color: #{{ page.colors.background }};"></i>
+            <i class="fa fa-chevron-down fa-stack-1x fa-inverse" style="color: #{{ page.colors.font }};"></i>
+            <i class="fa fa-chevron-up fa-stack-1x fa-inverse" style="color: #{{ page.colors.font }};"></i>
+          </span>
+        <span class="title">{{ page.screenshots.first.title }}</span>
+      </a>
+    </div>
+
+    <div id="screenshots-collapse-menu" class="collapse">
+      {% include portfolio/project/tabs/screenshots_menu.html %}
+    </div>
+  </div>
+  <div class="nearby-screenshot-col col-sm-3">
+    <div class="nearby-screenshot-container next-screenshot-container">
+      <button type="button" class="nearby-screenshot next-screenshot" aria-label="Next screenshot">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>

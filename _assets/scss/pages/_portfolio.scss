@@ -104,7 +104,7 @@
     }
 
     .next-project {
-      justify-content: end;
+      justify-content: flex-end;
     }
 
     .nearby-project-col {
@@ -390,7 +390,7 @@
     }
   }
 
-  .divided-content {
+  .portfolio-project-tabs {
     margin-top: 0.5rem;
     padding-bottom: 1.5rem;
 
@@ -432,6 +432,66 @@
     }
   }
 
+  .collapse-menu-trigger {
+    padding: 0.65rem 0.35rem;
+    border-bottom: 1px solid $separator-color;
+    text-align: center;
+
+    .trigger {
+      display: block;
+      text-decoration: none;
+      outline: none;
+    }
+
+    .fa-stack {
+      margin-right: 0.3rem;
+    }
+
+    .fa-chevron-up {
+      display: none;
+    }
+
+    .title {
+      display: inline-block;
+      vertical-align: middle;
+      color: $body-color;
+      font-weight: 500;
+    }
+
+    &.active {
+      border-bottom: none;
+
+      .trigger {
+        display: inline;
+      }
+
+      .fa-circle {
+        color: $separator-color !important;
+      }
+
+      .fa-inverse {
+        color: $white !important;
+      }
+
+      .fa-chevron-down {
+        display: none;
+      }
+
+      .fa-chevron-up {
+        display: inline-block;
+        top: -1.5px;
+      }
+
+      .title {
+        display: none;
+      }
+    }
+  }
+
+  .details-collapse-menu-trigger {
+    border-bottom: none;
+  }
+
   .details {
     .menu {
       .nav-link {
@@ -449,7 +509,29 @@
       }
     }
 
+    .details-collapse-menu-col {
+      @include media-breakpoint-only(xs) {
+        @include make-col(8, 12);
+        @include make-col-offset(2, 12);
+      }
+    }
+
+    .details-collapse-menu-container {
+      border: 1px solid $separator-color;
+      border-radius: 4px;
+
+      .menu {
+        > .nav {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+
     .content {
+      @include media-breakpoint-down(md) {
+        margin-top: 1.5rem;
+      }
+
       p {
         &:last-child {
           margin-bottom: 0;
@@ -460,38 +542,43 @@
 
   .screenshots {
     .nav {
-      padding-left: 1rem;
-
       .nav-item {
-        &:not(:last-child) {
-          padding-bottom: 0.35rem;
-          border-bottom: 1px solid $separator-color;
-          margin-bottom: 0.35rem;
+        padding: 0.65rem 0.35rem;
+        border-bottom: 1px solid $separator-color;
+
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
         }
       }
 
       .nav-link {
+        padding: 0;
         color: $body-color;
         font-weight: 500;
-        padding: 0.3rem;
         outline: none;
+
+        .icon {
+          display: table-cell;
+          vertical-align: middle;
+        }
 
         .fa-stack {
           font-size: 1.25rem;
-          margin-right: 0.3rem;
-        }
-
-        .fa-inverse {
-          font-size: 1rem;
         }
 
         .fa-circle-o {
           display: none;
         }
 
+        .fa-inverse {
+          font-size: 1rem;
+        }
+
         .title {
-          display: inline-block;
+          display: table-cell;
           vertical-align: middle;
+          padding-left: 0.3rem;
         }
 
         &.active {
@@ -510,11 +597,49 @@
       }
     }
 
+    .nearby-screenshot-col {
+      @include media-breakpoint-only(xs) {
+        @include make-col(2, 12);
+      }
+    }
+
+    .screenshots-collapse-menu-col {
+      @include media-breakpoint-only(xs) {
+        @include make-col(8, 12);
+      }
+    }
+
+    .nearby-screenshot-container {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+
+    .prev-screenshot-container {
+      justify-content: flex-end;
+    }
+
+    .nearby-screenshot {
+      border: none;
+      background: transparent;
+      color: $separator-color;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        color: gray;
+      }
+    }
+
     .screenshot {
       display: flex;
       height: 100%;
       justify-content: center;
       align-items: center;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 1rem;
+      }
 
       .loading {
         .fa {
