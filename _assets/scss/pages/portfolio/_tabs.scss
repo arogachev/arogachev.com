@@ -1,0 +1,262 @@
+.portfolio-project-tabs {
+  margin-top: 0.5rem;
+  padding-bottom: 1.5rem;
+
+  .nav-tabs {
+    justify-content: center;
+    border-bottom: 2px solid $separator-color;
+    margin-bottom: 1.5rem;
+
+    .nav-item {
+      margin-bottom: -1.5px;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+    }
+
+    .nav-link {
+      border: none;
+      outline: none;
+      color: $nav-tabs-active-link-hover-color;
+      font-weight: 500;
+      padding: 1rem 0.5rem;
+
+      .name {
+        vertical-align: middle;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      .count {
+        vertical-align: middle;
+        font-weight: 400;
+        font-size: 0.75rem;
+        margin-left: 0.2rem;
+      }
+
+      &.active {
+        border-bottom: 2px solid $emphasis-color;
+      }
+    }
+  }
+}
+
+.collapse-menu-trigger {
+  padding: 0.65rem 0.35rem;
+  border-bottom: 1px solid $separator-color;
+  text-align: center;
+
+  .trigger {
+    display: block;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .fa-stack {
+    margin-right: 0.3rem;
+  }
+
+  .fa-chevron-up {
+    display: none;
+  }
+
+  .title {
+    display: inline-block;
+    vertical-align: middle;
+    color: $body-color;
+    font-weight: 500;
+  }
+
+  &.active {
+    border-bottom: none;
+
+    .trigger {
+      display: inline;
+    }
+
+    .fa-circle {
+      color: $separator-color !important;
+    }
+
+    .fa-inverse {
+      color: $white !important;
+    }
+
+    .fa-chevron-down {
+      display: none;
+    }
+
+    .fa-chevron-up {
+      display: inline-block;
+      top: -1.5px;
+    }
+
+    .title {
+      display: none;
+    }
+  }
+}
+
+.details-collapse-menu-trigger {
+  border-bottom: none;
+}
+
+.details {
+  .menu {
+    .nav-link {
+      color: $body-color;
+      padding: 0.3rem 1rem;
+
+      &.level-2 {
+        font-weight: 500;
+      }
+
+      &.level-3 {
+        font-size: 0.9rem;
+        padding: 0.3rem 1.5rem;
+      }
+    }
+  }
+
+  .details-collapse-menu-col {
+    @include media-breakpoint-only(xs) {
+      @include make-col(8, 12);
+      @include make-col-offset(2, 12);
+    }
+  }
+
+  .details-collapse-menu-container {
+    border: 1px solid $separator-color;
+    border-radius: 4px;
+
+    .menu {
+      > .nav {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .content {
+    @include media-breakpoint-down(md) {
+      margin-top: 1.5rem;
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.screenshots {
+  .nav {
+    .nav-item {
+      padding: 0.65rem 0.35rem;
+      border-bottom: 1px solid $separator-color;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    .nav-link {
+      padding: 0;
+      color: $body-color;
+      font-weight: 500;
+      outline: none;
+
+      .icon {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .fa-stack {
+        font-size: 1.25rem;
+      }
+
+      .fa-circle-o {
+        display: none;
+      }
+
+      .fa-inverse {
+        font-size: 1rem;
+      }
+
+      .title {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 0.3rem;
+      }
+
+      &.active {
+        .fa-inverse {
+          color: $body-color !important;
+        }
+
+        .fa-circle {
+          display: none;
+        }
+
+        .fa-circle-o {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .nearby-screenshot-col {
+    @include media-breakpoint-only(xs) {
+      @include make-col(2, 12);
+    }
+  }
+
+  .screenshots-collapse-menu-col {
+    @include media-breakpoint-only(xs) {
+      @include make-col(8, 12);
+    }
+  }
+
+  .nearby-screenshot-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .prev-screenshot-container {
+    justify-content: flex-end;
+  }
+
+  .nearby-screenshot {
+    border: none;
+    background: transparent;
+    color: $separator-color;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      color: gray;
+    }
+  }
+
+  .screenshot {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 1rem;
+    }
+
+    .loading {
+      .fa {
+        color: $spinner-color;
+      }
+    }
+
+    img {
+      border: 1px solid $card-border-color;
+    }
+  }
+}

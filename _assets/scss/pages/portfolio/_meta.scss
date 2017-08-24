@@ -1,0 +1,146 @@
+.meta {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid $separator-color;
+  border-left: 1px solid $separator-color;
+  border-right: 1px solid $separator-color;
+  border-radius: 4px;
+
+  @include media-portfolio-project-xs-1 {
+    font-size: 0.9rem;
+  }
+
+  tr {
+    @include media-breakpoint-up(sm) {
+      &:first-child {
+        background: $faded-bg-color;
+      }
+
+      &:nth-child(2n+4) {
+        background: $faded-bg-color;
+      }
+    }
+
+    @include media-breakpoint-only(xs) {
+      &:nth-child(odd) {
+        background: $faded-bg-color;
+      }
+    }
+  }
+
+  th, td {
+    padding: 1rem;
+    border-bottom: 1px solid $separator-color;
+
+    @include media-breakpoint-only(xs) {
+      padding: 0.75rem;
+    }
+  }
+
+  th {
+    width: 1%;
+    font-weight: 500;
+
+    @include media-portfolio-project-xs-2-up {
+      vertical-align: middle;
+    }
+  }
+
+  .named-icon {
+    a, .name {
+      vertical-align: middle;
+    }
+
+    .fa {
+      vertical-align: middle;
+      margin-left: 0.3rem;
+    }
+  }
+
+  .link, .accessible {
+    .fa {
+      &.active {
+        color: $brand-success;
+      }
+
+      &.inactive {
+        color: $brand-danger;
+      }
+    }
+  }
+
+  .link {
+    td {
+      color: $link-color;
+      max-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .status {
+    .fa {
+      font-size: 0.75rem;
+
+      &.working {
+        color: $brand-success;
+      }
+
+      &.on-hold {
+        color: $brand-warning;
+      }
+
+      &.closed {
+        color: $brand-danger;
+      }
+    }
+  }
+
+  .companies {
+    .chronology {
+      @include list-unstyled;
+
+      margin-bottom: 0;
+
+      .chronology-item {
+        display: inline-block;
+        vertical-align: top;
+        color: $link-color;
+
+        @include media-portfolio-project-xs-2-up {
+          max-width: 50%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          &:not(:last-child) {
+            padding-right: 1rem;
+            border-right: 1px solid $separator-color;
+            margin-right: 1rem;
+          }
+        }
+
+        @include media-portfolio-project-xs-1 {
+          display: block;
+
+          &:not(:last-child) {
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid $separator-color;
+            margin-bottom: 0.7rem;
+          }
+        }
+      }
+    }
+
+    .name {
+      color: $body-color;
+    }
+
+    .period {
+      margin-bottom: 0;
+      color: $navbar-light-color;
+    }
+  }
+}
