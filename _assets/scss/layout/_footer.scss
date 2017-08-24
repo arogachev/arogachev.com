@@ -40,19 +40,18 @@
       a {
         color: $footer-text-color;
         text-decoration: none;
+        font-size: 1.5rem;
 
         &:hover {
           color: $white;
         }
 
         @include media-breakpoint-up(sm) {
-          font-size: 1.5rem;
           vertical-align: middle;
           margin-right: 0.7rem;
         }
 
         @include media-breakpoint-only(xs) {
-          font-size: 1.1rem;
           vertical-align: top;
           margin-right: 0.5rem;
         }
