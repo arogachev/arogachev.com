@@ -1,9 +1,10 @@
 .project-wrap-row {
   &:not(:last-child) {
-    @include media-portfolio-index-xs-3-up {
-      .project {
+    .project {
+      @include media-portfolio-index-xs-3-up {
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $separator-color;
+        margin-bottom: 1.5rem;
       }
     }
   }
@@ -31,10 +32,6 @@
 }
 
 .project {
-  @include media-portfolio-index-xs-3-up {
-    margin-bottom: 1.5rem;
-  }
-
   .img-col {
     @include media-portfolio-index-xs-3 {
       @include make-col(4, 12);

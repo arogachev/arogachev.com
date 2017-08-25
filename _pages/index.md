@@ -6,7 +6,7 @@ layout: narrow
 title: Blog
 permalink: /
 menu_item: blog
-heading_icon: pencil
+heading_icon: folder-open
 content_class: blog
 ---
 

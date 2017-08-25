@@ -1,10 +1,9 @@
 .blog {
   .post {
-    margin-bottom: 1.5rem;
-
     &:not(:last-child) {
       padding-bottom: 1.5rem;
       border-bottom: 1px solid $separator-color;
+      margin-bottom: 1.5rem;
     }
 
     .title {
