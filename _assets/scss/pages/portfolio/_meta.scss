@@ -2,9 +2,9 @@
   margin-bottom: 0;
   border-collapse: separate;
   border-spacing: 0;
-  border-top: 1px solid $separator-color;
-  border-left: 1px solid $separator-color;
-  border-right: 1px solid $separator-color;
+  border-top: 1px solid $light-gray-color;
+  border-left: 1px solid $light-gray-color;
+  border-right: 1px solid $light-gray-color;
   border-radius: 4px;
 
   @include media-portfolio-project-xs-1 {
@@ -31,7 +31,7 @@
 
   th, td {
     padding: 1rem;
-    border-bottom: 1px solid $separator-color;
+    border-bottom: 1px solid $light-gray-color;
 
     @include media-breakpoint-only(xs) {
       padding: 0.75rem;
@@ -117,7 +117,7 @@
 
           &:not(:last-child) {
             padding-right: 1rem;
-            border-right: 1px solid $separator-color;
+            border-right: 1px solid $light-gray-color;
             margin-right: 1rem;
           }
         }
@@ -127,7 +127,7 @@
 
           &:not(:last-child) {
             padding-bottom: 0.7rem;
-            border-bottom: 1px solid $separator-color;
+            border-bottom: 1px solid $light-gray-color;
             margin-bottom: 0.7rem;
           }
         }

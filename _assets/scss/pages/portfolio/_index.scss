@@ -7,7 +7,7 @@
     .project {
       @include media-portfolio-index-xs-3-up {
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $separator-color;
+        border-bottom: 1px solid $light-gray-color;
         margin-bottom: 1.5rem;
       }
     }
@@ -15,7 +15,7 @@
 }
 
 .separator {
-  border-top-color: $separator-color;
+  border-top-color: $light-gray-color;
   margin: 1.5rem 0;
 
   @include media-portfolio-index-xs-3-up {

@@ -2,7 +2,7 @@
   .post {
     &:not(:last-child) {
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid $separator-color;
+      border-bottom: 1px solid $light-gray-color;
       margin-bottom: 1.5rem;
     }
 
