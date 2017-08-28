@@ -1,3 +1,5 @@
+// Index
+
 @mixin media-portfolio-index-xs-1 {
   @media (max-width: $portfolio-index-xs-1-max) {
     @content;
@@ -27,6 +29,20 @@
     @content;
   }
 }
+
+@mixin portfolio-index-col-xs {
+  @include media-portfolio-index-xs-2 {
+    @include make-col(8, 12);
+    @include make-col-offset(2, 12);
+  }
+
+  @include media-portfolio-index-xs-1 {
+    @include make-col(10, 12);
+    @include make-col-offset(1, 12);
+  }
+}
+
+// Project
 
 @mixin portfolio-project-main-image($size) {
   margin-top: $size / 2 + $font-size * 2;
