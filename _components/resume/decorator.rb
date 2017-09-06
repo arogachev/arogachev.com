@@ -32,9 +32,9 @@ module Resume
       @data['skills']['all'] = all_skills
 
       @data['references'].each do |r|
-        author_text = r['author'] + ', '
+        author_text = r['author']['name'] + ', '
         author_text << r['position'] if r['position']
-        author_text << ' ' + r['preposition'] + ' ' + r['company'] if r['company']
+        author_text << ' ' + r['preposition'] + ' ' + r['company']['name'] if r['company']
         r['author_text'] = author_text
       end
 

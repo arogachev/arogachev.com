@@ -34,6 +34,10 @@
       font-size: 1.1rem;
       font-weight: 500;
       margin-bottom: 0.3rem;
+
+      a {
+        color: $body-color;
+      }
     }
 
     .position {
@@ -67,7 +71,13 @@
 
       .name {
         font-weight: 500;
+        color: $text-muted;
       }
     }
+  }
+
+  .company {
+    font-style: italic;
+    color: $text-muted;
   }
 }
