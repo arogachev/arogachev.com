@@ -19,8 +19,9 @@ module Components
     end
 
     class Inflector
-      def self.slugify(str)
-        str.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      def self.slugify(str, normalize_spaces=false)
+        str = str.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        normalize_spaces ? str.squeeze('-') : str
       end
     end
 

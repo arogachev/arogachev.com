@@ -14,7 +14,7 @@ module Resume
       @data['education']['end_date_text'] = @data['education']['end_date'].strftime('%B %Y')
 
       @data['work'].each do |job|
-        job['slug'] = Inflector.slugify(job['company'])
+        job['slug'] = Inflector.slugify(job['name'], true)
         job['start_date_year'] = job['start_date'].strftime('%Y')
         job['end_date_year'] = job['end_date'] ? job['end_date'].strftime('%Y') : 'Present'
         job['start_date_text'] = job['start_date'].strftime('%B %Y')

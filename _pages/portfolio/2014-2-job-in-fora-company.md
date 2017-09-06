@@ -1,13 +1,13 @@
 ---
-title: Job in Fora company
+title: Job in FORA company
 start_year: 2014
 end_year: 2016
-description: Separate service for jobs in Fora company.
+description: Separate service for jobs in FORA company.
 technologies: [PHP, Yii, MySQL, JavaScript, jQuery, Bootstrap, Sass]
   
 site: http://job.fora.kz/
 status: working
-company: Fora
+company: FORA
 
 screenshots: [home, vacancies, vacancy, career, resume_constructor]
 colors:
@@ -17,7 +17,7 @@ colors:
 
 ## Background
 
-Before appearance of this project there was a separate "Jobs" section on ["Fora"][Fora] company's main site where users 
+Before appearance of this project there was a separate "Jobs" section on ["FORA"][FORA] company's main site where users 
 could view the list of actual jobs and respond to suitable one. In turn HR department specialists had access to 
 corresponding section of administrative site's part for viewing received responses. However over time this functionality 
 became insufficient in both administrative and public parts of the site. Because jobs part was not coupled neither with 
@@ -61,4 +61,4 @@ After collective work and project's launch, its further development and support 
 technical aspect, the active communication directly with HR department main specialist was occuring, during which the 
 bugs and the new tasks were being discussed and consultations about system's work were being given.
 
-[Fora]: https://fora.kz/
+[FORA]: https://fora.kz/

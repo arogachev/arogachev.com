@@ -81,7 +81,7 @@ making filling and editing of the tests even more uncomfortable for customer.
 ## Phase 2 - Transition to Yii Framework and further improvements
 
 Later the customer contacted me and proposed to continue work on the project. At that time I was already working in 
-"Fora" company but agreed to take the project as a side job.
+"FORA" company but agreed to take the project as a side job.
 
 ### Design and layout customizations
 
@@ -99,7 +99,7 @@ work were carried out on my own. A switch to SASS was done to simplify support o
 ### Programming
 
 Having assessed the complexity of further development of the project in "1C-Bitrix" CMS, I decided to rewrite it fully
-in Yii Framework which I was studying at that time while working at "Fora" company. Test structure was redesigned using 
+in Yii Framework which I was studying at that time while working at "FORA" company. Test structure was redesigned using 
 MVC framework models. It was decided to use expressions containing links to key objects, their values and also basic 
 arithmetic and logic operations for calculation of the results. This list was subsequently supplemented by many other 
 operations - for example, checking if one set is a subset of another set, etc. I excluded use of `eval` immediately for
@@ -111,7 +111,7 @@ use only keyboard for navigation and answering the questions was added.
 
 ## Phase 3 - Transition to Yii 2 Framework and further improvements
 
-At some point in "Fora" company we started to use second version of Yii since the first one inevitably became obsolete 
+At some point in "FORA" company we started to use second version of Yii since the first one inevitably became obsolete 
 and was more difficult to support. Along with this I decided to upgrade "Psychological tests online" project to newer
 version too. As it turned out - it was done for good reason. Work with project became easier and more productive. It 
 was also a promising step in terms of future support. The code base was not so huge yet and migration process was 

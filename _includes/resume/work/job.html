@@ -11,8 +11,11 @@
 
 <p>{{ job.summary }}</p>
 
-<p><b>Position:</b> {{ job.position }}</p>
+{% if job.legal_name %}
+  <p><b>Legal name:</b> {{ job.legal_name }}</p>
+{% endif %}
 <p><b>Website:</b> <a href="{{ job.website }}">{{ job.website }}</a></p>
+<p><b>Position:</b> {{ job.position }}</p>
 
 <div class="technologies">
   <p><b>Technologies:</b></p>

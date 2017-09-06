@@ -17,7 +17,7 @@ colors:
 
 ## Background
 
-The project initially was planned as side job while working at "Fora" company. "Zernovye & Maslichnye. Kazakhstan" 
+The project initially was planned as side job while working at "FORA" company. "Zernovye & Maslichnye. Kazakhstan" 
 information and analysis bureau already had site written in Joomla, however the leader was not satisfied with its work 
 and support. Moreover, a multitude of improvements that made the using CMS of this kind inappropriate were being 
 planned. The key idea from business point of view was opportunity of closing of specific content parts from common 

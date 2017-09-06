@@ -18,13 +18,13 @@ colors:
 
 ## Background
 
-Working at "Fora" company, at some point I decided to move beyond PHP / Yii, learn and try other languages and 
+Working at "FORA" company, at some point I decided to move beyond PHP / Yii, learn and try other languages and 
 frameworks.
 
 I chose Ruby language and Ruby on Rails framework. I heard a lot about speed and convenience of development with Rails
 and also about its influence on other frameworks.
 
-I remembered that my friend Tatyana (head of the department where I worked at "Bars Stroy") was needing a personal site.
+I remembered that my friend Tatyana (head of the department where I worked at "Bars-Stroy") was needing a personal site.
 She does professional photographing in own studio and outside. Tatyana complained that though social networks cover her
 needs, nevertheless they have some cons:
 

@@ -137,7 +137,7 @@ module Portfolio
         return
       end
 
-      slug = Inflector.slugify(data['name'])
+      slug = Inflector.slugify(data['name'], true)
       data['link'] = "/resume/##{slug}"
     end
 

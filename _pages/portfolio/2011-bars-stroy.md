@@ -1,14 +1,14 @@
 ---
-title: Bars Stroy
+title: Bars-Stroy
 start_year: 2011
 end_year: 2013
-description: Bars Stroy company is a construction materials seller. Has some branches across Kazakhstan.
+description: Bars-Stroy company is a construction materials seller. Has some branches across Kazakhstan.
 technologies: [PHP, UMI.CMS, XSLT, MySQL, JavaScript, jQuery]
   
 site: https://bars-stroy.kz/
 status: on hold
 companies:
-  - name: Bars Stroy
+  - name: Bars-Stroy
     start_year: 2011
     end_year: 2012
 
@@ -32,7 +32,7 @@ local company which will become my next work afterwards.
 In addition to programming a big amount of other work was entrusted to me because I was the only employee fully engaged 
 in the site.
 
-## Phase 1 - Work in "Bars Stroy" company
+## Phase 1 - Work in "Bars-Stroy" company
 
 ### Layout and design
 
