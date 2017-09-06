@@ -1,0 +1,9 @@
+<div class="bs-callout bs-callout-success">
+  <h3>{{ group.name }}</h3>
+
+  <ul class="badge-tags">
+    {% for keyword in group.keywords %}
+      <li class="badge-tag">{{ keyword }}</li>
+    {% endfor %}
+  </ul>
+</div>

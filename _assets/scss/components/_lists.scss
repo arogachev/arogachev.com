@@ -1,0 +1,32 @@
+.meta-list {
+  @include list-unstyled;
+
+  color: $text-muted;
+  margin-bottom: 1rem;
+
+  @include media-breakpoint-only(xs) {
+    margin-bottom: 0.5rem;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 1.5rem;
+
+    &:not(:last-child) {
+      @include media-breakpoint-only(xs) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .fa {
+    vertical-align: middle;
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+}

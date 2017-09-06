@@ -1,0 +1,17 @@
+.skills {
+  .bs-callout {
+    padding: 1rem 1rem 0 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .badge-tags {
+    margin-bottom: 0.4rem;
+  }
+}

@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Code</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in education.courses %}
+      <tr>
+        <th scope="row">{{ forloop.index }}</th>
+        <td>{{ course.code }}</td>
+        <td>{{ course.name }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

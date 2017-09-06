@@ -1,17 +1,13 @@
 .meta {
-  margin-bottom: 0;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-top: 1px solid $light-gray-color;
-  border-left: 1px solid $light-gray-color;
-  border-right: 1px solid $light-gray-color;
-  border-radius: 4px;
-
   @include media-portfolio-project-xs-1 {
     font-size: 0.9rem;
   }
 
   tr {
+    &:nth-child(odd) {
+      background: transparent;
+    }
+
     @include media-breakpoint-up(sm) {
       &:first-child {
         background: $faded-bg-color;
@@ -31,7 +27,6 @@
 
   th, td {
     padding: 1rem;
-    border-bottom: 1px solid $light-gray-color;
 
     @include media-breakpoint-only(xs) {
       padding: 0.75rem;
@@ -40,7 +35,6 @@
 
   th {
     width: 1%;
-    font-weight: 500;
 
     @include media-portfolio-project-xs-2-up {
       vertical-align: middle;

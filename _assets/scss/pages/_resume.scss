@@ -1,89 +1,9 @@
 .resume {
-  // Basics
-
-  .basics {
-    .name {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .work-duration,
-    .location,
-    .languages {
-      font-style: italic;
-    }
-
-    .photo {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 10px;
-      box-shadow: 0 0 5px gray;
-    }
-  }
-
-  // Download
-
-  .download {
-    .extension {
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-  }
-
-  // Interests
-
-  .interests {
-    .interests-list {
-      .name {
-        margin: 10px 0;
-      }
-    }
-  }
-
-  .profiles {
-    .fa {
-      font-size: 32px;
-      margin: 3px 0;
-
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: none;
-        color: #999;
-      }
-    }
-
-    .fa-github {
-      color: #333;
-    }
-
-    .fa-stack-overflow {
-      color: #f48024;
-    }
-
-    .fa-linkedin {
-      color: #1985bc;
-    }
-
-    .fa-twitter {
-      color: #1da1f2;
-    }
-
-    .fa-vk {
-      color: #507299;
-    }
-
-    .fa-instagram {
-      color: #262626;
-    }
-  }
-
-  // References
-
-  .references {
-    .photo {
-      width: 80px;
-      height: 80px;
-    }
-  }
+  @import "resume/common";
+  @import "resume/basics";
+  @import "resume/about";
+  @import "resume/work";
+  @import "resume/skills";
+  @import "resume/references";
+  @import "resume/interests";
 }

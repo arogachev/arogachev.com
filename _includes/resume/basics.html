@@ -1,37 +1,25 @@
 {% assign basics = resume.basics %}
 {% assign location = basics.location %}
-{% capture languages %}
-  {% for language in basics.languages %}
-    {{ language.name }} ({{ language.level | downcase }}){% unless forloop.last %}, {% endunless %}
-  {% endfor %}
-{% endcapture %}
 
-<div class="basics row">
-  <div class="col-md-3 col-sm-4">
-    <img src="/assets/images/resume/{{ basics.image }}"
-         class="photo center-block"
-         alt="{{ basics.name }}"
-         title="{{ basics.name }}">
+<div class="basics">
+  <div class="photo-col">
+    <img src="/assets/images/resume/{{ basics.image }}" class="photo" alt="{{ basics.name }}" title="{{ basics.name }}">
   </div>
-  <div class="col-md-9 col-sm-8">
-    <p class="name">{{ basics.name }}</p>
-    <p>{{ basics.specialization }}, {{ basics.age }} years old</p>
 
-    <p>
-      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-      <span class="work-duration">{{ basics.work_duration.years }} years' experience</span>
-    </p>
+  <div class="info-col">
+    {% include resume/basics/download.html %}
 
-    <p>
-      <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-      <span class="location">{{ location.city }}, {{ location.country }} ({{ location.region }})</span>
-    </p>
+    <h2 class="name">{{ basics.name }}</h2>
+    <p class="description">{{ basics.specialization }}, {{ basics.age }} years old</p>
 
-    <p>
-      <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-      <span class="languages">{{ languages }}</span>
-    </p>
+    <div class="hidden-xs-down">
+      {% include resume/basics/info_list.html %}
+      {% include resume/basics/profiles.html %}
+    </div>
+  </div>
 
-    <blockquote>{{ basics.summary }}</blockquote>
+  <div class="info-row hidden-sm-up">
+    {% include resume/basics/info_list.html %}
+    {% include resume/basics/profiles.html %}
   </div>
 </div>

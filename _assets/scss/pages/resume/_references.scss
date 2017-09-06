@@ -1,0 +1,73 @@
+.references {
+  .reference {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+
+      @include media-breakpoint-only(xs) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .photo-col {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 1rem;
+
+    @include media-breakpoint-only(xs) {
+      vertical-align: middle;
+    }
+  }
+
+  .photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .author-col {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.9rem;
+
+    .name {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .position {
+      color: $text-muted;
+      margin-bottom: 0;
+    }
+  }
+
+  .blockquote-col {
+    display: table-cell;
+    vertical-align: top;
+
+    @include media-breakpoint-only(xs) {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+
+  .blockquote {
+    font-size: 1rem;
+
+    p {
+      @include media-breakpoint-only(xs) {
+        margin-bottom: 0;
+      }
+    }
+
+    .author {
+      font-size: 0.9rem;
+      color: $text-muted;
+
+      .name {
+        font-weight: 500;
+      }
+    }
+  }
+}

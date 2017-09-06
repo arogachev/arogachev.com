@@ -16,63 +16,6 @@
       }
     }
 
-    .meta {
-      color: $text-muted;
-
-      ul {
-        @include list-unstyled;
-
-        margin-bottom: 1rem;
-
-        @include media-breakpoint-only(xs) {
-          margin-bottom: 0.5rem;
-        }
-
-        li {
-          display: inline-block;
-          margin-right: 1.5rem;
-
-          &:not(:last-child) {
-            @include media-breakpoint-only(xs) {
-              margin-bottom: 0.5rem;
-            }
-          }
-        }
-      }
-
-      .icon, .image {
-        margin-right: 0.3rem;
-        vertical-align: middle;
-      }
-
-      .icon {
-        font-size: 1.1rem;
-      }
-
-      .label {
-        font-size: 0.9rem;
-        vertical-align: middle;
-      }
-    }
-
-    .author {
-      margin-bottom: 1rem;
-
-      .image {
-        display: inline-block;
-        background-image: url(/assets/images/resume/main_photo.jpg);
-        background-size: 100% 100%;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        box-shadow: 0 0 3px gray;
-      }
-
-      .label {
-        display: inline-block;
-      }
-    }
-
     .tags {
       @include list-unstyled;
 

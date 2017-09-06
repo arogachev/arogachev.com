@@ -14,10 +14,19 @@ location:
   region: North Kazakhstan Region
 languages:
   - name: Russian
-    level: Native speaker
+    emoji: ':ru:'
+    level:
+      ilr: 5
+      cefr: C2
 
   - name: English
-    level: Can pass interviews
+    emoji: ':uk:'
+    level:
+      ilr: 3
+      cefr: C1
 
   - name: Kazakh
-    level: Basic knowledge
+    emoji: ':kazakhstan:'
+    level:
+      ilr: 1
+      cefr: A2

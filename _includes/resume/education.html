@@ -1,35 +1,23 @@
 {% assign education = resume.education %}
 
-<div>
-  <p>
-    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-    {{ education.start_date | date: '%b. %Y' }} - {{ education.end_date | date: '%b. %Y' }}
-  </p>
+<div class="education">
+  <ul class="meta-list">
+    <li>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <span class="label">{{ education.start_date | date: '%B %Y' }} - {{ education.end_date | date: '%B. %Y' }}</span>
+    </li>
+    <li>
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <span class="label">Diploma with honors</span>
+    </li>
+  </ul>
+
   <p><b>Institution:</b> {{ education.institution }}</p>
   <p><b>Area:</b> {{ education.area }}</p>
   <p><b>Degree:</b> {{ education.degree }}</p>
   <p><b>GPA:</b> {{ education.gpa }}</p>
 
-  <div class="panel panel-default">
-    <div class="panel-heading" id="education-courses-heading">
-      <h4 id="education-courses" class="panel-title">
-        <a href="#education-courses-content"
-           class="collapsed"
-           role="button"
-           data-toggle="collapse"
-           aria-expanded="false"
-           aria-controls="education-courses-content">Courses</a>
-      </h4>
-    </div>
-    <div class="panel-collapse collapse"
-         id="education-courses-content"
-         aria-labelledby="education-courses-heading"
-         aria-expanded="false">
-      <ul class="list-group">
-        {% for course in education.courses %}
-          <li class="list-group-item">{{ course }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+  {% collapse 'Courses' %}
+    {% include resume/education/courses.html %}
+  {% endcollapse %}
 </div>

@@ -1,0 +1,32 @@
+.table {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid $light-gray-color;
+  border-left: 1px solid $light-gray-color;
+  border-right: 1px solid $light-gray-color;
+  border-radius: 4px;
+
+  th {
+    font-weight: 500;
+  }
+
+  thead {
+    th {
+      border-top: none;
+      border-bottom: 2px solid $light-gray-color;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background: $faded-bg-color;
+      }
+    }
+
+    th, td {
+      border-bottom: 1px solid $light-gray-color;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.collapse-item {
+  .collapse-trigger {
+    display: table;
+    width: 100%;
+    color: $body-color;
+    text-decoration: none;
+    outline: none;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid $light-gray-color;
+
+    > div {
+      display: table-cell;
+    }
+
+    .collapse-icon {
+      width: 1%;
+      padding-right: 0.6rem;
+    }
+
+    .fa {
+      position: relative;
+      top: -1px;
+      font-size: 0.9rem;
+    }
+
+    .fa-chevron-up {
+      display: none;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    &.active {
+      .fa-chevron-down {
+        display: none;
+      }
+
+      .fa-chevron-up {
+        display: inline-block;
+      }
+    }
+  }
+
+  .collapse-content {
+    padding-top: 1rem;
+  }
+}
+
+.collapse-item-more {
+  .collapse-trigger {
+    border-bottom: none;
+    padding-bottom: 0;
+    border-top: 1px solid $light-gray-color;
+    margin-top: 1.5rem;
+
+    .collapse-less {
+      display: none;
+    }
+
+    &.active {
+      .collapse-more {
+        display: none;
+      }
+
+      .collapse-less {
+        display: inline;
+      }
+    }
+  }
+
+  .collapse-content {
+    padding-top: 0;
+  }
+}
+
+.collapse-stack {
+  .collapse-item {
+    margin: 0.1rem 0;
+
+    .collapse-trigger {
+      padding: 0.6rem 0;
+    }
+  }
+}

@@ -35,6 +35,10 @@ hr {
   }
 }
 
+b, strong {
+  font-weight: 500;
+}
+
 // https://stackoverflow.com/questions/42627681/bootstrap-4-container-class-seems-to-cause-hamburger-menu-to-overlap-brand-logo
 
 @media (max-width: 568px) {

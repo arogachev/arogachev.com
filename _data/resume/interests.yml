@@ -1,20 +1,34 @@
 - name: Sports
-  keywords: [gym, running, cycling, yoga, snowboarding]
+  details:
+    - name: gym
+      emoji: ':muscle:'
+
+    - name: yoga
+      emoji: ':man_cartwheeling:'
+
+    - name: running
+      emoji: ':runner:'
+
+    - name: cycling
+      emoji: ':bicyclist:'
+
+    - name: snowboarding
+      emoji: ':snowboarder:'
 
 - name: Foreign languages studying
-  keywords: [English]
+  details:
+    - name: English
+      emoji: ':uk:'
 
 - name: Photography
-  keywords: [nature, architecture]
+  details:
+    - name: nature
+      emoji: ':cherry_blossom:'
 
 - name: Psychology
-  keywords: [articles, books]
+  details:
+    - name: articles
+      emoji: ':newspaper:'
 
-- name: Music
-  keywords: []
-
-- name: Movies
-  keywords: []
-
-- name: Books
-  keywords: []
+    - name: books
+      emoji: ':books:'

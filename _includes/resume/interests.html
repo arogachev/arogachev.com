@@ -1,12 +1,20 @@
 <div class="interests">
-  <dl class="interests-list">
-    {% for interest in resume.interests %}
-      <dt class="name">{{ interest.name }}</dt>
-      <dd class="keywords">
-        {% for keyword in interest.keywords %}
-          <span class="label label-primary">{{ keyword }}</span>
-        {% endfor %}
-      </dd>
-    {% endfor %}
-  </dl>
+  <div class="toggle">
+    <span class="label">Show text</span>
+    <i id="interests-toggle" class="fa fa-toggle-on" aria-hidden="true"></i>
+  </div>
+
+  {% for interest in resume.interests %}
+    {% assign details_names = interest.details | map: 'name' %}
+
+    <p>
+      <b>{{ interest.name }}:</b>
+
+      {% for detail in interest.details %}
+        {{ detail.emoji }}
+      {% endfor %}
+
+      <span class="details-text">{{ details_names | join: ', ' }}</span>
+    </p>
+  {% endfor %}
 </div>
