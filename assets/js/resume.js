@@ -4,13 +4,24 @@ $(function () {
     var $collapseBlocks = $('.collapse');
     var $toggles = $('.toggle .fa');
 
+    var $workHeaders = $('.work .collapse-heading');
     var $skillsHeader = $('#skills');
     var $skillsCollapse = $('#hidden-skills-collapse');
-    var $interestsToggle = $('#interests-toggle');
-    var $interestsToggleableBlocks = $('.interests .emoji, .interests .details-text');
     var $downloadToggleBlock = $('.download .toggle');
     var $downloadToggle = $('#download-toggle');
     var $downloadToggleableBlocks = $('.download .dropdown-item');
+    var $interestsToggle = $('#interests-toggle');
+    var $interestsToggleableBlocks = $('.interests .emoji, .interests .details-text');
+
+    $workHeaders.each(function () {
+        var id = $(this).attr('id');
+
+        if ('#' + id === window.location.hash) {
+            $('#' + id + '-collapse').collapse('show');
+
+            return false;
+        }
+    });
 
     $collapseBlocks.on('show.bs.collapse', function () {
         $(this).closest('.collapse-item').find('.collapse-trigger').addClass('active');
@@ -28,10 +39,6 @@ $(function () {
         $scrollableBlock.scrollTop($skillsHeader.offset().top - SCROLL_TOP_OFFSET);
     });
 
-    $interestsToggle.click(function () {
-        $interestsToggleableBlocks.toggle();
-    });
-
     $downloadToggleBlock.click(function () {
         return false;
     });
@@ -40,5 +47,9 @@ $(function () {
         $downloadToggleableBlocks.toggleClass('visible');
 
         return false;
+    });
+
+    $interestsToggle.click(function () {
+        $interestsToggleableBlocks.toggle();
     });
 });
