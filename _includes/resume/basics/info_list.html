@@ -1,7 +1,9 @@
 <ul class="info-list">
   <li>
     <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
-    <span class="location">{{ location.city }}, {{ location.country }} ({{ location.region }})</span>
+    <a class="location" href="{{ location.link }}">
+      {{ location.city }}, {{ location.country }} ({{ location.region }})
+    </a>
   </li>
 
   <li>

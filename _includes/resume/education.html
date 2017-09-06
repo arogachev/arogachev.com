@@ -3,6 +3,10 @@
 <div class="education">
   <ul class="meta-list">
     <li>
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      <a class="label" href="{{ education.location.link }}">{{ education.location.city }}</a>
+    </li>
+    <li>
       <i class="fa fa-calendar" aria-hidden="true"></i>
       <span class="label">{{ education.start_date | date: '%B %Y' }} - {{ education.end_date | date: '%B. %Y' }}</span>
     </li>
