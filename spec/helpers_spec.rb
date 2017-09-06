@@ -73,8 +73,22 @@ end
 
 RSpec.describe Inflector do
   describe '.slugify' do
-    it 'creates slug from string' do
-      expect(Inflector.slugify('Ruby on Rails')).to eq('ruby-on-rails')
+    context 'with human readable string' do
+      it 'creates slug' do
+        expect(Inflector.slugify('Ruby on Rails')).to eq('ruby-on-rails')
+      end
+    end
+
+    context 'with normalize_spaces set to false' do
+      it 'leaves repeated dashes as is' do
+        expect(Inflector.slugify('Zernovye & Maslichnye. Kazakhstan')).to eq('zernovye--maslichnye-kazakhstan')
+      end
+    end
+
+    context 'with normalize_spaces set to true' do
+      it 'removes repeated dashes' do
+        expect(Inflector.slugify('Zernovye & Maslichnye. Kazakhstan', true)).to eq('zernovye-maslichnye-kazakhstan')
+      end
     end
   end
 end

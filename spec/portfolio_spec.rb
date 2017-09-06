@@ -156,7 +156,7 @@ RSpec.describe ProjectDecorator do
 
         expect(project.data['company']).to eq({
           'name' => 'Zernovye & Maslichnye. Kazakhstan',
-          'link' => '/resume/#zernovye--maslichnye-kazakhstan',
+          'link' => '/resume/#zernovye-maslichnye-kazakhstan',
         })
       end
     end
