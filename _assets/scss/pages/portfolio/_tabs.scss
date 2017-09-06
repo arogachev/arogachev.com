@@ -93,12 +93,6 @@
   }
 }
 
-.screenshots-collapse-menu-trigger {
-  @include media-breakpoint-down(md) {
-    margin-bottom: 1rem;
-  }
-}
-
 .details {
   .menu {
     .nav-link {
@@ -204,6 +198,14 @@
     @include media-breakpoint-only(xs) {
       @include make-col(8, 12);
       @include make-col-offset(2, 12);
+    }
+
+    .screenshots-collapse-menu-trigger {
+      margin-bottom: 1rem;
+    }
+
+    .collapse {
+      margin-bottom: 1rem;
     }
   }
 
