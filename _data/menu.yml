@@ -1,9 +1,6 @@
 - name: blog
   link: /
 
-- name: about
-  link: /about/
-
 - name: resume
   link: /resume/
 
