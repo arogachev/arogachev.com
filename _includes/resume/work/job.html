@@ -13,7 +13,7 @@
   </li>
 </ul>
 
-<p>{{ job.summary }}</p>
+<div>{{ job.summary | markdownify }}</div>
 
 {% if job.legal_name %}
   <p><b>Legal name:</b> {{ job.legal_name }}</p>

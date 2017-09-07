@@ -7,7 +7,7 @@ start_date: 2012-11-01
 end_date: 2013-11-15
 summary: INSY company is a website developing company based in Petropavl, Kazakhstan. Services also include mobile
   applications development, creation of logos and corporate style. Work on company projects in PHP based CMS
-  (UMI.CMS and 1C-Bitrix). Full company portfolio can be found here - http://insy.kz/portfolio/.
+  (UMI.CMS and 1C-Bitrix). Full company portfolio can be found [here](http://insy.kz/portfolio/).
 technologies:
   - PHP
   - UMI.CMS

@@ -3,8 +3,16 @@ h2 {
   margin-bottom: 1rem;
 }
 
-p, ul {
+p {
   margin-bottom: 0.5rem;
+}
+
+ul {
+  margin-bottom: 0.5rem;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .table {
