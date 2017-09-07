@@ -146,13 +146,25 @@
 
     li {
       margin-bottom: 0.3rem;
+
+      > div {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+
+    .icon-col {
+      @include fa-fw;
+
+      padding-right: 0.3rem;
     }
 
     .fa {
+      font-size: 1.1rem;
       color: $text-muted;
     }
 
-    a {
+    .label {
       color: $body-color;
     }
   }
