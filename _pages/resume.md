@@ -3,7 +3,6 @@ layout: resume
 title: Resume
 permalink: /resume/
 menu_item: resume
-heading_icon: folder-open
 content_class: resume
 ---
 
