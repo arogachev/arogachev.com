@@ -17,6 +17,11 @@ code, kbd, pre, samp {
   font-family: $code-font;
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 1rem;
+}
+
 h1, .h1 {
   font-size: 1.9rem;
 }
@@ -37,6 +42,13 @@ hr {
 
 b, strong {
   font-weight: 500;
+}
+
+.highlight {
+  font-size: 0.85rem;
+  border: 1px solid $light-gray-color;
+  border-radius: 4px;
+  padding: 0.6rem;
 }
 
 // https://stackoverflow.com/questions/42627681/bootstrap-4-container-class-seems-to-cause-hamburger-menu-to-overlap-brand-logo

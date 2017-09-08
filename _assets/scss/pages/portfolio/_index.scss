@@ -47,6 +47,7 @@
 
   .title {
     font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 
     @include media-portfolio-index-xs-2-down {
       margin-top: 1rem;

@@ -28,3 +28,12 @@
     vertical-align: middle;
   }
 }
+
+.hashtags {
+  @include list-unstyled;
+
+  li {
+    display: inline-block;
+    color: $blue;
+  }
+}

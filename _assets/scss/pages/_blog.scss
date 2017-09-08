@@ -7,22 +7,23 @@
     }
 
     .title {
-      margin-bottom: 1rem;
-
       a {
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 2.1rem;
       }
     }
+  }
+}
 
-    .tags {
-      @include list-unstyled;
+.blog-post {
+  .page-heading {
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+  }
 
-      .tag {
-        display: inline-block;
-        color: $blue;
-      }
-    }
+  .meta {
+    border-bottom: 1px solid $light-gray-color;
+    margin-bottom: 1rem;
   }
 }

@@ -1,21 +1,23 @@
-<div id="disqus_thread"></div>
+<div class="comments">
+  <div id="disqus_thread"></div>
 
-<script>
+  <script>
     var disqus_config = function () {
-        this.page.url = '{{ site.url }}{{ page.url }}';
-        this.page.identifier = this.page.url.match(/\/blog\/\d{4}\/\d{2}\/\d{2}\/\d{4}/)[0];
+      this.page.url = '{{ site.url }}{{ page.url }}';
+      this.page.identifier = this.page.url.match(/\/blog\/\d{4}\/\d{2}\/\d{2}\/\d{4}/)[0];
     };
 
     (function() {
-        var d = document,
-            s = d.createElement('script');
+      var d = document,
+          s = d.createElement('script');
 
-        s.src = '//arogachev.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+      s.src = '//arogachev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
     })();
-</script>
+  </script>
 
-<noscript>
+  <noscript>
     Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+  </noscript>
+</div>
