@@ -12,7 +12,7 @@ module Resume
       site = Jekyll::Site.new(Jekyll.configuration)
       data = {}
       Jekyll::DataReader.new(site).read_data_to(@input_folder, data)
-      data = Decorator.new(data).decorate
+      data = Decorator.new(data['resume'], data['geo']).decorate
       File.open(@output_file, 'w') {|f| f.write data.to_yaml }
     end
   end

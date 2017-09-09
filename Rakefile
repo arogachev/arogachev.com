@@ -1,6 +1,8 @@
 require 'yaml'
 require_relative '_components/resume/generators'
 
+RAW_DATA_DIR = '_data'
+raw_data = Rake::FileList.new("#{RAW_DATA_DIR}/**/*.yml")
 GENERATED_DIR = '_generated'
 assets_dir = 'assets'
 FILES_DIR = "#{assets_dir}/files"
@@ -11,8 +13,6 @@ task default: %w[resume:generate_files portfolio:generate_main_images]
 namespace :resume do
   resume_generated_dir = "#{GENERATED_DIR}/resume"
 
-  RESUME_RAW_DATA_DIR = '_data/resume'
-  raw_data = Rake::FileList.new("#{RESUME_RAW_DATA_DIR}/**/*.yml")
   RESUME_DATA_FILE = "#{resume_generated_dir}/data.yml"
 
   RESUME_RAW_TEMPLATES_DIR = '_components/resume/templates'
@@ -34,7 +34,7 @@ namespace :resume do
   file RESUME_DATA_FILE => raw_data.add(GENERATED_DIR) do |t|
     mkdir_p t.name.pathmap('%d')
     puts "Generating data #{t.name}"
-    Resume::DataGenerator.new(RESUME_RAW_DATA_DIR, t.name).generate
+    Resume::DataGenerator.new(RAW_DATA_DIR, t.name).generate
   end
 
   desc 'Convert Markdown raw templates (with Liquid syntax) to regular Markdown templates'

@@ -14,9 +14,9 @@
 
 # {{ basics.name }}
 
-*{{ basics.specialization }}*
-
 ![](assets/images/resume/main_photo.jpg){width=100px height=100px}
+
+{{ basics.specialization }}
 
 {{ location }}
 
@@ -25,7 +25,7 @@
 ## Work
 
 {% for job in work_reversed %}
-### {{ job.company }}, {{ job.position | downcase }} ({{ job.start_date_text }} - {{ job.end_date_text }})
+### {{ job.name }}, {{ job.position | downcase }} ({{ job.start_date_text }} - {{ job.end_date_text }})
 
 {% for highlight in job.brief_highlights %}
 - {{ highlight | brief }}
@@ -37,7 +37,8 @@
 
 ### {{ education.institution }} ({{ education.start_date_text }} - {{ education.end_date_text }})  
 
-{{ education.area }} | {{ education.degree }} degree | {{ education.gpa }} GPA | {{ education.highlights | sentence }}
+{{ education.location.city}}, {{ education.location.country }} | {{ education.area }} | {{ education.degree }} degree |
+{{ education.gpa }} GPA | {{ education.highlights | sentence }}
 
 ## Extra activity
 
