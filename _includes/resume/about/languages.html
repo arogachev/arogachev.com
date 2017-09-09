@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>ILR</th>
+      <th>CEFR</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for language in resume.basics.languages %}
+      <tr>
+        <th scope="row">{{ language.emoji }}</th>
+        <td>{{ language.name }}</td>
+        <td>{{ language.level.ilr }}</td>
+        <td>{{ language.level.cefr }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

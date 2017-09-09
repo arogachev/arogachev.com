@@ -1,0 +1,16 @@
+<ul class="nav flex-column">
+  {% for screenshot in page.screenshots %}
+    <li class="nav-item">
+      <a class="nav-link" href="#screenshot-{{ forloop.index }}" data-index="{{ forloop.index0 }}">
+        <div class="icon">
+          <span class="fa-stack fa-1x">
+            <i class="fa fa-circle fa-stack-2x" style="color: #{{ page.colors.background }};"></i>
+            <i class="fa fa-circle-o fa-stack-2x" style="color: #{{ page.colors.background }};"></i>
+            <i class="fa fa-stack-1x fa-inverse" style="color: #{{ page.colors.font }};">{{ forloop.index }}</i>
+          </span>
+        </div>
+        <span class="title">{{ screenshot.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

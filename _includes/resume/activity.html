@@ -1,7 +1,7 @@
 <div class="activity">
-  <ul>
+  <ul class="fa-ul">
     {% for action in resume.activity %}
-      <li>{{ action }}</li>
+      <li><i class="fa-li fa fa-check-square-o"></i> {{ action | markdownify }}</li>
     {% endfor %}
   </ul>
 </div>

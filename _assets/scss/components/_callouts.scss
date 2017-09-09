@@ -1,0 +1,27 @@
+@import "mixins/callouts";
+
+.bs-callout {
+  border: 1px solid $light-gray-color;
+  border-left-width: 5px;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include bs-callout-color(default, $gray);
+@include bs-callout-color(primary, $brand-primary);
+@include bs-callout-color(success, $brand-success);
+@include bs-callout-color(info, $brand-info);
+@include bs-callout-color(warning, $brand-warning);
+@include bs-callout-color(danger, $brand-danger);

@@ -1,0 +1,18 @@
+.main-menu {
+  border-bottom: 1px solid $light-gray-color;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1.5rem;
+  }
+
+  .navbar-toggler {
+    cursor: pointer;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      text-transform: uppercase;
+    }
+  }
+}

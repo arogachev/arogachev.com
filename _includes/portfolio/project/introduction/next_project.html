@@ -1,0 +1,9 @@
+<div class="nearby-project nearby-project-{{ include.position }} next-project">
+  {% if page.next %}
+    <a href="{{ page.next.permalink }}">
+      <i class="fa fa-chevron-right" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
+    </a>
+  {% else %}
+    <i class="fa fa-chevron-right disabled" aria-hidden="true" style="color: #{{ page.colors.font }};"></i>
+  {% endif %}
+</div>

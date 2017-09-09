@@ -1,5 +1,32 @@
 // Fonts
 
-$body-font: 'PT Sans', sans-serif;
-$headings-font: 'Philosopher', sans-serif;
-$code-font: 'PT Mono', monospace;
+$font-size: 16px; // Used for mathematical operations
+$main-font: 'Roboto', sans-serif;
+$code-font: 'Roboto Mono', monospace;
+
+// Colors
+
+$gray-color: gray;
+$light-gray-color: lightgray;
+
+$faded-bg-color: darken($body-bg, 3%);
+$emphasis-color: coral;
+
+$footer-bg-color: #555;
+$footer-text-color: cornsilk;
+
+// Dimensions
+
+$body-min-width: 320px;
+$footer-height: 60px;
+$footer-xs-height: 105px;
+$footer-profiles-height: $footer-xs-height - $footer-height;
+$footer-bottom-offset: $font-size * 2;
+
+$portfolio-index-xs-1-max: 380px;
+$portfolio-index-xs-2-min: $portfolio-index-xs-1-max + 1px;
+$portfolio-index-xs-2-max: 460px;
+$portfolio-index-xs-3-min: $portfolio-index-xs-2-max + 1px;
+
+$portfolio-project-xs-1-max: 420px;
+$portfolio-project-xs-2-min: $portfolio-project-xs-1-max + 1px;

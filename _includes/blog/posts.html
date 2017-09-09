@@ -1,13 +1,17 @@
-<div class="posts">
-  {% for post in include.posts %}
-    <div class="post">
-      {% include blog/post/info.html post=post with_link=true %}
+{% for page in site.posts %}
+  <div class="post">
+    <h2 class="title">
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </h2>
 
-      {{ post.excerpt }}
+    {% include blog/post/meta_list.html %}
 
-      <a href="{{ post.url }}" class="btn btn-default">
-        <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Read more
-      </a>
-    </div>
-  {% endfor %}
-</div>
+    <div class="excerpt">{{ page.excerpt }}</div>
+
+    {% include blog/post/tags.html %}
+
+    <a class="btn btn-emphasis" href="{{ post.url }}">
+      Continue reading <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </a>
+  </div>
+{% endfor %}

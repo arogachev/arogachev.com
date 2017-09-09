@@ -1,7 +1,11 @@
-- author: Alexander Makarov
+- author:
+    name: Alexander Makarov
+    link: https://github.com/samdark
   position: core developer
   preposition: of
-  company: Yii Framework
+  company:
+    name: Yii Framework
+    link: https://github.com/yiisoft/yii2
   image: amakarov.jpg
   text: Alexey contributed significantly to Yii PHP framework last year. I can mention that his communication style
     stands out. Very calm and reasonable. Mind is sharp about problem-solving and approaches are good. Based on best
@@ -9,10 +13,14 @@
     covering it with automated tests properly which usually is the part lazy developers try to avoid. It was a pleasure
     to work with him and I hope to do it again.
 
-- author: Viktor Aslanov
+- author:
+    name: Viktor Aslanov
+    link: https://web.facebook.com/aslanov.viktor
   position: founder
   preposition: of
-  company: Zernovye & Maslichnye. Kazakhstan
+  company:
+    name: Zernovye & Maslichnye. Kazakhstan
+    link: https://margin.kz/
   image: vaslanov.jpg
   text: Alexey helped us rewrite our site margin.kz from Joomla to Django, improve functionality, fix bugs and migrate
     all existing data. Traffic and sales were increased. Alexey is always ready to help, explain and recommend the

@@ -1,38 +1,18 @@
 ---
 layout: default
+menu_item: portfolio
 ---
 
 {% contentfor extrahead %}
   <script src="/assets/js/portfolio_project.js"></script>
+  <script>window.screenshots = JSON.parse('{{ page.screenshots | jsonify }}');</script>
 {% endcontentfor %}
 
-{% assign project = page.project %}
+<div class="portfolio-project">
+  {% include portfolio/project/introduction.html %}
 
-<h2>Description</h2>
-
-<div>{{ page.content }}</div>
-
-<h2>Screenshots</h2>
-
-<div class="row">
-  <div class="col-lg-3">
-    <ul id="screenshot-menu" class="nav nav-pills nav-stacked">
-      {% for screenshot in page.screenshots %}
-        <li class="screenshot-menu-item">
-          <a class="screenshot-trigger" href="{{ screenshot.url }}" data-title="{{ screenshot.title }}">
-            {{ screenshot.title }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div id="screenshot" class="col-lg-9">
-    <div class="loading">
-      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-      <span class="sr-only">Loading...</span>
-    </div>
-
-    <a class="screenshot-link"></a>
+  <div class="container">
+    {% include portfolio/project/meta.html %}
+    {% include portfolio/project/tabs.html %}
   </div>
 </div>

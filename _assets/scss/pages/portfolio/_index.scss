@@ -1,0 +1,65 @@
+.page-heading-col {
+  @include portfolio-index-col-xs;
+}
+
+.project-wrap-row {
+  &:not(:last-child) {
+    .project {
+      @include media-portfolio-index-xs-3-up {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $light-gray-color;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+.separator {
+  border-top-color: $light-gray-color;
+  margin: 1.5rem 0;
+
+  @include media-portfolio-index-xs-3-up {
+    display: none;
+  }
+}
+
+.project-wrap-col {
+  @include portfolio-index-col-xs;
+}
+
+.project {
+  .img-col {
+    @include media-portfolio-index-xs-3 {
+      @include make-col(4, 12);
+    }
+  }
+
+  .info-col {
+    @include media-portfolio-index-xs-3 {
+      @include make-col(8, 12);
+    }
+  }
+
+  .main-image {
+    border: 1px solid $card-border-color;
+    border-radius: 4px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+
+    @include media-portfolio-index-xs-2-down {
+      margin-top: 1rem;
+    }
+  }
+
+  .period {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}

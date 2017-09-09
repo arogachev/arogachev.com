@@ -1,0 +1,12 @@
+<ul class="profiles">
+  {% for profile_data in resume.profiles %}
+    {% assign profile = profile_data[1] %}
+    {% capture link_title %}{{ profile.network}}, {{ profile.username }}{% endcapture %}
+
+    <li>
+      <a href="{{ profile.url }}" title="{{ link_title }}">
+        <i class="fa fa-{{ profile.icon }}" aria-hidden="true"></i>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

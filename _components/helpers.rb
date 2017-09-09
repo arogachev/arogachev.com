@@ -18,6 +18,13 @@ module Components
       end
     end
 
+    class Inflector
+      def self.slugify(str, normalize_spaces=false)
+        str = str.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        normalize_spaces ? str.squeeze('-') : str
+      end
+    end
+
     class DateHelper
       def self.work_duration(start_date, end_date=nil, years_only: false)
         end_date = DateTime.now.to_date if end_date.nil?
@@ -50,6 +57,51 @@ module Components
       def self.age(dob)
         now = Date.today
         now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+      end
+    end
+
+    class MarkdownHelper
+      def self.headings_tree(content)
+        items = content.encode(universal_newline: true).scan(/(\#{1,4}) (.+)\n/)
+        if items.empty?
+          return []
+        end
+
+        min_level = items[0][0].length
+        tree = []
+        prev_items = {}
+        names_occurence = {}
+
+        items.each do |item|
+          name = item[1]
+          current_level = item[0].length
+          slug = Inflector.slugify(name)
+
+          if names_occurence.key?(name)
+            slug << "-#{names_occurence[name]}"
+            names_occurence[name] += 1
+          else
+            names_occurence[name] = 1
+          end
+
+          data = {'name' => name, 'level' => current_level, 'slug' => slug}
+
+          if current_level == min_level
+            tree.push(data)
+          else
+            prev_level = current_level - 1
+
+            if prev_items[prev_level]['children'].nil?
+              prev_items[prev_level]['children'] = []
+            end
+
+            prev_items[prev_level]['children'].push(data)
+          end
+
+          prev_items[current_level] = data
+        end
+
+        tree
       end
     end
   end

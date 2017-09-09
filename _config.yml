@@ -31,7 +31,7 @@ defaults:
       comments: true
 
   - scope:
-      path: '_pages/portfolio/projects'
+      path: '_pages/portfolio'
     values:
       layout: 'portfolio_project'
 

@@ -1,0 +1,30 @@
+{% if layout.menu_item %}
+  {% assign active_item = layout.menu_item %}
+{% elsif page.menu_item %}
+  {% assign active_item = page.menu_item %}
+{% endif %}
+
+<nav class="main-menu navbar navbar-toggleable-sm navbar-light bg-faded">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#main-menu-content" aria-controls="main-menu-content" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">Alexey Rogachev</a>
+
+    <div class="collapse navbar-collapse" id="main-menu-content">
+      <ul class="navbar-nav ml-auto">
+        {% for item in site.data.menu %}
+          <li class="nav-item {% if item.name == active_item %}active{% endif %}">
+            <a class="nav-link" href="{{ item.link }}">
+              {{ item.name | capitalize }}
+              {% if item.name == active_item %} <span class="sr-only">(current)</span>{% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

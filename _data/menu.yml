@@ -1,0 +1,8 @@
+- name: blog
+  link: /
+
+- name: resume
+  link: /resume/
+
+- name: portfolio
+  link: /portfolio/

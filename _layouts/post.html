@@ -1,12 +1,16 @@
 ---
-layout: default
-content_class: anchored
+layout: narrow
+menu_item: blog
+content_class: blog-post
 ---
 
-<div class="post-detail">
-  {% include blog/post/info.html post=page %}
-  {{ page.content }}
-  {% if jekyll.environment == 'production' and page.comments %}
-    {% include blog/post/comments.html %}
-  {% endif %}
+<div class="meta">
+  {% include blog/post/meta_list.html %}
+  {% include blog/post/tags.html %}
 </div>
+
+<div class="post-content">{{ page.content }}</div>
+
+{% if jekyll.environment == 'production' and page.comments %}
+  {% include blog/post/comments.html %}
+{% endif %}

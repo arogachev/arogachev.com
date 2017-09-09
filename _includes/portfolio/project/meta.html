@@ -1,0 +1,86 @@
+{% assign technologies_names = page.technologies | map: 'name' %}
+
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12">
+    <table class="meta table">
+      <tbody>
+        <tr class="link named-icon">
+          <th scope="row">Link:</th>
+          <td>
+            <a href="{{ page.site.link }}">{{ page.site.link }}</a>
+
+            {% if page.site.active %}
+              <i class="hidden-xs-down active fa fa-check" aria-hidden="true" title="Accessible"
+                 aria-label="Accessible"></i>
+            {% else %}
+              <i class="hidden-xs-down inactive fa fa-times" aria-hidden="true" title="Inaccessible"
+                 aria-label="Inaccessible"></i>
+            {% endif %}
+          </td>
+        </tr>
+
+        <tr class="accessible named-icon hidden-sm-up">
+          <th scope="row">Accessible:</th>
+          <td>
+            {% if page.site.active %}
+              <span class="name">Yes</span>
+              <i class="active fa fa-check" aria-hidden="true"></i>
+            {% else %}
+              <span class="name">No</span>
+              <i class="inactive fa fa-times" aria-hidden="true"></i>
+            {% endif %}
+          </td>
+        </tr>
+
+        <tr class="status named-icon">
+          <th scope="row">Status:</th>
+          <td>
+            <span class="name">{{ page.status | capitalize }}</span>
+            <i class="{{ page.status | slugify }} fa fa-circle" aria-hidden="true"></i>
+          </td>
+        </tr>
+
+        {% if page.company %}
+          <tr class="company">
+            <th scope="row">Company:</th>
+            <td>
+              {% if page.company.link %}
+                <a href="{{ page.company.link }}">{{ page.company.name }}</a>
+              {% else %}
+                {{ page.company.name }}
+              {% endif %}
+            </td>
+          </tr>
+        {% endif %}
+
+        {% if page.companies %}
+          <tr class="companies">
+            <th scope="row">Companies:</th>
+            <td>
+              <ul class="chronology">
+                {% for company in page.companies %}
+                  <li class="chronology-item">
+                    {% if company.link %}
+                      <a href="{{ company.link }}" title="{{ company.name }}">{{ company.name }}</a>
+                    {% else %}
+                      <span class="name">{{ company.name }}</span>
+                    {% endif %}
+                    <p class="period">({{ company.period }})</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+
+        <tr class="technologies">
+          <th scope="row">
+            <span class="hidden-xs-down">Technologies:</span>
+            <span class="hidden-sm-up">Tech:</span>
+          </th>
+          <td>{{ technologies_names | join: ', ' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

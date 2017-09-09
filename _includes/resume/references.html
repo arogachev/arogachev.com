@@ -1,22 +1,35 @@
-<div class="references row">
-  {% for reference in include.references %}
-    <div class="col-lg-1 col-md-2 col-sm-2 col-lg-12">
-      <img src="/assets/images/resume/references/{{ reference.image }}"
-           class="photo img-circle center-block"
-           alt="{{ reference.name }}"
-           title="{{ reference.name }}">
-    </div>
-    <div class="col-lg-11 col-md-10 col-sm-10 col-lg-12">
-      <blockquote>
-        <p>{{ reference.text }}</p>
-        <footer>
-          {{ reference.author }},
-          {% if reference.position %}{{ reference.position }}{% endif %}
-          {% if reference.company %}
-            {{ reference.preposition }} <cite title="{{ reference.company }}">{{ reference.company }}</cite>
-          {% endif %}
-        </footer>
-      </blockquote>
+<div class="references">
+  {% for reference in resume.references %}
+    {% capture author_position %}
+      {% if reference.position %}{{ reference.position }}{% endif %}
+      {% if reference.company %}
+        {{ reference.preposition }}
+        <a class="company" href="{{ reference.company.link }}">{{ reference.company.name }}</a>
+      {% endif %}
+    {% endcapture %}
+
+    <div class="reference">
+      <div class="photo-col">
+        <a href="{{ reference.author.link }}">
+          <img src="/assets/images/resume/references/{{ reference.image }}" class="photo"
+               alt="{{ reference.author.name }}" title="{{ reference.author.name }}">
+        </a>
+      </div>
+      <div class="author-col hidden-sm-up">
+        <p class="name">
+          <a href="{{ reference.author.link }}">{{ reference.author.name }}</a>
+        </p>
+        <p class="position">{{ author_position }}</p>
+      </div>
+      <div class="blockquote-col">
+        <blockquote class="blockquote">
+          <p>{{ reference.text }}</p>
+          <footer class="author hidden-xs-down">
+            <a class="name" href="{{ reference.author.link }}">{{ reference.author.name }}</a>,
+            {{ author_position }}
+          </footer>
+        </blockquote>
+      </div>
     </div>
   {% endfor %}
 </div>

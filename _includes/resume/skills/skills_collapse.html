@@ -1,0 +1,23 @@
+<div class="collapse-item collapse-item-more">
+  <div id="hidden-skills-collapse" class="collapse" aria-labelledby="hidden-skills">
+    <div class="collapse-content">
+      {% for group in resume.skills.hidden %}
+        {% include resume/skills/skill.html %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="hidden-skills" class="collapse-heading">
+    <a class="collapse-trigger" href="#hidden-skills-collapse" data-toggle="collapse" aria-expanded="false"
+       aria-controls="hidden-skills-collapse">
+      <div class="collapse-icon">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </div>
+      <div class="collapse-title">
+        <span class="collapse-more">Show the rest</span>
+        <span class="collapse-less">Hide</span>
+      </div>
+    </a>
+  </div>
+</div>

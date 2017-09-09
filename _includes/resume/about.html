@@ -1,0 +1,9 @@
+<div class="about">
+  <p class="description">{{ resume.basics.summary }}</p>
+
+  <div class="languages">
+    {% collapse 'Languages' %}
+      {% include resume/about/languages.html %}
+    {% endcollapse %}
+  </div>
+</div>

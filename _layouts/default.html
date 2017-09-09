@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Philosopher:700|PT+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/devicon/devicon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700|Roboto+Mono:400,700">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     {% if jekyll.environment == 'production' %}
@@ -14,6 +17,7 @@
     {% endif %}
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/tether/dist/js/tether.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/bower_components/anchor-js/anchor.min.js"></script>
     <script src="/assets/js/anchors.js"></script>
@@ -24,43 +28,8 @@
       {% include yandex_metrika_counter.html %}
     {% endif %}
 
-    <div class="wrap">
-      <nav class="main-menu navbar navbar-inverse" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">{{ site.title }}</a>
-          </div>
-          <div id="menu-collapse" class="collapse navbar-collapse">
-            <ul class="navbar-nav navbar-right nav">
-              <li><a href="/blog/">Blog</a></li>
-              <li><a href="/resume/">Resume</a></li>
-              <li><a href="/portfolio/">Portfolio</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="container">
-        <h1>{{ page.title }}</h1>
-        <hr>
-        {% if layout.content_class %}
-          {% assign content_class = layout.content_class %}
-        {% elsif page.content_class %}
-          {% assign content_class = page.content_class %}
-        {% endif %}
-        <div class="content{% if content_class %} {{ content_class }}{% endif %}">{{ content }}</div>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="container">
-        <p class="pull-left">&copy; {{ site.title }} 2017</p>
-        <p class="pull-right">Jekyll powered</p>
-      </div>
-    </footer>
+    {% include layout/menu.html %}
+    {{ content }}
+    {% include layout/footer.html %}
   </body>
 </html>

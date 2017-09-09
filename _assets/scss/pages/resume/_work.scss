@@ -1,0 +1,23 @@
+.work {
+  .collapse-item {
+    .collapse-trigger {
+      h3 {
+        display: inline-block;
+      }
+
+      .collapse-period {
+        display: inline-block;
+      }
+    }
+  }
+
+  .technologies {
+    p {
+      margin-bottom: 0.6rem;
+    }
+
+    .badge-tags {
+      margin-bottom: 0;
+    }
+  }
+}

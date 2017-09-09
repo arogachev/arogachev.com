@@ -1,0 +1,25 @@
+.toggle {
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid $light-gray-color;
+  margin-bottom: 0.7rem;
+
+  .label {
+    display: inline-block;
+    vertical-align: middle;
+    color: $text-muted;
+    margin-right: 1rem;
+  }
+
+  .fa {
+    vertical-align: middle;
+    transform: rotate(180deg);
+    font-size: 2rem;
+    color: $gray-color;
+    cursor: pointer;
+
+    &.active {
+      transform: none;
+      color: $brand-primary;
+    }
+  }
+}

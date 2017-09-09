@@ -8,16 +8,22 @@ site:
   url: http://arogachev.com/
 summary: Passionate full stack web developer. Perfectionist trying to find a balance between quality, deadlines and
   requirements.
-location:
-  city: Petropavl
-  country: Kazakhstan
-  region: North Kazakhstan Region
+location: Petropavl
 languages:
   - name: Russian
-    level: Native speaker
+    emoji: ':ru:'
+    level:
+      ilr: 5
+      cefr: C2
 
   - name: English
-    level: Can pass interviews
+    emoji: ':uk:'
+    level:
+      ilr: 3
+      cefr: C1
 
   - name: Kazakh
-    level: Basic knowledge
+    emoji: ':kazakhstan:'
+    level:
+      ilr: 1
+      cefr: A2

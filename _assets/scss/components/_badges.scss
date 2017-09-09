@@ -1,0 +1,30 @@
+@import "mixins/badges";
+
+.badge-tags {
+  @include list-unstyled;
+
+  .badge-tag {
+    display: inline-block;
+    background: $faded-bg-color;
+    color: $navbar-light-active-color;
+    border: 2px solid $light-gray-color;
+    border-radius: 5px;
+    padding: 0.25rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    &:before{
+      @include tag-dot;
+
+      margin-right: 5px;
+    }
+
+    &:after {
+      @include tag-dot;
+
+      margin-left: 5px;
+    }
+  }
+}

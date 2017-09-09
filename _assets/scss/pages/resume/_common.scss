@@ -1,0 +1,29 @@
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  margin-bottom: 0.5rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.table {
+  margin-top: 1rem;
+}
+
+.meta-list {
+  margin-bottom: 0;
+}
+
+.fa-li {
+  top: 5.5px;
+  color: $text-muted;
+}

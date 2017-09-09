@@ -71,7 +71,29 @@ RSpec.describe StringHelper do
   end
 end
 
-RSpec.describe StringHelper do
+RSpec.describe Inflector do
+  describe '.slugify' do
+    context 'with human readable string' do
+      it 'creates slug' do
+        expect(Inflector.slugify('Ruby on Rails')).to eq('ruby-on-rails')
+      end
+    end
+
+    context 'with normalize_spaces set to false' do
+      it 'leaves repeated dashes as is' do
+        expect(Inflector.slugify('Zernovye & Maslichnye. Kazakhstan')).to eq('zernovye--maslichnye-kazakhstan')
+      end
+    end
+
+    context 'with normalize_spaces set to true' do
+      it 'removes repeated dashes' do
+        expect(Inflector.slugify('Zernovye & Maslichnye. Kazakhstan', true)).to eq('zernovye-maslichnye-kazakhstan')
+      end
+    end
+  end
+end
+
+RSpec.describe DateHelper do
   describe '.work_duration' do
     context 'with months' do
       context 'with last month less than a half' do
@@ -271,6 +293,91 @@ RSpec.describe StringHelper do
           allow(Date).to receive(:today).and_return(Date.parse('2015-03-01'))
           expect(DateHelper.age(Date.parse('2000-02-29'))).to eq(15)
         end
+      end
+    end
+  end
+end
+
+RSpec.describe MarkdownHelper do
+  describe '.headings_tree' do
+    context 'with no headings' do
+      it 'returns empty array' do
+        expect(MarkdownHelper.headings_tree('content')).to be_empty
+      end
+    end
+
+    context 'with headings' do
+      it 'creates hierarchical tree' do
+        content = [
+          '# Header 1.1',
+          'Text',
+          '## Header 2.1',
+          '### Header 3.1',
+          'Text',
+          '### Header 3.2',
+          'Text',
+          '## Header 2.2',
+          'Text',
+          '# Header 1.2',
+          'Text',
+        ].join("\n")
+
+        expect(MarkdownHelper.headings_tree(content)).to eq([
+          {'name' => 'Header 1.1', 'level' => 1, 'slug' => 'header-11', 'children' => [
+            {'name' => 'Header 2.1', 'level' => 2, 'slug' => 'header-21', 'children' => [
+              {'name' => 'Header 3.1', 'level' => 3, 'slug' => 'header-31'},
+              {'name' => 'Header 3.2', 'level' => 3, 'slug' => 'header-32'},
+            ]},
+            {'name' => 'Header 2.2', 'level' => 2, 'slug' => 'header-22'},
+          ]},
+          {'name' => 'Header 1.2', 'level' => 1, 'slug' => 'header-12'},
+        ])
+      end
+    end
+
+    context 'with different line endings' do
+      it 'unifes them' do
+        content = [
+          '# Header 1.1',
+          "\n",
+          'Text',
+          '## Header 2.1',
+          "\r\n",
+          'Text',
+          '## Header 2.2',
+          "\r",
+          'Text'
+        ].join('')
+
+        expect(MarkdownHelper.headings_tree(content)).to eq([
+          {'name' => 'Header 1.1', 'level' => 1, 'slug' => 'header-11', 'children' => [
+            {'name' => 'Header 2.1', 'level' => 2, 'slug' => 'header-21'},
+            {'name' => 'Header 2.2', 'level' => 2, 'slug' => 'header-22'},
+          ]},
+        ])
+      end
+    end
+
+    context "with repeated headings' names" do
+      it 'creates unique slugs' do
+        content = [
+          '# Header 1',
+          'Text',
+          '## Header 2',
+          'Text',
+          '# Header 1',
+          'Text',
+          '# Header 1',
+          'Text',
+        ].join("\n")
+
+        expect(MarkdownHelper.headings_tree(content)).to eq([
+          {'name' => 'Header 1', 'level' => 1, 'slug' => 'header-1', 'children' => [
+            {'name' => 'Header 2', 'level' => 2, 'slug' => 'header-2'},
+          ]},
+          {'name' => 'Header 1', 'level' => 1, 'slug' => 'header-1-1'},
+          {'name' => 'Header 1', 'level' => 1, 'slug' => 'header-1-2'},
+        ])
       end
     end
   end

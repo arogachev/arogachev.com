@@ -1,0 +1,26 @@
+<div class="portfolio-project-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a id="details-tab" class="nav-link active" data-toggle="tab" href="#portfolio-project-details" role="tab"
+         aria-controls="portfolio-project-details">
+        <span class="name">Details</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a id="screenshots-tab" class="nav-link" data-toggle="tab" href="#portfolio-project-screenshots" role="tab"
+         aria-controls="portfolio-project-screenshots">
+        <span class="name">Screenshots</span>
+        <span class="count">{{ page.screenshots.size }}</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="portfolio-project-details" class="tab-pane active" role="tabpanel">
+      {% include portfolio/project/tabs/details.html %}
+    </div>
+    <div id="portfolio-project-screenshots" class="tab-pane" role="tabpanel">
+      {% include portfolio/project/tabs/screenshots.html %}
+    </div>
+  </div>
+</div>

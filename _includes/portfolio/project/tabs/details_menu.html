@@ -1,0 +1,11 @@
+<ul class="nav flex-column">
+  {% for item in include.items %}
+    <li class="nav-item">
+      <a class="nav-link level-{{ item.level }}" href="#{{ item.slug }}">{{ item.name }}</a>
+
+      {% if item.children %}
+        {% include portfolio/project/tabs/details_menu.html items=item.children %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

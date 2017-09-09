@@ -1,0 +1,59 @@
+<ul class="meta-list">
+  <li>
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    <a class="label" href="{{ job.location.link }}">{{ job.location.city }}</a>
+  </li>
+  <li>
+    <i class="fa fa-calendar" aria-hidden="true"></i>
+    <span class="label">{{ job.start_date_text }} - {{ job.end_date_text }}</span>
+  </li>
+  <li>
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
+    <span class="label">{{ job.work_duration.label }}</span>
+  </li>
+</ul>
+
+<div>{{ job.summary | markdownify }}</div>
+
+{% if job.legal_name %}
+  <p><b>Legal name:</b> {{ job.legal_name }}</p>
+{% endif %}
+<p><b>Website:</b> <a href="{{ job.website }}">{{ job.website }}</a></p>
+<p><b>Position:</b> {{ job.position }}</p>
+
+<div class="technologies">
+  <p><b>Technologies:</b></p>
+  <ul class="badge-tags">
+    {% for technology in job.technologies %}
+      <li class="badge-tag">{{ technology }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<p><b>Tasks:</b></p>
+<ul class="fa-ul">
+  {% for task in job.tasks %}
+    <li><i class="fa-li fa fa-check-square-o"></i> {{ task }}</li>
+  {% endfor %}
+</ul>
+
+<p><b>Highlights:</b></p>
+<ul class="fa-ul">
+  {% for highlight in job.highlights %}
+    <li><i class="fa-li fa fa-check-square-o"></i> {{ highlight }}</li>
+  {% endfor %}
+</ul>
+
+<p><b>Results:</b></p>
+<ul class="fa-ul">
+  {% for result in job.results %}
+    <li><i class="fa-li fa fa-check-square-o"></i> {{ result }}</li>
+  {% endfor %}
+</ul>
+
+<p><b>Achievements:</b></p>
+<ul class="fa-ul">
+  {% for achievement in job.achievements %}
+    <li><i class="fa-li fa fa-check-square-o"></i> {{ achievement }}</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,39 @@
+.meta-list {
+  @include list-unstyled;
+
+  color: $text-muted;
+  margin-bottom: 0.5rem;
+
+  li {
+    display: inline-block;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .fa {
+    vertical-align: middle;
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+
+    @include media-breakpoint-down(lg) {
+      @include fa-fw;
+
+      margin-right: 0.2rem;
+    }
+  }
+
+  .label {
+    font-size: 0.9rem;
+    color: $text-muted;
+    vertical-align: middle;
+  }
+}
+
+.hashtags {
+  @include list-unstyled;
+
+  li {
+    display: inline-block;
+    color: $blue;
+  }
+}

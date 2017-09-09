@@ -1,0 +1,218 @@
+.basics {
+  .photo-col {
+    display: table-cell;
+    vertical-align: top;
+    width: 33%;
+    padding-right: 2rem;
+
+    @include media-breakpoint-only(xs) {
+      width: 1%;
+      padding-right: 1rem;
+    }
+  }
+
+  .photo {
+    width: 100%;
+    box-shadow: 0 0 5px $gray-color;
+
+    @include media-breakpoint-only(xs) {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  .info-col {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+
+    @include media-breakpoint-only(xl) {
+      vertical-align: middle;
+    }
+
+    @include media-breakpoint-only(xs) {
+      width: 99%;
+      vertical-align: middle;
+    }
+  }
+
+  .info-row {
+    margin-top: 1rem;
+  }
+
+  .download {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .download-btn {
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .fa-download {
+      font-size: 1.2rem;
+      color: $gray-color;
+    }
+
+    .toggle {
+      padding: 0.2rem 1.5rem 0.7rem 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .dropdown-menu {
+      left: auto;
+      right: 0;
+      padding: 0.5rem 0 0 0;
+    }
+
+    .dropdown-item {
+      display: none;
+      padding: 0.7rem 1.5rem;
+
+      @include hover-focus {
+        color: $gray-color;
+        background-color: $faded-bg-color;
+
+        .fa {
+          opacity: 0.7;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $light-gray-color;
+      }
+
+      &.visible {
+        display: block;
+      }
+
+      .fa {
+        vertical-align: middle;
+        font-size: 2rem;
+        margin-right: 0.3rem;
+      }
+
+      .fa-file-word-o {
+        color: #2a5699;
+      }
+
+      .fa-file-pdf-o {
+        color: #bb0706;
+      }
+
+      .extension {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .name {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    @include media-breakpoint-only(xs) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: $text-muted;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+
+    @include media-breakpoint-only(xs) {
+      margin-bottom: 0;
+    }
+  }
+
+  .info-list {
+    @include list-unstyled;
+
+    border-top: 1px solid $light-gray-color;
+    border-bottom: 1px solid $light-gray-color;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.7rem;
+
+    li {
+      margin-bottom: 0.3rem;
+
+      > div {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+
+    .icon-col {
+      @include fa-fw;
+
+      padding-right: 0.3rem;
+    }
+
+    .fa {
+      font-size: 1.1rem;
+      color: $text-muted;
+    }
+
+    .label {
+      color: $body-color;
+    }
+  }
+
+  .profiles {
+    @include list-unstyled;
+
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      margin: 0.2rem 0.3rem;
+    }
+
+    .fa {
+      font-size: 1.8rem;
+
+      &:hover {
+        color: #999;
+      }
+    }
+
+    .fa-github {
+      color: #333;
+    }
+
+    .fa-stack-overflow {
+      color: #f48024;
+    }
+
+    .fa-linkedin {
+      color: #1985bc;
+    }
+
+    .fa-twitter {
+      color: #1da1f2;
+    }
+
+    .fa-vk {
+      color: #507299;
+    }
+
+    .fa-facebook {
+      color: #4267b2;
+    }
+
+    .fa-instagram {
+      color: #262626;
+    }
+  }
+}

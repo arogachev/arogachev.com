@@ -4,30 +4,38 @@
 
 {{ basics.specialization }}, {{ basics.age }} years old
 
-**Experience:** {{ basics.work_duration.label }} in total
-
 **Location:** {{ basics.location.city }}, {{ basics.location.country }} ({{ basics.location.region }})
+
+**Experience:** {{ basics.work_duration.label }}
+
+## About
+
+{{ basics.summary }}
 
 **Languages:**
 
 {% for language in basics.languages %}
-- {{ language.name }} ({{ language.level }})
+- {{ language.name }}: ILR - {{ language.level.ilr }}, CEFR - {{ language.level.cefr }}
 {% endfor %}
-
-{{ basics.summary }}
 
 ## Work
 
 {% for job in work_reversed %}
-### {{ job.company }} ({{ job.start_date_year }} - {{ job.end_date_year }})
+### {{ job.name }} ({{ job.start_date_year }} - {{ job.end_date_year }})
 
-**Period:** {{ job.start_date_text }} - {{ job.end_date_text }} (**{{ job.work_duration.label }}** in total)
+**Location**: {{ job.location.city }}, {{ job.location.country }}
 
-**Position:** {{ job.position }}
+**Period:** {{ job.start_date_text }} - {{ job.end_date_text }} (**{{ job.work_duration.label }}**)
+
+{{ job.summary }}
+
+{% if job.legal_name %}
+**Legal name:** {{ job.legal_name }}
+{% endif %}
 
 **Website:** [{{ job.website }}]({{ job.website }})
 
-{{ job.summary }}
+**Position:** {{ job.position }}
 
 **Technologies:** {{ job.technologies | sentence }}
 
@@ -69,15 +77,17 @@
 
 **GPA:** {{ education.gpa }}
 
+**Diploma with honours**
+
 **Courses:**
 
 {% for course in education.courses %}
-- {{ course }}
+- {{ course.code }} - {{ course.name }}
 {% endfor %}
 
 ## Skills
 
-{% for skill in skills %}
+{% for skill in skills.all %}
 **{{ skill.name }}:** {{ skill.keywords | sentence }}
 
 {% endfor %}
@@ -91,16 +101,24 @@
 ## References
 
 {% for reference in references %}
+{% capture author_position %}
+  {% if reference.position %}{{ reference.position }}{% endif %}
+  {% if reference.company %}
+    {{ reference.preposition }}
+    [{{ reference.company.name }}]({{ reference.company.link }})
+  {% endif %}
+{% endcapture %}
+
 "{{ reference.text }}"
 
-*{{ reference.author_text }}*
+*[{{ reference.author.name }}]({{ reference.author.link }}), {{ author_position }}*
 
 {% endfor %}
 
 ## Interests
 
 {% for interest in interests %}
-- {{ interest.name }}{% unless interest.keywords == empty %} ({{ interest.keywords | sentence }}){% endunless %}
+- {{ interest.name }}{% unless details == empty %} ({{ interest.details | map: 'name' | sentence }}){% endunless %}
 
 {% endfor %}
 

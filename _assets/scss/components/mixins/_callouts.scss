@@ -1,0 +1,13 @@
+@mixin bs-callout-color($name, $color) {
+  .bs-callout-#{$name} {
+    border-left-color: $color;
+
+    h3 {
+      color: $color;
+
+      a {
+        color: $color;
+      }
+    }
+  }
+}

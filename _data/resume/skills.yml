@@ -1,14 +1,14 @@
 - name: Programming languages
   keywords: [PHP, JavaScript, Ruby, Python, Node.js]
 
+- name: Frontend
+  keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
+
 - name: Web frameworks
   keywords: [Yii, Silex, Ruby on Rails, Jekyll, Django]
 
 - name: CMS
   keywords: [UMI.CMS, 1C-Bitrix]
-
-- name: Frontend
-  keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, jQuery, AngularJS]
 
 - name: Databases
   keywords: [MySQL, PostgreSQL, SQLite, Redis]

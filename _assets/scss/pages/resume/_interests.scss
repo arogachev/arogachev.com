@@ -1,0 +1,13 @@
+.interests {
+  .emoji {
+    margin-right: 0.2rem;
+
+    &:first-of-type {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .details-text {
+    display: none;
+  }
+}
