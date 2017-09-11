@@ -33,7 +33,7 @@ tasks:
   - Integration of new graphic design and layout based on Bootstrap 3.
   - Fixing new layout bugs, adding missing layout elements.
   - Improving existing functionality (including "News" module).
-  - Developing new functionality (including "Agrarian map" and "Trading platform" modules).
+  - Developing new functionality (including "Agrarian map", "Trading platform", "Subscription" modules).
   - Basic SEO related work. Improving urls and redirects setup.
   - Switching from HTTP to HTTPS.
   - Launch of the new site and further support of it.
@@ -43,12 +43,14 @@ highlights:
   - &agrarian_map
     Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
     better UX and page loading) with filter.
+  - &subscription
+    Added e-commerce component - combined modular and object subscriptions, integrated payment through credit cards
+    (VISA, MasterCard).
   - &moderation
     Implemented moderation for some site's objects.
   - &limited_access
     Limited access to some site's functionality using custom permissions.
-  - Added notifications (via email and push) for better UX.
-  - Shared some functionality between backend and frontend parts of the site.
+  - Added notifications (static, pop-up, email, web push) for better UX.
 results:
   - New site was released in May of 2016.
   - &client_base_increase
@@ -66,6 +68,7 @@ achievements:
 brief_highlights:
   - *programming
   - *agrarian_map
+  - *subscription
   - *moderation
   - *limited_access
   - *client_base_increase
