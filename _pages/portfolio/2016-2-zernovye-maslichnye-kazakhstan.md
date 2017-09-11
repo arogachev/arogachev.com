@@ -95,7 +95,7 @@ Any addition or change of enterprise is moderated:
 - Deactivation of an enterprise for a period of moderation.
 - There is a feature of viewing the exact fields and content parts that were changed with visual highlighting of old and
 new values.
-- The opportunity to engage in dialogue about filled oject for both user and site administrator: for user - to ask 
+- The opportunity to engage in dialogue about filled object for both user and site administrator: for user - to ask 
 clarifying questions, for administrator - to answer them or request corrections.
 - Saving history of changes and feature to rollback to previous version.
 - Notifications for administrator and user about the need for making changes. 
