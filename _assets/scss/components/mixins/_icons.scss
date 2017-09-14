@@ -1,4 +1,4 @@
-@mixin fa-fw {
-  width: (18em / 14);
+@mixin fa-fw($font-size-rem: 1) {
+  width: (18em / 14 * $font-size-rem);
   text-align: center;
 }
