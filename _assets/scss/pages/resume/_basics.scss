@@ -2,8 +2,12 @@
   .photo-col {
     display: table-cell;
     vertical-align: top;
-    width: 33%;
+    width: 36%;
     padding-right: 2rem;
+
+    @include media-breakpoint-between(sm, lg) {
+      width: 33%;
+    }
 
     @include media-breakpoint-only(xs) {
       width: 1%;
