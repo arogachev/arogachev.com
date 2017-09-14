@@ -50,7 +50,6 @@ these:
 - It's now possible to emphasize separate news by fixing them at the top of the list as well as marking them as 
 promotional.  
 - Templates for convenient use of frequently repeating text parts were added.
-- The feature of news' deactivation was added.
 - "Disqus" comments were connected, necessary settings for correct publication of news on Facebook were implemented.
 - Human readable URLs for categories and news were set up - and linking with id is used for news, so name with slug can 
 be edited at any moment after news' publication.
@@ -83,7 +82,7 @@ The feature to form the base of agricultural enterprises of Kazakhstan with conv
 map was implemented:
 
 - For linking with geographical data "Geography" module with division into regions, districts and settlements was added. 
-- The filter for quick search of enterprises group of specific enterprise was added.
+- The filter for quick search of enterprises group or specific enterprise was added.
 - The map with grouping of enterprises into settlements, clustering of all markers (for ease of perception and fast 
 loading) and synchronization with filter was implemented.
 - Users can participate in filling of the enteprises base, assign themselves to the selected enterprise. 
@@ -170,7 +169,7 @@ Some JS plugins were developed:
 
 - The form with client validation and submitting via AJAX feature.
 - The dependent drop-down lists plugin with support of simultaneous updating of multiple dependent drop-down lists.
-- Replaced block with use of pjax.
+- Replaceable block with use of pjax.
 
 ## Further development
 
