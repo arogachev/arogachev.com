@@ -296,7 +296,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
                 rjsonp.test( s.data ) && "data"
         );
 
-    // Handle iff the expected data type is "jsonp" or we have a parameter to set
+    // Handle if the expected data type is "jsonp" or we have a parameter to set
     if ( jsonProp || s.dataTypes[ 0 ] === "jsonp" ) {
 
         // Omitted for brevity
