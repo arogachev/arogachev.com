@@ -3,7 +3,7 @@ title: Zernovye & Maslichnye. Kazakhstan
 start_year: 2016
 end_year:
 description: Informational and analytical resource about grain and oil-bearing crops in Kazakhstan.
-technologies: [Python, Django, PostgreSQL, JavaScript, jQuery, Bootstrap, Sass]
+technologies: [Python, Django, PostgreSQL, JavaScript, jQuery, React, Bootstrap, Sass]
 
 site: https://margin.kz/
 status: working
