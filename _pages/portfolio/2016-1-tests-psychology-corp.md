@@ -1,6 +1,6 @@
 ---
 title: Tests-Psychology Corp
-year: 2016
+start_year: 2016
 description: Extension of "Psychological tests online" project focused on corporate clients.
 technologies: [PHP, Yii, MySQL, JavaScript, jQuery, React, Bootstrap, Sass]
 
@@ -86,7 +86,5 @@ Kazakh started. Convenience of working with service was appreciated by clients, 
 based on their criticism and suggestions. Later service also became operational in a number of Kazakh and Russian 
 schools. Similar products generally were implemented in form of window applications and lacked support of different 
 languages and other features.
-
-Despite quite good development prospects, later financing of the project was stopped and work on it was discontinued.
 
 [Psychological tests online]: /portfolio/psychological-tests-online/
