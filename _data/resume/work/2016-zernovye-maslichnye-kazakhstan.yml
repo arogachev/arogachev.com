@@ -11,46 +11,38 @@ summary: Informational and analytical resource about agriculture in Kazakhstan. 
 technologies:
   - Python
   - Django
-  - PHP
-  - Joomla
-  - MySQL
   - PostgreSQL
   - Nginx
   - Gunicorn
   - Ubuntu
   - JavaScript
   - jQuery
+  - React
   - HTML
   - Bootstrap
   - Sass
   - Gulp
+  - Webpack
   - Capistrano
 tasks:
   - &programming
-    Full rewriting of the existing company site based on Joomla in Django from scratch.
-  - Changing database from MySQL to PostgreSQL and migrating of all existing data.
-  - Switching from shared hosting to VPS, setup of different technology stack.
-  - Integration of new graphic design and layout based on Bootstrap 3.
-  - Fixing new layout bugs, adding missing layout elements.
-  - Improving existing functionality (including "News" module).
-  - Developing new functionality (including "Agrarian map", "Trading platform", "Subscription" modules).
+    Full rewriting of the existing company site based on Joomla in Django from scratch, migrating of all existing data.
+  - Configuring web server.
   - Basic SEO related work. Improving urls and redirects setup.
-  - Switching from HTTP to HTTPS.
-  - Launch of the new site and further support of it.
+  - Working with design and layout after project's launch.
+  - Improving existing functionality (including "News" module).
+  - Developing new functionality (including "Agrarian map", "Trading platform", "Subscription", "Stats" modules).
 highlights:
-  - Implemented image cropping for news for better images' display.
-  - Added convenient way to pick the location of settlements and enterprises.
+  - Developed a few custom fields (image crop, location picker, etc.)
   - &agrarian_map
-    Implemented map for showing agrarian enterprises' locations (grouping in settlements, clustering of markers for
-    better UX and page loading) with filter.
+    Added grouping of enterprises by settlements on agrarian map.
+  - Implemented moderation for some site's objects.
+  - Limited access to some site's functionality using custom permissions and policies.
   - &subscription
-    Added e-commerce component - combined modular and object subscriptions, integrated payment through credit cards
-    (VISA, MasterCard).
-  - &moderation
-    Implemented moderation for some site's objects.
-  - &limited_access
-    Limited access to some site's functionality using custom permissions.
-  - Added notifications (static, pop-up, email, web push) for better UX.
+    Added e-commerce component - combined modular subscriptions and subscriptions to objects of different types,
+    integrated payment through credit cards (VISA, MasterCard).
+  - &stats
+    Organized collecting, editing and viewing of a big amount of statistical data from various sources.
 results:
   - New site was released in May of 2016.
   - &client_base_increase
@@ -62,6 +54,7 @@ results:
   - The site became more secure, pages started to load faster.
 achievements:
   - Programming in Python and Django.
+  - Learning ES6 and React.
   - Migration of site and data.
   - Configuring VPS from scratch.
   - Setup of production environment for Django site.
@@ -69,6 +62,5 @@ brief_highlights:
   - *programming
   - *agrarian_map
   - *subscription
-  - *moderation
-  - *limited_access
+  - *stats
   - *client_base_increase
