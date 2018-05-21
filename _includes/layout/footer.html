@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container">
-    <p class="copyright">&copy; Alexey Rogachev 2017</p>
+    <p class="copyright">&copy; Alexey Rogachev {{ 'now' | date: '%Y' }}</p>
     <ul class="profiles">
       {% for profile_data in site.data.resume.profiles %}
         {% assign profile = profile_data[1] %}
