@@ -5,13 +5,10 @@
   keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, Webpack, jQuery, AngularJS, React]
 
 - name: Web frameworks
-  keywords: [Yii, Ruby on Rails, Jekyll, Django]
-
-- name: CMS
-  keywords: [UMI.CMS, 1C-Bitrix]
+  keywords: [Yii, Ruby on Rails, Django]
 
 - name: Databases
-  keywords: [MySQL, PostgreSQL, SQLite, Redis]
+  keywords: [MySQL, PostgreSQL, Redis]
 
 - name: Web servers
   keywords: [Nginx, Apache, Unicorn, Gunicorn]
