@@ -33,7 +33,7 @@ tasks:
   - Improving existing functionality (including "News" module).
   - Developing new functionality (including "Agrarian map", "Trading platform", "Subscription", "Stats" modules).
 highlights:
-  - Developed a few custom fields (image crop, location picker, etc.)
+  - Developed a few custom form fields (image crop, location picker, etc.)
   - &agrarian_map
     Added grouping of enterprises by settlements on agrarian map.
   - Implemented moderation for some site's objects.
