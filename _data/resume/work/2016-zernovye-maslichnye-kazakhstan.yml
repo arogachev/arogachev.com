@@ -25,13 +25,14 @@ technologies:
   - Webpack
   - Capistrano
 tasks:
-  - &programming
-    Full rewriting of the existing company site based on Joomla in Django from scratch, migrating of all existing data.
+  - Full rewriting of the existing company site based on Joomla in Django from scratch, migrating of all existing data.
   - Configuring web server.
   - Basic SEO related work. Improving urls and redirects setup.
   - Working with design and layout after project's launch.
-  - Improving existing functionality (including "News" module).
-  - Developing new functionality (including "Agrarian map", "Trading platform", "Subscription", "Stats" modules).
+  - &news
+    Improving existing functionality (including "News" module).
+  - &new_modules
+    Developing new functionality (including "Agrarian map", "Trading platform", "Subscription", "Stats" modules).
 highlights:
   - Developed a few custom form fields (image crop, location picker, etc.)
   - &agrarian_map
@@ -59,7 +60,8 @@ achievements:
   - Configuring VPS from scratch.
   - Setup of production environment for Django site.
 brief_highlights:
-  - *programming
+  - *news
+  - *new_modules
   - *agrarian_map
   - *subscription
   - *stats
