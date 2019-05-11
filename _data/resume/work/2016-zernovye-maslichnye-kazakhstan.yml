@@ -3,7 +3,7 @@ location: Petropavl
 website: https://margin.kz/
 position: Web programmer
 start_date: 2016-04-18
-end_date:
+end_date: 2018-07-05
 summary: Informational and analytical resource about agriculture in Kazakhstan. The customer already had site written in
   Joomla, but was not satisfied with its work and support. Planned ideas and improvements would be hard to
   implement using Joomla. Because of that the decision was taken to completely rewrite it using Django and
@@ -23,6 +23,7 @@ technologies:
   - Sass
   - Gulp
   - Webpack
+  - Node.js
   - Capistrano
 tasks:
   - Full rewriting of the existing company site based on Joomla in Django from scratch, migrating of all existing data.

@@ -1,0 +1,69 @@
+name: Aviata
+location: Almaty
+website: https://aviata.kz/railways/
+position: Web programmer
+start_date: 2018-07-09
+end_data:
+summary: Flight and railway tickets selling service. In 2018 it was
+  [united](https://forbes.kz/finances/markets/aviata_i_i_chocotravel_obyedinilis/) with ex-competitor
+  ["Chocotravel"](https://www.chocotravel.com/) and became the 2nd biggest internet plaform in Kazakhstan according to
+  Forbes ([short](https://forbes.kz/ranking/25_krupneyshih_torgovyih_internet-ploschadok_-_2018),
+  [details](https://forbes.kz/leader/25_krupneyshih_torgovyih_internet-ploschadok_1540206970/)). Worked on
+  [railways](https://aviata.kz/railways/) project. After I joined this company it got bigger priority and dedicated
+  team.
+technologies:
+  - Python
+  - Django
+  - Django REST Framework
+  - Flask
+  - MySQL
+  - Nginx
+  - Gunicorn
+  - CentOS
+  - JavaScript
+  - jQuery
+  - Vue.js
+  - HTML
+  - Bootstrap
+  - Sass
+  - Webpack
+  - Node.js
+  - Docker
+tasks:
+  - Backend development - support and further development of API used by site, mobile apps and partner "Chocotravel".
+    Integration with other APIs and services.
+  - Frontend development - both desktop and mobile site versions (until January 2019).
+  - Making reports to determine success of adding new features.
+  - Code review and mentoring of other team members.
+highlights:
+  - Set up Docker and Docker Compose for development, staging and production environments.
+  - &new_functionality
+    Developed new functionality - subscription to free places, timetable and routes of the trains, nearby dates search,
+    push notifications.
+  - Connected Google Cloud Storage.
+  - &partner_api
+    Adapted and extended API for usage by partner "Chocotravel".
+  - &mock_server
+    Created mock server for supplier's API with a set of quickly reproducible cases for easier testing and design
+    showcase.
+  - Improved unit tests' coverage, wrote a suite of functional tests for main flow.
+  - Set up CI together with DevOps engineer.
+  - Detected and removed a lot of dead code.
+results:
+  - &ticket_sales
+    Ticket sales were increased, in May 2019 a record amount of tickets was sold.
+  - The cost of development for partner "Chocotravel" was reduced after migration to Aviata API.
+  - &support_return_requests
+    The amount of requests related with tickets' returns to support department was decreased.
+achievements:
+  - Learning Docker and Docker Compose.
+  - Learning Vue.js.
+  - Working with Python 2, Django REST Framework and Flask.
+  - Participation in the internal "Dev Days" event with presentation.
+  - Participation in creating of frontend code style and guide.
+brief_highlights:
+  - *new_functionality
+  - *partner_api
+  - *mock_server
+  - *ticket_sales
+  - *support_return_requests

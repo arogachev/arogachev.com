@@ -2,10 +2,10 @@
   keywords: [PHP, JavaScript, Ruby, Python, Node.js]
 
 - name: Frontend
-  keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, Webpack, jQuery, AngularJS, React]
+  keywords: [HTML, CSS, Sass, Bootstrap, Grunt, Gulp, Webpack, jQuery, AngularJS, React, Vue.js]
 
 - name: Web frameworks
-  keywords: [Yii, Ruby on Rails, Django]
+  keywords: [Yii, Ruby on Rails, Django, Django REST Framework, Flask]
 
 - name: Databases
   keywords: [MySQL, PostgreSQL, Redis]
@@ -20,7 +20,7 @@
   keywords: [Debian, Ubuntu, CentOS]
 
 - name: Work automating
-  keywords: [Vagrant, Puppet, PuPHPet]
+  keywords: [Vagrant, Puppet, PuPHPet, Docker]
 
 - name: Caching
   keywords: [memcached]

@@ -55,7 +55,7 @@ highlights:
     knowledge of employees from different departments. It can handle pretty complex types of tests, filling data is
     possible with either easy-to-use GUI (AngularJS based) or importing Excel file using yii2-excel extension which
     I developed during work on this module. Test passing also involves a lot of JavaScript for better UX. Detailed
-    statistics is avalable for inspectors.
+    statistics is available for inspectors.
   - &erp_graph
     Implemented subordination graph for ERP system to be able to get each employee's chiefs and subordinates based
     on data in 1C. The structure couldn't be presented as tree (employee could have multiple chiefs, relations were
