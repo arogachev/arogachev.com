@@ -2,6 +2,23 @@ version: '3'
 services:
   web:
     build: .
+    volumes:
+      - ./_assets:/code/_assets
+      - ./_components:/code/_components
+      - ./_data:/code/_data
+      - ./_generated:/code/_generated
+      - ./_includes:/code/_includes
+      - ./_layouts:/code/_layouts
+      - ./_pages:/code/_pages
+      - ./_plugins:/code/_plugins
+      - ./_posts:/code/_posts
+      - ./_site:/code/_site
+      - ./assets:/code/assets
+      - ./bower_components:/code/bower_components
+      - ./spec:/code/spec
+      - ./vendor:/code/vendor
+      - ./_config.yml:/code/_config.yml
+      - ./Rakefile:/code/Rakefile
     ports:
       - "4000:4000"
     command: >

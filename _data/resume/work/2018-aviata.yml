@@ -3,7 +3,7 @@ location: Almaty
 website: https://aviata.kz/railways/
 position: Web programmer
 start_date: 2018-07-09
-end_data:
+end_date: 2021-09-15
 summary: Flight and railway tickets selling service. In 2018 it was
   [united](https://forbes.kz/finances/markets/aviata_i_i_chocotravel_obyedinilis/) with ex-competitor
   ["Chocotravel"](https://www.chocotravel.com/) and became the 2nd biggest internet plaform in Kazakhstan according to
@@ -43,12 +43,13 @@ highlights:
   - Connected Google Cloud Storage.
   - &partner_api
     Adapted and extended API for usage by partner "Chocotravel".
-  - &mock_server
-    Created mock server for supplier's API with a set of quickly reproducible cases for easier testing and design
+  - Created mock server for supplier's API with a set of quickly reproducible cases for easier testing and design
     showcase.
   - Improved unit tests' coverage, wrote a suite of functional tests for main flow.
   - Set up CI together with DevOps engineer.
   - Detected and removed a lot of dead code.
+  - &microservices
+    Started splitting monolith project to microservices and integrating other internal common services.
 results:
   - &ticket_sales
     Ticket sales were increased, in May 2019 a record amount of tickets was sold.
@@ -64,6 +65,6 @@ achievements:
 brief_highlights:
   - *new_functionality
   - *partner_api
-  - *mock_server
   - *ticket_sales
   - *support_return_requests
+  - *microservices

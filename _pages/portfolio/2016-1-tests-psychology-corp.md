@@ -1,6 +1,7 @@
 ---
 title: Tests-Psychology Corp
 start_year: 2016
+end_year: 2018
 description: Extension of "Psychological tests online" project focused on corporate clients.
 technologies: [PHP, Yii, MySQL, JavaScript, jQuery, React, Bootstrap, Sass]
 

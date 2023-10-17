@@ -16,7 +16,10 @@ module Resume
       @data['education']['end_date_text'] = @data['education']['end_date'].strftime('%B %Y')
 
       @data['work'].each do |job|
-        job['location'] = @geo_data[job['location'].downcase]
+        unless job['location'].nil?
+          job['location'] = @geo_data[job['location'].downcase]
+        end
+
         job['slug'] = Inflector.slugify(job['name'], true)
         job['start_date_year'] = job['start_date'].strftime('%Y')
         job['end_date_year'] = job['end_date'] ? job['end_date'].strftime('%Y') : 'Present'

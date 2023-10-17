@@ -1,7 +1,11 @@
 <ul class="meta-list">
   <li>
     <i class="fa fa-map-marker" aria-hidden="true"></i>
-    <a class="label" href="{{ job.location.link }}">{{ job.location.city }}</a>
+    {% if job.location %}
+      <a class="label" href="{{ job.location.link }}">{{ job.location.city }}</a>
+    {% else %}
+      <span class="label">Remote</span>
+    {% endif %}
   </li>
   <li>
     <i class="fa fa-calendar" aria-hidden="true"></i>
