@@ -1,15 +1,13 @@
 {% capture location %}
 {{ basics.location.city }}, {{ basics.location.country }} ({{ basics.location.region }})
-{% if secrets %} | {{ secrets.zip_code }}, {{ secrets.address }}{% endif %}
 {% endcapture %}
 
 {% capture email %}[{{basics.email}}](mailto:{{basics.email}}){% endcapture %}
 {% if secrets %}{% capture phone %}{{ secrets.phone }}{% endcapture %}{% endif %}
-{% capture site %}[{{ basics.site.name }}]({{ basics.site.url }}){% endcapture %}
 {% capture github %}{{ profiles.github | profile_link }}{% endcapture %}
 {% capture linkedin %}{{ profiles.linkedin | profile_link }}{% endcapture %}
 {% capture contacts %}
-{{ email }} {% if phone %}| {{ phone }}{% endif %} | {{ site }} | {{ github }} | {{ linkedin }}
+{{ email }} {% if phone %}| {{ phone }}{% endif %} | {{ github }} | {{ linkedin }}
 {% endcapture %}
 
 # {{ basics.name }}

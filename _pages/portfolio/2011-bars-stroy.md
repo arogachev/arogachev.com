@@ -6,7 +6,7 @@ description: Bars-Stroy company is a construction materials seller. Has some bra
 technologies: [PHP, UMI.CMS, XSLT, MySQL, JavaScript, jQuery]
   
 site: https://bars-stroy.kz/
-status: on hold
+status: working
 companies:
   - name: Bars-Stroy
     start_year: 2011
@@ -126,5 +126,3 @@ CMS structure and project's organization.
 A short time later, already without my participation, the site's migration to "1C-Bitrix" CMS with adding functionality 
 of online shop occured. Along with this the site's appearance was changed too. First orders and client feedback 
 appeared. The project became the first online shop of construction materials in Petropavl town.
-
-The site as at July 2017 "does not work temporarily for technical reasons".

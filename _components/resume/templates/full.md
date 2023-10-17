@@ -23,7 +23,11 @@
 {% for job in work_reversed %}
 ### {{ job.name }} ({{ job.start_date_year }} - {{ job.end_date_year }})
 
+{% if job.location %}
 **Location**: {{ job.location.city }}, {{ job.location.country }}
+{% else %}
+**Location**: Remote
+{% endif %}
 
 **Period:** {{ job.start_date_text }} - {{ job.end_date_text }} (**{{ job.work_duration.label }}**)
 

@@ -1,0 +1,50 @@
+name: Yii Software
+website: https://www.yiiframework.com
+position: Web programmer
+start_date: 2021-11-01
+end_date:
+summary: Working on "Yii" PHP Framework, mostly 3rd version on a commercial basis. The main goal of 3rd version is a 
+  switch from monolithic to modular architecture improving code quality according to modern standards and best 
+  practices.
+technologies:
+  - PHP
+  - SQLite
+  - MySQL
+  - MariaDB
+  - PostgreSQL
+  - Microsoft SQL Server
+  - Oracle
+  - Nginx
+  - JavaScript
+  - jQuery
+  - HTML
+  - Bootstrap
+  - Sass
+  - Node.js
+  - Docker
+tasks:
+  - Working on Yii 2 and extensions, mostly Yii 2 APIDoc.
+  - &site
+    Working on framework site (full stack).
+  - Working on Yii 3 packages.
+  - &documentation
+    Writing documentation.
+  - Code review for pull requests of team and community members.
+  - Handling community chat questions and requests.
+highlights:
+  - Released multiple packages.
+results:
+  - &yii2_apidoc_release
+    Released 3rd version of Yii 2 APIDoc extension.
+  - &yii3_released_packages
+    Increased amount of released packages for Yii 3.
+achievements:
+  - Using PHP 8 and its latest features.
+  - Using tools for static analysis, mutation testing.
+  - Maintaining high code quality, writing tests with high coverage level.
+  - Helped to write news about Yii 3 development.
+brief_highlights:
+  - *yii3_released_packages
+  - *yii2_apidoc_release
+  - *site
+  - *documentation
